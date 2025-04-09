@@ -296,8 +296,7 @@ h6 {
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
-/* Desktop Navigation */
-@media (min-width: 1200px) {
+
   .navmenu {
     padding: 0;
   }
@@ -396,6 +395,9 @@ h6 {
     font-size: 15px;
     text-transform: none;
     color: var(--nav-dropdown-color);
+    text-align: left; /* Garante que o texto fique alinhado à esquerda */
+    white-space: normal; /* Permite que o texto quebre em várias linhas */
+    word-wrap: break-word; /* Quebra palavras longas, se necessário */
   }
 
   .navmenu .dropdown ul a i {
@@ -416,143 +418,32 @@ h6 {
 
   .navmenu .dropdown .dropdown ul {
     top: 0;
-    left: -90%;
+    left: auto; /* Remove o alinhamento padrão para a direita */
+    right: 100%; /* Alinha o submenu à esquerda */
     visibility: hidden;
   }
 
   .navmenu .dropdown .dropdown:hover>ul {
     opacity: 1;
     top: 0;
-    left: -100%;
+    right: 100%; /* Garante que o submenu abra para a esquerda */
     visibility: visible;
   }
-}
 
-/* Mobile Navigation */
-@media (max-width: 1199px) {
-  .mobile-nav-toggle {
-    color: var(--nav-color);
-    font-size: 28px;
-    line-height: 0;
-    margin-right: 10px;
-    cursor: pointer;
-    transition: color 0.3s;
-  }
-
-  .navmenu {
-    padding: 0;
-    z-index: 9997;
-  }
-
-  .navmenu ul {
+  /* Força o submenu a abrir para a esquerda */
+  .navmenu .dropdown-menu .dropdown-menu {
+    top: 0;
+    left: auto; /* Remove o alinhamento padrão para a direita */
+    right: 100%; /* Alinha o submenu à esquerda */
+    margin-left: 0;
+    margin-right: -1px; /* Ajusta a borda para evitar sobreposição */
     display: none;
-    list-style: none;
-    position: absolute;
-    inset: 60px 20px 20px 20px;
-    padding: 10px 0;
-    margin: 0;
-    border-radius: 6px;
-    background-color: var(--nav-mobile-background-color);
-    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-    box-shadow: none;
-    overflow-y: auto;
-    transition: 0.3s;
-    z-index: 9998;
   }
 
-  .navmenu a,
-  .navmenu a:focus {
-    color: var(--nav-dropdown-color);
-    padding: 10px 20px;
-    font-family: var(--nav-font);
-    font-size: 17px;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    white-space: nowrap;
-    transition: 0.3s;
-  }
-
-  .navmenu a i,
-  .navmenu a:focus i {
-    font-size: 12px;
-    line-height: 0;
-    margin-left: 5px;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    transition: 0.3s;
-    background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
-  }
-
-  .navmenu a i:hover,
-  .navmenu a:focus i:hover {
-    background-color: var(--accent-color);
-    color: var(--contrast-color);
-  }
-
-  .navmenu a:hover,
-  .navmenu .active,
-  .navmenu .active:focus {
-    color: var(--nav-dropdown-hover-color);
-  }
-
-  .navmenu .active i,
-  .navmenu .active:focus i {
-    background-color: var(--accent-color);
-    color: var(--contrast-color);
-    transform: rotate(180deg);
-  }
-
-  .navmenu .dropdown ul {
-    position: static;
-    display: none;
-    z-index: 99;
-    padding: 10px 0;
-    margin: 10px 20px;
-    background-color: var(--nav-dropdown-background-color);
-    transition: all 0.5s ease-in-out;
-  }
-
-  .navmenu .dropdown ul ul {
-    background-color: rgba(33, 37, 41, 0.1);
-  }
-
-  .navmenu .dropdown>.dropdown-active {
-    display: block;
-    background-color: rgba(33, 37, 41, 0.03);
-  }
-
-  .mobile-nav-active {
-    overflow: hidden;
-  }
-
-  .mobile-nav-active .mobile-nav-toggle {
-    color: #fff;
-    position: absolute;
-    font-size: 32px;
-    top: 15px;
-    right: 15px;
-    margin-right: 0;
-    z-index: 9999;
-  }
-
-  .mobile-nav-active .navmenu {
-    position: fixed;
-    overflow: hidden;
-    inset: 0;
-    background: rgba(33, 37, 41, 0.8);
-    transition: 0.3s;
-  }
-
-  .mobile-nav-active .navmenu>ul {
+  /* Exibe o submenu ao passar o mouse */
+  .navmenu .dropdown-menu .dropdown:hover > .dropdown-menu {
     display: block;
   }
-}
 
 /*--------------------------------------------------------------
 # Global Footer
@@ -846,6 +737,7 @@ section,
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
+/* CSS original com nomes de classes atualizados */
 .hero {
   width: 100%;
   min-height: 100vh;
@@ -854,6 +746,8 @@ section,
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
+  color: white;
 }
 
 .hero img {
@@ -864,45 +758,112 @@ section,
   height: 100%;
   object-fit: cover;
   z-index: 1;
+  background: #000;
 }
 
-.hero:before {
-  content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 30%);
+.hero-section {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  padding: 80px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-background {
   position: absolute;
   inset: 0;
-  z-index: 2;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
 
-.hero .container {
+.hero-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-overlay {
+  content: "";
+  background: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  inset: 0;
+  z-index: 2;  /* Ajuste para garantir que o texto no Hero Section seja visível */
+}
+
+.hero-content h2,
+.hero-content p {
+  color: #ffffff; /* Cor branca para contraste com fundo escuro */
+  z-index: 3; /* Garante que o texto fique acima de outros elementos */
+  position: relative; /* Evita sobreposição */
+}
+
+.hero-content {
   position: relative;
   z-index: 3;
+  max-width: 900px;
+  padding: 0 20px;
 }
 
-.hero h2 {
-  margin: 0;
-  font-size: 48px;
+.hero-logo h1 {
+  font-size: 3.5rem;
   font-weight: 700;
+  text-transform: lowercase;
+  margin-bottom: 30px;
+  color: white;
 }
 
-.hero p {
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-  margin: 10px 0 20px 0;
-  font-size: 24px;
+.hero-title {
+  margin: 0 0 20px 0;
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1.3;
 }
 
+.hero-description {
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 auto 30px auto;
+  font-size: 1.3rem;
+  line-height: 1.6;
+  max-width: 700px;
+}
+
+#hero img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Ajustes para mobile */
 @media (max-width: 768px) {
-  .hero h2 {
-    font-size: 32px;
-    line-height: 36px;
+  .hero-section {
+    padding: 60px 0;
+    min-height: 90vh;
   }
-
-  .hero p {
-    font-size: 18px;
-    line-height: 24px;
+  
+  .hero-logo h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero-title {
+    font-size: 1.8rem;
+    line-height: 1.2;
+    margin-bottom: 15px;
+  }
+  
+  .hero-description {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-bottom: 25px;
   }
 }
-
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
@@ -2481,3 +2442,4 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 60%);
   font-size: 14px;
 }
+
