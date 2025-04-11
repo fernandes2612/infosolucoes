@@ -124,8 +124,8 @@
   <main class="main">
 
     <!-- Hero Section -->
-    <section id="hero" class="hero section dark-background">
-      <img src="imagens/escritorio 1.jpg" alt="Imagem ilustrativa da Infosoluções" data-aos="fade-in">
+    <section id="hero" class="hero d-flex align-items-center">
+      <img src="imagens/escritorio1.jpg" alt="Imagem ilustrativa da Infosoluções" data-aos="fade-in">
       <div class="hero-content">
         <h2>Infosoluções: Sua Parceira em Soluções Informáticas Confiáveis</h2>
         <p>Desde 2010, oferecemos serviços especializados para empresas e particulares.</p>
@@ -133,27 +133,116 @@
     </section><!-- /Hero Section -->
 
     <!-- About Section -->
-    <section id="about" class="about section">
+    <style>
+      /* Apenas as alterações necessárias para o tema escuro */
+      #features {
+        background-color: #000;
+        padding: 60px 0;
+      }
+      #features .section-title h2 {
+        color: #fff;
+      }
+      #features .section-title p {
+        color: #ccc;
+      }
+      #features .features-item {
+        color: #eee;
+      }
+      #features .features-item h4 {
+        color: #fff;
+      }
+      #features .features-item p {
+        color: #aaa;
+      }
+      #features .bi {
+        color: #b29146;
+      }
+    </style>
+    
+    <section id="features" class="features section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Nossos Serviços</h2>
+          <p>Com a Infosoluções, tem à disposição uma vasta gama de serviços informáticos para garantir a máxima eficiência do seu sistema.</p>
+        </div>
+    
+        <div class="row gy-4 align-items-center">
+          
+          <!-- Imagem -->
+          <div class="col-lg-6 order-lg-2">
+            <div class="features-image" data-aos="fade-left">
+              <img src="imagens/aaar.jpg" alt="Serviços de TI" class="img-fluid rounded">
+            </div>
+          </div>
+    
+          <!-- Lista de serviços -->
+          <div class="col-lg-6 order-lg-1">
+            
+            <!-- Item 1 -->
+            <div class="features-item d-flex align-items-start ps-0 ps-lg-3 pt-4 pt-lg-0" data-aos="fade-right">
+              <div class="icon-box me-3">
+                <i class="bi bi-server"></i>
+              </div>
+              <div>
+                <h4>Consultoria e Gestão de Redes</h4>
+                <p class="mb-0">Garantimos que a sua rede interna seja robusta, segura e eficiente.</p>
+              </div>
+            </div>
+    
+            <!-- Item 2 -->
+            <div class="features-item d-flex align-items-start mt-4 ps-0 ps-lg-3" data-aos="fade-right" data-aos-delay="100">
+              <div class="icon-box me-3">
+                <i class="bi bi-cloud"></i>
+              </div>
+              <div>
+                <h4>Serviços de Servidores</h4>
+                <p class="mb-0">Configuração e manutenção de servidores Windows e Linux, com soluções personalizadas para empresas.</p>
+              </div>
+            </div>
+    
+            <!-- Item 3 -->
+            <div class="features-item d-flex align-items-start mt-4 ps-0 ps-lg-3" data-aos="fade-right" data-aos-delay="200">
+              <div class="icon-box me-3">
+                <i class="bi bi-cloud-arrow-up"></i>
+              </div>
+              <div>
+                <h4>Soluções Cloud da Microsoft</h4>
+                <p class="mb-0">Implementação do Microsoft 365, Azure e outras ferramentas essenciais para a sua produtividade.</p>
+              </div>
+            </div>
+    
+            <!-- Item 4 -->
+            <div class="features-item d-flex align-items-start mt-4 ps-0 ps-lg-3" data-aos="fade-right" data-aos-delay="300">
+              <div class="icon-box me-3">
+                <i class="bi bi-shield-lock"></i>
+              </div>
+              <div>
+                <h4>Segurança Informática</h4>
+                <p class="mb-0">Proteção de dados, firewalls, VPNs e auditorias de segurança para evitar ataques.</p>
+              </div>
+            </div>
+    
+            <!-- Item 5 -->
+            <div class="features-item d-flex align-items-start mt-4 ps-0 ps-lg-3" data-aos="fade-right" data-aos-delay="400">
+              <div class="icon-box me-3">
+                <i class="bi bi-headset"></i>
+              </div>
+              <div>
+                <h4>Suporte Técnico Remoto e Presencial</h4>
+                <p class="mb-0">Para solucionar qualquer problema técnico rapidamente.</p>
+              </div>
+            </div>
+    
+          </div>
+        </div>
+      </div>
+    </section>
+    
 
 
     </section><!-- /About Section -->
 
-    <!-- Services Section -->
-    <section id="services" class="services section">
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Nossos Serviços</h2>
-        <p>Com a Infosoluções, tem à disposição uma vasta gama de serviços informáticos para garantir a máxima eficiência do seu sistema.</p>
-      </div>
-      <div class="container">
-        <ul class="services-list" data-aos="fade-up" data-aos-delay="100">
-          <li><i class="bi bi-server"></i> Consultoria e Gestão de Redes: Garantimos que a sua rede interna seja robusta, segura e eficiente.</li>
-          <li><i class="bi bi-cloud"></i> Serviços de Servidores: Configuração e manutenção de servidores Windows e Linux, com soluções personalizadas para empresas.</li>
-          <li><i class="bi bi-cloud-arrow-up"></i> Soluções Cloud da Microsoft: Implementação do Microsoft 365, Azure e outras ferramentas essenciais para a sua produtividade.</li>
-          <li><i class="bi bi-shield-lock"></i> Segurança Informática: Proteção de dados, firewalls, VPNs e auditorias de segurança para evitar ataques.</li>
-          <li><i class="bi bi-headset"></i> Suporte Técnico Remoto e Presencial: Para solucionar qualquer problema técnico rapidamente.</li>
-        </ul>
-      </div>
-    </section><!-- /Services Section -->
+  
 
     <!-- Call To Action Section -->
     <section id="call-to-action" class="call-to-action section dark-background">
@@ -164,68 +253,18 @@
 
         <div class="row" data-aos="zoom-in" data-aos-delay="100">
           <div class="col-xl-9 text-center text-xl-start">
-            <h3>Call To Action</h3>
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <h3>Precisa de Suporte Técnico Rápido e Eficaz?</h3>
+            <p>Precisa de Suporte Técnico Rápido e Eficaz?
+              Contate-nos para soluções personalizadas em servidores, redes, segurança e muito mais.</p>
           </div>
           <div class="col-xl-3 cta-btn-container text-center">
-            <a class="cta-btn align-middle" href="#">Call To Action</a>
+            <a class="cta-btn" href="tel:912 094 963">Fale Conosco</a>
           </div>
         </div>
 
       </div>
 
     </section><!-- /Call To Action Section -->
-
-    <!-- Features Section -->
-    <section id="features" class="features section">
-
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="features-image col-lg-6 order-lg-2" data-aos="fade-up" data-aos-delay="100"><img src="assets/img/features-bg.jpg" alt=""></div>
-
-          <div class="col-lg-6 order-lg-1">
-
-            <div class="features-item d-flex ps-0 ps-lg-3 pt-4 pt-lg-0" data-aos="fade-up" data-aos-delay="200">
-              <i class="bi bi-archive flex-shrink-0"></i>
-              <div>
-                <h4>Est labore ad</h4>
-                <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
-              </div>
-            </div><!-- End Features Item-->
-
-            <div class="features-item d-flex mt-5 ps-0 ps-lg-3" data-aos="fade-up" data-aos-delay="300">
-              <i class="bi bi-basket flex-shrink-0"></i>
-              <div>
-                <h4>Harum esse qui</h4>
-                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
-              </div>
-            </div><!-- End Features Item-->
-
-            <div class="features-item d-flex mt-5 ps-0 ps-lg-3" data-aos="fade-up" data-aos-delay="400">
-              <i class="bi bi-broadcast flex-shrink-0"></i>
-              <div>
-                <h4>Aut occaecati</h4>
-                <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
-              </div>
-            </div><!-- End Features Item-->
-
-            <div class="features-item d-flex mt-5 ps-0 ps-lg-3" data-aos="fade-up" data-aos-delay="500">
-              <i class="bi bi-camera-reels flex-shrink-0"></i>
-              <div>
-                <h4>Beatae veritatis</h4>
-                <p>Expedita veritatis consequuntur nihil tempore laudantium vitae denat pacta</p>
-              </div>
-            </div><!-- End Features Item-->
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- /Features Section -->
 
     <!-- Benefits Section -->
     <section id="benefits" class="benefits section">
@@ -355,7 +394,7 @@
             <div class="content px-xl-5" data-aos="fade-up" data-aos-delay="100">
               <h3><strong>Perguntas Frequentes</strong></h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
+                Aqui estão algumas perguntas frequentes que recebemos de nossos clientes. Se você não encontrar a resposta que procura, não hesite em entrar em contato conosco diretamente.
               </p>
             </div>
     
@@ -365,7 +404,15 @@
                 <i class="faq-icon bi bi-question-circle"></i>
                 <h3>Quais serviços vocês oferecem para empresas?</h3>
                 <div class="faq-content">
-                  <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi...</p>
+                  <p>Nós oferecemos uma ampla gama de serviços informáticos para empresas, incluindo:
+
+                    Consultoria e implementação de redes (LAN, Wi-Fi, VPN, VLAN)
+                    Gestão e manutenção de servidores (Windows e Linux)
+                    Soluções de cloud da Microsoft (Microsoft 365, Azure)
+                    Backup e disaster recovery
+                    Monitorização remota e suporte preventivo
+                    Implementação de políticas de segurança e firewalls
+                    Licenciamento de software e otimização de sistemas</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div>
@@ -374,7 +421,13 @@
                 <i class="faq-icon bi bi-question-circle"></i>
                 <h3>A Infosoluções oferece suporte para particulares também?</h3>
                 <div class="faq-content">
-                  <p>Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi...</p>
+                  <p>Sim, também prestamos apoio a particulares, com serviços como:
+
+                    Reparação de computadores e portáteis
+                    Instalação e configuração de sistemas operativos e software
+                    Limpeza de vírus e otimização de desempenho
+                    Recuperação de dados e backup
+                    Montagem e upgrades de PCs personalizados</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div>
@@ -383,7 +436,7 @@
                 <i class="faq-icon bi bi-question-circle"></i>
                 <h3>Como posso agendar uma consulta ou solicitar um orçamento?</h3>
                 <div class="faq-content">
-                  <p>Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci...</p>
+                  <p>É simples! Basta preencher o formulário de contacto no nosso site, ligar para o nosso número de telefone (+351 912 094 963), ou enviar um e-mail para ruiamorim@infosolucoes.pt. Teremos o prazer de agendar uma consulta ou fornecer um orçamento personalizado para o seu projeto.</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div>
@@ -402,20 +455,66 @@
                 <i class="faq-icon bi bi-question-circle"></i>
                 <h3>Vocês oferecem suporte remoto?</h3>
                 <div class="faq-content">
-                  <p>Sim, a maioria dos problemas podem ser resolvidos remotamente com acesso seguro...</p>
+                  <p>Sim, oferecemos suporte remoto para resolver a maioria dos problemas de forma rápida e eficaz. Através de ferramentas de acesso remoto, podemos diagnosticar e solucionar questões sem a necessidade de deslocação. Caso seja necessário, também realizamos atendimentos presenciais.</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div>
     
               <div class="faq-item" style="display: none;">
                 <i class="faq-icon bi bi-question-circle"></i>
-                <h3>Qual é a área de cobertura dos serviços presenciais?</h3>
+                <h3>Quais são os custos dos serviços ?</h3>
                 <div class="faq-content">
-                  <p>Cobrimos toda a região metropolitana e podemos atender outras áreas mediante consulta...</p>
+                  <p>Os preços dos nossos serviços variam conforme a complexidade do projeto e as necessidades do cliente. Para obter uma estimativa mais precisa, recomendamos que entre em contato connosco para discutir os detalhes e solicitar um orçamento personalizado.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+
+              <div class="faq-item" style="display: none;">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>O que fazer se eu tiver uma emergência informática fora do horário comercial?</h3>
+                <div class="faq-content">
+                  <p>Caso tenha uma emergência fora do horário comercial, oferecemos planos de suporte 24/7 para empresas. Entre em contato conosco e faremos o possível para atender à sua situação urgente.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+
+              <div class="faq-item" style="display: none;">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>Vocês oferecem soluções em nuvem (cloud)?</h3>
+                <div class="faq-content">
+                  <p>Sim, oferecemos soluções completas em cloud, incluindo a implementação de Microsoft 365, Azure e OneDrive. Podemos ajudar a migrar seus dados para a nuvem e configurar sistemas de colaboração e armazenamento seguros e eficientes.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+
+              <div class="faq-item" style="display: none;">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>Vocês vendem equipamentos informáticos?</h3>
+                <div class="faq-content">
+                  <p>Sim, trabalhamos com diversos fornecedores e podemos fornecer equipamentos informáticos de alta qualidade, como computadores, servidores, switches, roteadores e outros componentes necessários para o bom funcionamento da sua infraestrutura.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+
+              <div class="faq-item" style="display: none;">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>Como garantir a segurança dos meus dados?</h3>
+                <div class="faq-content">
+                  <p>A segurança dos dados dos nossos clientes é uma das nossas principais prioridades. Implementamos firewalls, VPNs, backup regular e políticas de segurança personalizadas para garantir que seus dados estejam protegidos contra ameaças externas. Também realizamos auditorias de segurança periódicas para manter seus sistemas sempre atualizados.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+
+              <div class="faq-item" style="display: none;">
+                <i class="faq-icon bi bi-question-circle"></i>
+                <h3>Vocês oferecem serviços de licenciamento de software?</h3>
+                <div class="faq-content">
+                  <p>Sim, oferecemos licenciamento de software e assistência na escolha das melhores soluções para o seu negócio, incluindo software de segurança, ferramentas de produtividade (Microsoft 365), entre outros.</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div>
             </div>
+            
     
             <!-- Botão "Ver mais" - Atualizado -->
             <div class="px-xl-5 mt-3 text-center" data-aos="fade-up" data-aos-delay="300">
