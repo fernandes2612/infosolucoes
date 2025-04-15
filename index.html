@@ -125,10 +125,11 @@
   <main class="main">
 
     <!-- Hero Section -->
-    <section id="hero" class="hero d-flex align-items-center">
-      <img src="imagens/escritorio1.jpg" alt="Imagem ilustrativa da Infosoluções" data-aos="fade-in">
-      <div class="hero-content">
-        <h2> Sua Parceira em Soluções Informáticas Confiáveis</h2>
+    <section id="hero" class="hero">
+      <img src="imagens/escritorio1.jpg" alt="Imagem do escritório" class="hero-bg" data-aos="fade-in">
+      <div class="overlay"></div>
+      <div class="hero-content" data-aos="fade-up">
+        <h2 class="text-glow">Sua Parceira em Soluções Informáticas Confiáveis</h2>
         <p>Desde 2010, oferecemos serviços especializados para empresas e particulares.</p>
       </div>
     </section><!-- /Hero Section -->
@@ -172,7 +173,7 @@
           <!-- Imagem -->
           <div class="col-lg-6 order-lg-2">
             <div class="features-image" data-aos="fade-left">
-              <img src="imagens/aaar.jpg" alt="Serviços de TI" class="img-fluid rounded">
+              <img src="imagens/cubos.jpg" alt="Serviços de TI" class="img-fluid rounded">
             </div>
           </div>
     
@@ -268,125 +269,256 @@
     </section><!-- /Call To Action Section -->
 
     <!-- Benefits Section -->
+    <style>
+      #benefits {
+        background-color: #000000;
+        padding: 80px 0;
+        position: relative;
+        overflow: hidden;
+      }
+      
+      #benefits::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(circle at 20% 50%, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 50%);
+        pointer-events: none;
+      }
+      
+      #benefits .container {
+        position: relative;
+        z-index: 1;
+      }
+      
+      #benefits h2 {
+        color: #fff;
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        text-align: center;
+        position: relative;
+        padding-bottom: 15px;
+      }
+      
+      #benefits h2::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 3px;
+        background: linear-gradient(90deg, #b29146, transparent);
+      }
+      
+      #benefits .benefits-list {
+        list-style: none;
+        padding: 0;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      
+      #benefits .benefits-list li {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 1.8rem;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.7);
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        border-left: 3px solid transparent;
+      }
+      
+      #benefits .benefits-list li:hover {
+        background-color: rgba(0, 0, 0, 0.9);
+        border-left: 3px solid #b29146;
+        transform: translateX(5px);
+      }
+      
+      #benefits .benefits-list li i {
+        color: #b29146;
+        margin-right: 1rem;
+        font-size: 1.5rem;
+        flex-shrink: 0;
+        margin-top: 0.2rem;
+      }
+      
+      #benefits .benefits-list li span {
+        color: #eee;
+        font-size: 1.1rem;
+        line-height: 1.6;
+      }
+      
+      #benefits .benefits-list li strong {
+        color: #fff;
+        font-weight: 600;
+        display: inline-block;
+        margin-right: 5px;
+      }
+      
+      @media (max-width: 768px) {
+        #benefits {
+          padding: 60px 0;
+        }
+        
+        #benefits h2 {
+          font-size: 2rem;
+        }
+        
+        #benefits .benefits-list li {
+          padding: 15px;
+        }
+      }
+    </style>
+    
     <section id="benefits" class="benefits section">
       <div class="container">
-        <h2 data-aos="fade-up">O que nos torna diferentes?</h2>
+        <h2 data-aos="fade-up">O Que Nos Torna Diferentes?</h2>
         <ul class="benefits-list" data-aos="fade-up" data-aos-delay="100">
-          <li><i class="bi bi-check-circle"></i> Atendimento Personalizado: Acompanhamos cada cliente de forma única, adaptando as soluções às suas necessidades.</li>
-          <li><i class="bi bi-check-circle"></i> Experiência Comprovada: Mais de uma década de experiência em diferentes áreas da informática e consultoria.</li>
-          <li><i class="bi bi-check-circle"></i> Soluções Seguras: Implementamos e gerimos soluções que protegem dados e garantem a continuidade do seu negócio.</li>
-          <li><i class="bi bi-check-circle"></i> Suporte Proativo: Monitorização constante e manutenção preventiva para evitar problemas antes que eles ocorram.</li>
+          <li data-aos="fade-up" data-aos-delay="150">
+            <i class="bi bi-person-gear"></i>
+            <span><strong>Atendimento Personalizado:</strong> Acompanhamos cada cliente de forma única, adaptando as soluções às suas necessidades específicas com um consultor dedicado.</span>
+          </li>
+          <li data-aos="fade-up" data-aos-delay="200">
+            <i class="bi bi-award"></i>
+            <span><strong>Experiência Comprovada:</strong> Mais de uma década de excelência em diversas áreas da informática e consultoria, com portfólio de casos de sucesso.</span>
+          </li>
+          <li data-aos="fade-up" data-aos-delay="250">
+            <i class="bi bi-shield-check"></i>
+            <span><strong>Soluções Seguras:</strong> Implementamos e gerimos sistemas robustos que protegem seus dados críticos e garantem a continuidade do seu negócio 24/7.</span>
+          </li>
+          <li data-aos="fade-up" data-aos-delay="300">
+            <i class="bi bi-graph-up-arrow"></i>
+            <span><strong>Suporte Proativo:</strong> Monitorização constante em tempo real e manutenção preventiva para antecipar e resolver problemas antes que afetem sua operação.</span>
+          </li>
         </ul>
       </div>
     </section><!-- /Benefits Section -->
 
     <!-- Clients Section -->
+    <style>
+      #clients {
+        background: linear-gradient(to bottom, #000000 0%, #1a1a1a 100%);
+        padding: 80px 0;
+        position: relative;
+      }
+      
+      #clients::before {
+        content: "";
+        position: absolute;
+        top: -50px;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        background: linear-gradient(to bottom, transparent 0%, #1a1a1a 100%);
+      }
+      
+      .clients-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+      }
+      
+      .client-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        background-color: rgba(40, 40, 40, 0.5);
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(4px);
+      }
+      
+      .client-logo:hover {
+        background-color: rgba(60, 60, 60, 0.8);
+        transform: translateY(-5px);
+      }
+      
+      .client-logo img {
+        max-width: 120px;
+        height: auto;
+        filter: grayscale(100%) brightness(0.8);
+        transition: filter 0.3s ease;
+      }
+      
+      .client-logo:hover img {
+        filter: grayscale(0%) brightness(1);
+      }
+      
+      @media (max-width: 768px) {
+        .clients-wrap {
+          gap: 15px;
+        }
+        
+        .client-logo {
+          padding: 15px;
+        }
+        
+        .client-logo img {
+          max-width: 80px;
+        }
+      }
+    </style>
+    
     <section id="clients" class="clients section">
-
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-
         <div class="row g-0 clients-wrap">
-
           <div class="col-xl-3 col-md-4 client-logo">
-            <img src="imagens/microsoft.png" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
-
+            <img src="imagens/microsoft.png" class="img-fluid" alt="Microsoft">
+          </div>
+    
           <div class="col-xl-3 col-md-4 client-logo">
-            <img src="imagens/drayteck.png" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
-
+            <img src="imagens/drayteck.png" class="img-fluid" alt="DrayTek">
+          </div>
+    
           <div class="col-xl-3 col-md-4 client-logo">
-            <img src="imagens/Veeam.png" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
-
+            <img src="imagens/Veeam.png" class="img-fluid" alt="Veeam">
+          </div>
+    
           <div class="col-xl-3 col-md-4 client-logo">
-            <img src="imagens/Ubiquiti.png" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
-
+            <img src="imagens/Ubiquiti.png" class="img-fluid" alt="Ubiquiti">
+          </div>
+    
           <div class="col-xl-3 col-md-4 client-logo">
-            <img src="imagens/cisco.png" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
-
+            <img src="imagens/cisco.png" class="img-fluid" alt="Cisco">
+          </div>
+    
           <div class="col-xl-3 col-md-4 client-logo">
-            <img src="imagens/Fortinet.png" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
-
+            <img src="imagens/Fortinet.png" class="img-fluid" alt="Fortinet">
+          </div>
+    
           <div class="col-xl-3 col-md-4 client-logo">
-            <img src="imagens/Tp-Link.png" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
-
+            <img src="imagens/Tp-Link.png" class="img-fluid" alt="TP-Link">
+          </div>
+    
           <div class="col-xl-3 col-md-4 client-logo">
-            <img src="imagens/Amazon.png" class="img-fluid" alt="">
+            <img src="imagens/Amazon.png" class="img-fluid" alt="Amazon Web Services">
           </div>
           
           <div class="col-xl-3 col-md-4 client-logo">
-            <img src="imagens/Microsoft_Azure.png" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
-
-          <div class="col-xl-3 col-md-4 client-logo">
-            <img src="imagens/Sophos.png" class="img-fluid" alt="">
+            <img src="imagens/Microsoft_Azure.png" class="img-fluid" alt="Microsoft Azure">
           </div>
-
+    
           <div class="col-xl-3 col-md-4 client-logo">
-            <img src="imagens/PfSense.png" class="img-fluid" alt="">
+            <img src="imagens/Sophos.png" class="img-fluid" alt="Sophos">
           </div>
-
+    
           <div class="col-xl-3 col-md-4 client-logo">
-            <img src="imagens/OpenVPN.png" class="img-fluid" alt="">
+            <img src="imagens/PfSense.png" class="img-fluid" alt="pfSense">
+          </div>
+    
+          <div class="col-xl-3 col-md-4 client-logo">
+            <img src="imagens/OpenVPN.png" class="img-fluid" alt="OpenVPN">
           </div>
         </div>
-
       </div>
-
     </section><!-- /Clients Section -->
-
-    <!-- Stats Section -->
-    <section id="stats" class="stats section dark-background">
-
-      <img src="assets/img/stats-bg.jpg" alt="" data-aos="fade-in">
-
-      <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="subheading">
-          <h3>What we have achieved so far</h3>
-          <p>Iusto et labore modi qui sapiente xpedita tempora et aut non ipsum consequatur illo.</p>
-        </div>
-
-        <div class="row gy-4">
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Clients</p>
-            </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Projects</p>
-            </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Hours Of Support</p>
-            </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Workers</p>
-            </div>
-          </div><!-- End Stats Item -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Stats Section -->
     <!-- Faq Section -->
     <section id="faq" class="faq section">
       <div class="container-fluid">
@@ -531,14 +663,27 @@
     </section>
     
     <style>
+      /* Estilo para o gradiente de fundo - cinzento escuro para branco */
+      .faq.section {
+        background: linear-gradient(to bottom, #1a1a1a, #ffffff);
+        padding: 80px 0;
+      }
+
+      /* Ajustes para melhor visibilidade do texto com o fundo escuro */
+      .faq .content h3, 
+      .faq .content p {
+        color: #ffffff;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+      }
+
       /* Estilos personalizados para o botão FAQ */
       .btn-faq-custom {
         display: inline-block;
         padding: 12px 30px;
-        border: 2px solid #3d3d3d;
+        border: 2px solid #ffffff;
         border-radius: 50px;
         background-color: transparent;
-        color: #3d3d3d;
+        color: #ffffff;
         font-size: 1rem;
         font-weight: 600;
         text-transform: uppercase;
@@ -549,8 +694,8 @@
       }
     
       .btn-faq-custom:hover {
-        background-color: #3d3d3d;
-        color: #fff;
+        background-color: #ffffff;
+        color: #333333;
         transform: translateY(-2px);
       }
     
@@ -564,15 +709,37 @@
         padding: 15px 0;
         cursor: pointer;
         transition: all 0.3s ease;
+        background-color: rgba(255, 255, 255, 0.9);
+        margin-bottom: 10px;
+        border-radius: 8px;
+        padding: 15px;
       }
     
       .faq-item:hover {
-        background-color: #f9f9f9;
+        background-color: #ffffff;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .faq-item h3 {
+        color: #333333;
+        margin-bottom: 0;
+        font-size: 1.1rem;
       }
     
       .faq-content {
         display: none;
         padding-top: 10px;
+        color: #555555;
+      }
+      
+      .faq-icon {
+        color: #333333;
+        margin-right: 10px;
+      }
+      
+      .faq-toggle {
+        float: right;
+        color: #333333;
       }
     </style>
     
@@ -648,7 +815,7 @@
         <div class="row gy-4">
 
           <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <article>
+            <article class="blog-card">
 
               <div class="post-img">
                 <img src="assets/img/blog/blog-1.jpg" alt="" class="img-fluid">
@@ -674,7 +841,7 @@
           </div><!-- End post list item -->
 
           <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <article>
+            <article class="blog-card">
 
               <div class="post-img">
                 <img src="assets/img/blog/blog-2.jpg" alt="" class="img-fluid">
@@ -700,7 +867,7 @@
           </div><!-- End post list item -->
 
           <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <article>
+            <article class="blog-card">
 
               <div class="post-img">
                 <img src="assets/img/blog/blog-3.jpg" alt="" class="img-fluid">
@@ -728,6 +895,121 @@
         </div><!-- End recent posts list -->
 
       </div>
+
+      <style>
+        /* Estilo para o gradiente de fundo - começa com branco (continuação da seção anterior) */
+        .recent-posts.section {
+          background: linear-gradient(to bottom, #ffffff, #f8f9fa);
+          padding: 80px 0;
+        }
+
+        /* Estilos para os cards de blog */
+        .blog-card {
+          background-color: #ffffff;
+          border-radius: 12px;
+          overflow: hidden;
+          box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+          transition: all 0.3s ease;
+          height: 100%;
+        }
+
+        .blog-card:hover {
+          transform: translateY(-10px);
+          box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+
+        .post-img {
+          overflow: hidden;
+          position: relative;
+        }
+
+        .post-img img {
+          transition: all 0.6s ease;
+        }
+
+        .blog-card:hover .post-img img {
+          transform: scale(1.1);
+        }
+
+        .post-category {
+          display: inline-block;
+          background-color: #333333;
+          color: #ffffff;
+          padding: 6px 12px;
+          border-radius: 4px;
+          font-size: 0.8rem;
+          font-weight: 600;
+          margin: 15px 15px 5px;
+        }
+
+        .blog-card .title {
+          padding: 0 15px;
+          margin-bottom: 15px;
+        }
+
+        .blog-card .title a {
+          color: #333333;
+          text-decoration: none;
+          transition: all 0.3s ease;
+        }
+
+        .blog-card .title a:hover {
+          color: #4d4d4d;
+        }
+
+        .blog-card .d-flex {
+          padding: 15px;
+          border-top: 1px solid #f0f0f0;
+        }
+
+        .post-author-img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          margin-right: 15px;
+        }
+
+        .post-meta {
+          line-height: 1.2;
+        }
+
+        .post-author {
+          font-weight: 600;
+          margin-bottom: 5px;
+        }
+
+        .post-date {
+          color: #888;
+          font-size: 0.85rem;
+          margin-bottom: 0;
+        }
+        
+        /* Estilo para o título da seção */
+        .section-title h2 {
+          font-size: 32px;
+          font-weight: 700;
+          margin-bottom: 20px;
+          color: #333333;
+          position: relative;
+          padding-bottom: 20px;
+        }
+        
+        .section-title h2:after {
+          content: "";
+          position: absolute;
+          display: block;
+          width: 50px;
+          height: 3px;
+          background: #333333;
+          bottom: 0;
+          left: calc(50% - 25px);
+        }
+        
+        .section-title p {
+          color: #666666;
+          margin-bottom: 30px;
+        }
+      </style>
 
     </section><!-- /Recent Posts Section -->
 
@@ -921,6 +1203,7 @@
       });
     });
   </script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   
   
 
