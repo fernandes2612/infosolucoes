@@ -569,7 +569,7 @@
                 <i class="faq-icon bi bi-question-circle"></i>
                 <h3>Como posso agendar uma consulta ou solicitar um orçamento?</h3>
                 <div class="faq-content">
-                  <p>É simples! Basta preencher o formulário de contacto no nosso site, ligar para o nosso número de telefone (+351 912 094 963), ou enviar um e-mail para ruiamorim@infosolucoes.pt. Teremos o prazer de agendar uma consulta ou fornecer um orçamento personalizado para o seu projeto.</p>
+                  <p>É simples! Basta preencher o formulário de contacto no nosso site, ligar para o nosso número de telefone (+351 912 094 963), ou enviar um e-mail para ruibulhosa@infosolucoes.pt. Teremos o prazer de agendar uma consulta ou fornecer um orçamento personalizado para o seu projeto.</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div>
@@ -1016,52 +1016,54 @@
     <!-- Contact Section -->
     <section id="contact" class="contact section light-background">
       <div class="container section-title" data-aos="fade-up">
-        <h2>Entre em Contato com a Infosoluções</h2>
+        <h2>Entre em Contato com a InfoSoluções</h2>
         <p>Estamos à disposição para responder a todas as suas questões e oferecer o suporte que precisa. Envie-nos uma mensagem ou ligue para agendar uma consulta personalizada.</p>
       </div>
-      <div class="container" data-aos="fade" data-aos-delay="100">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row gy-4">
+          <!-- Informações de Contato -->
           <div class="col-lg-4">
-            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+            <div class="info-item d-flex align-items-start" data-aos="fade-up" data-aos-delay="200">
               <i class="bi bi-geo-alt flex-shrink-0"></i>
               <div>
                 <h3>Morada</h3>
                 <p>R. do Dourado 297 1º andar, Sala 4, 3700-172 São João da Madeira</p>
               </div>
             </div>
-            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+            <div class="info-item d-flex align-items-start" data-aos="fade-up" data-aos-delay="300">
               <i class="bi bi-telephone flex-shrink-0"></i>
               <div>
                 <h3>Telefone</h3>
-                <p>+351 912 094 963</p>
+                <p><a href="tel:+351912094963">+351 912 094 963</a></p>
               </div>
             </div>
-            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+            <div class="info-item d-flex align-items-start" data-aos="fade-up" data-aos-delay="400">
               <i class="bi bi-envelope flex-shrink-0"></i>
               <div>
                 <h3>Email</h3>
-                <p>ruibulhosa@infosolucoes.pt</p>
+                <p><a href="mailto:ruibulhosa@infosolucoes.pt">ruibulhosa@infosolucoes.pt</a></p>
               </div>
             </div>
           </div>
+
+          <!-- Formulário de Contato -->
           <div class="col-lg-8">
-            <form id="contactForm" class="php-email-form" action="forms/enviar.php" method="post">
-              <div class="row">
-                <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Seu Nome" required>
+            <form action="https://formspree.io/f/xpwpgyga" method="POST" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+              <div class="row gy-3">
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Seu Nome" required>
                 </div>
-                <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Seu Email" required>
+                <div class="col-md-6">
+                  <input type="email" name="email" class="form-control" placeholder="Seu Email" required>
                 </div>
               </div>
-              <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Assunto" required>
+              <div class="row gy-3 mt-3">
+                <div class="col-12">
+                  <textarea name="message" class="form-control" rows="5" placeholder="Sua Mensagem" required></textarea>
+                </div>
               </div>
-              <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Mensagem" required></textarea>
-              </div>
-              <div class="text-center">
-                <button type="submit">Enviar Mensagem</button>
+              <div class="text-center mt-4">
+                <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
               </div>
             </form>
           </div>

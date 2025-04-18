@@ -1,21 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-PT">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>InfoSoluções </title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <title>Suporte Remoto Profissional - InfoSoluções</title>
+  <meta name="description" content="Oferecemos suporte técnico remoto especializado para empresas e particulares, garantindo soluções rápidas e eficazes para problemas informáticos.">
+  <meta name="keywords" content="suporte remoto, assistência técnica, InfoSoluções, suporte técnico, TI, informática, assistência online">
+  
+  <!-- Open Graph / Social Media Meta Tags -->
+  <meta property="og:title" content="Suporte Remoto Profissional - InfoSoluções">
+  <meta property="og:description" content="Serviço de suporte técnico remoto para resolver problemas informáticos sem deslocações.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.infosolucoes.pt/suporte-remoto">
+  <meta property="og:image" content="imagens/og-suporte-remoto.jpg">
 
   <!-- Favicons -->
   <link href="imagens/simbolo_pagina.png" rel="icon">
   <link href="imagens/simbolo_pagina.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -24,53 +31,852 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
+  <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <!-- Custom CSS -->
+  <style>
+    .header {
+  --background-color: rgba(0, 0, 0, 0);
+  --default-color: #ffffff;
+  --heading-color: #ffffff;
+  color: var(--default-color);
+  background-color: var(--background-color);
+  padding: 10px 0;
+  transition: all 0.5s;
+  z-index: 997;
+  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+}
+
+
+
+.header .logo img {
+  max-height: 70px;
+  margin-left: 0; /* Remove qualquer margem à esquerda */
+  padding-right: 100px;
+}
+
+.header .logo h1 {
+  font-size: 20px;
+  margin: 0;
+  font-weight: 700;
+  color: var(--heading-color);
+}
+
+.header .cta-btn,
+.header .cta-btn:focus {
+  color: var(--contrast-color);
+  background: var(--accent-color);
+  font-size: 14px;
+  padding: 8px 26px;
+  margin: 0;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+
+.header .cta-btn:hover,
+.header .cta-btn:focus:hover {
+  color: var(--contrast-color);
+  background: color-mix(in srgb, var(--accent-color), transparent 15%);
+}
+
+@media (max-width: 450px) {
+  .header .logo {
+    order: 1;
+  }
+
+  .header .logo img {
+    max-width: 50px; /* Ajuste para um tamanho visível */
+    height: auto; /* Mantém a proporção da imagem */
+  }
+
+  .header .cta-btn {
+    order: 2;
+    margin: 0 15px 0 0;
+    padding: 6px 20px;
+  }
+
+  .header .navmenu {
+    order: 3;
+  }
+}
+
+/* Global Header on Scroll
+------------------------------*/
+.scrolled .header {
+  --background-color: rgba(40, 40, 40, 0.9);
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+
+  .navmenu {
+    padding: 0;
+  }
+
+  .navmenu ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+  }
+
+  .navmenu li {
+    position: relative;
+  }
+
+  .navmenu>ul>li {
+    white-space: nowrap;
+    padding: 15px 14px;
+  }
+
+  .navmenu>ul>li:last-child {
+    padding-right: 0;
+  }
+
+  .navmenu a,
+  .navmenu a:focus {
+    color: color-mix(in srgb, var(--nav-color), transparent 30%);
+    font-size: 15px;
+    padding: 0 2px;
+    font-family: var(--nav-font);
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    white-space: nowrap;
+    transition: 0.3s;
+    position: relative;
+  }
+
+  .navmenu a i,
+  .navmenu a:focus i {
+    font-size: 12px;
+    line-height: 0;
+    margin-left: 5px;
+    transition: 0.3s;
+  }
+
+  .navmenu>ul>li>a:before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    bottom: -27px;
+    left: 0;
+    background-color: var(--nav-hover-color);
+    visibility: hidden;
+    width: 0px;
+    transition: all 0.3s ease-in-out 0s;
+  }
+
+  .navmenu a:hover:before,
+  .navmenu li:hover>a:before,
+  .navmenu .active:before {
+    visibility: visible;
+    width: 100%;
+  }
+
+  .navmenu li:hover>a,
+  .navmenu .active,
+  .navmenu .active:focus {
+    color: var(--nav-color);
+  }
+
+  .navmenu .dropdown ul {
+    margin: 0;
+    padding: 10px 0;
+    background: var(--nav-dropdown-background-color);
+    display: block;
+    position: absolute;
+    visibility: hidden;
+    left: 14px;
+    top: 130%;
+    opacity: 0;
+    transition: 0.3s;
+    border-radius: 4px;
+    z-index: 99;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .navmenu .dropdown ul li {
+    min-width: 200px;
+  }
+
+  .navmenu .dropdown ul a {
+    padding: 10px 20px;
+    font-size: 15px;
+    text-transform: none;
+    color: var(--nav-dropdown-color);
+    text-align: left; /* Garante que o texto fique alinhado à esquerda */
+    white-space: normal; /* Permite que o texto quebre em várias linhas */
+    word-wrap: break-word; /* Quebra palavras longas, se necessário */
+  }
+
+  .navmenu .dropdown ul a i {
+    font-size: 12px;
+  }
+
+  .navmenu .dropdown ul a:hover,
+  .navmenu .dropdown ul .active:hover,
+  .navmenu .dropdown ul li:hover>a {
+    color: var(--nav-dropdown-hover-color);
+  }
+
+  .navmenu .dropdown:hover>ul {
+    opacity: 1;
+    top: 100%;
+    visibility: visible;
+  }
+
+  .navmenu .dropdown .dropdown ul {
+    top: 0;
+    left: auto; /* Remove o alinhamento padrão para a direita */
+    right: 100%; /* Alinha o submenu à esquerda */
+    visibility: hidden;
+  }
+
+  .navmenu .dropdown .dropdown:hover>ul {
+    opacity: 1;
+    top: 0;
+    right: 100%; /* Garante que o submenu abra para a esquerda */
+    visibility: visible;
+  }
+
+  /* Força o submenu a abrir para a esquerda */
+  .navmenu .dropdown-menu .dropdown-menu {
+    top: 0;
+    left: auto; /* Remove o alinhamento padrão para a direita */
+    right: 100%; /* Alinha o submenu à esquerda */
+    margin-left: 0;
+    margin-right: -1px; /* Ajusta a borda para evitar sobreposição */
+    display: none;
+  }
+
+  /* Exibe o submenu ao passar o mouse */
+  .navmenu .dropdown-menu .dropdown:hover > .dropdown-menu {
+    display: block;
+  }
+
+    :root {
+      --primary-color: #b89911;
+      --secondary-color: #b29146;
+      --accent-color: #e2ad1a;
+      --dark-color: #0a0a0a;
+      --light-color: #f8f9fa;
+      --text-color: #333;
+      --white-color: #fff;
+      --default-color: #e8d8b8;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: var(--text-color);
+      overflow-x: hidden;
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      width: 100%;
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+      background: var(--dark-color);
+    }
+
+    .hero img.hero-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+      opacity: 0.7;
+      filter: brightness(0.7);
+      transition: transform 8s ease;
+    }
+
+    .hero:hover img.hero-bg {
+      transform: scale(1.05);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.2) 100%);
+      z-index: 2;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      max-width: 800px;
+      padding: 20px;
+      color: var(--default-color);
+      animation: fadeInUp 1s ease-out;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero-content h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      font-weight: 700;
+      margin-bottom: 20px;
+      text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .text-glow {
+      text-shadow: 0 0 10px rgba(232, 216, 184, 0.7);
+    }
+
+    .hero-content p {
+      font-size: clamp(1rem, 2vw, 1.3rem);
+      line-height: 1.8;
+      margin-bottom: 30px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-btn {
+      display: inline-block;
+      padding: 15px 30px;
+      background: transparent;
+      color: var(--default-color);
+      border: 2px solid var(--default-color);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      text-transform: uppercase;
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .hero-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 100%;
+      background: var(--default-color);
+      transition: all 0.4s ease;
+      z-index: -1;
+    }
+
+    .hero-btn:hover {
+      color: var(--dark-color);
+    }
+
+    .hero-btn:hover::before {
+      width: 100%;
+    }
+
+    /* Section Styling */
+    .section {
+      padding: 100px 0;
+      background: linear-gradient(to bottom, #0a0a0a, #1a1a1a);
+      color: var(--white-color);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 50%);
+      pointer-events: none;
+    }
+
+    .section h2 {
+      color: var(--primary-color);
+      margin-bottom: 1.5rem;
+      position: relative;
+      padding-bottom: 15px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.2rem;
+    }
+
+    .section h2::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 60px;
+      height: 3px;
+      background-color: var(--secondary-color);
+    }
+
+    .lead {
+      font-size: 1.2rem;
+      font-weight: 400;
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+      color: #ddd;
+    }
+
+    .service-list {
+      margin-bottom: 30px;
+    }
+
+    .service-list li {
+      position: relative;
+      padding-left: 30px;
+      margin-bottom: 12px;
+      list-style: none;
+      color: #ccc;
+      font-size: 1.05rem;
+    }
+
+    .service-list li::before {
+      content: "\f00c";
+      font-family: bootstrap-icons;
+      position: absolute;
+      left: 0;
+      top: 2px;
+      color: var(--accent-color);
+    }
+
+    /* Cards */
+    .card {
+      border: none;
+      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
+      border-radius: 15px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      background-color: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .card-body {
+      padding: 2rem;
+    }
+
+    .card-title {
+      color: var(--secondary-color);
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .form-control {
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--white-color);
+      padding: 12px 15px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      transition: all 0.3s;
+    }
+
+    .form-control:focus {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-color: var(--accent-color);
+      box-shadow: none;
+      color: var(--white-color);
+    }
+
+    .form-control::placeholder {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .btn-primary {
+      background-color: var(--accent-color);
+      color: var(--white-color);
+      border: none;
+      padding: 12px 20px;
+      font-weight: 600;
+      border-radius: 8px;
+      transition: all 0.3s;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .btn-primary::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: all 0.6s;
+      z-index: -1;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--secondary-color);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-primary:hover::before {
+      left: 100%;
+    }
+
+    /* Features section */
+    .features-section {
+      padding: 80px 0;
+      background: linear-gradient(to bottom, #1a1a1a, #0a0a0a);
+    }
+
+    .feature-card {
+      text-align: center;
+      padding: 30px 20px;
+      margin-bottom: 30px;
+      background-color: rgba(255, 255, 255, 0.03);
+      border-radius: 10px;
+      transition: all 0.3s ease;
+      height: 100%;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+
+    .feature-icon {
+      font-size: 2.5rem;
+      color: var(--accent-color);
+      margin-bottom: 20px;
+    }
+
+    .feature-title {
+      font-size: 1.3rem;
+      color: var(--secondary-color);
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+
+    .feature-text {
+      color: #ccc;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    /* Testimonials */
+    .testimonials {
+      padding: 80px 0;
+      background: linear-gradient(to bottom, #0a0a0a, #1a1a1a);
+    }
+
+    .testimonial-card {
+      background-color: rgba(255, 255, 255, 0.03);
+      border-radius: 10px;
+      padding: 30px;
+      margin-bottom: 30px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      position: relative;
+    }
+
+    .testimonial-text {
+      font-style: italic;
+      color: #ddd;
+      margin-bottom: 20px;
+      position: relative;
+      padding-left: 25px;
+    }
+
+    .testimonial-text::before {
+      content: '\f10e';
+      font-family: bootstrap-icons;
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--secondary-color);
+      opacity: 0.5;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .author-avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    .author-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .author-info h5 {
+      color: var(--secondary-color);
+      margin-bottom: 5px;
+      font-size: 1.1rem;
+    }
+
+    .author-info p {
+      color: #aaa;
+      font-size: 0.9rem;
+      margin: 0;
+    }
+
+    /* Footer */
+    .minimal-footer {
+      background-color: #111;
+      color: #eee;
+      padding: 70px 0 30px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .footer-logo {
+      max-width: 180px;
+      margin-bottom: 20px;
+      filter: brightness(1.5);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .footer-links a {
+      color: #ccc;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.3s;
+      position: relative;
+    }
+
+    .footer-links a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -5px;
+      left: 0;
+      background-color: var(--secondary-color);
+      transition: width 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: var(--secondary-color);
+    }
+
+    .footer-links a:hover::after {
+      width: 100%;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .social-icons a {
+      color: #aaa;
+      font-size: 1.5rem;
+      transition: color 0.3s, transform 0.2s;
+      display: inline-block;
+    }
+
+    .social-icons a:hover {
+      color: var(--secondary-color);
+      transform: translateY(-3px);
+    }
+
+    .footer-bottom {
+      margin-top: 20px;
+      text-align: center;
+      color: #888;
+      font-size: 0.9rem;
+    }
+
+    /* WhatsApp Button Animation */
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+      }
+      70% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+      }
+    }
+
+    /* Scroll Top Button */
+    .scroll-top {
+      position: fixed;
+      visibility: hidden;
+      opacity: 0;
+      right: 15px;
+      bottom: 15px;
+      z-index: 99999;
+      background: var(--secondary-color);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      transition: all 0.4s;
+      color: var(--white-color);
+    }
+
+    .scroll-top.active {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .scroll-top:hover {
+      background: var(--accent-color);
+      transform: translateY(-3px);
+    }
+
+    /* Responsive design */
+    @media (max-width: 991px) {
+      .section {
+        padding: 60px 0;
+      }
+      
+      .features-section .col-md-4 {
+        margin-bottom: 30px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero-content h2 {
+        font-size: 2.2rem;
+      }
+      
+      .hero-content p {
+        font-size: 1rem;
+      }
+      
+      .footer-links {
+        gap: 15px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .hero-btn {
+        padding: 12px 24px;
+      }
+      
+      .card-body {
+        padding: 1.5rem;
+      }
+    }
+  </style>
 </head>
 
 <body class="blog-page">
 
-  <a href="https://api.whatsapp.com/send?phone=912094963&text=Texto%20aqui"
-   target="_blank"
-   style="
-      position: fixed;
-      bottom: 80px;
-      right: 30px;
-      z-index: 9999;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 60px;
-      height: 60px;
+  <!-- Pre-loader -->
+  <div id="preloader" style="
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    overflow: hidden;
+    background: #0a0a0a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  ">
+    <div style="
+      width: 50px;
+      height: 50px;
+      border: 4px solid rgba(232, 216, 184, 0.3);
       border-radius: 50%;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-      animation: pulse 2s infinite;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-   "
-   onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 12px 24px rgba(0,0,0,0.3)'"
-   onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 8px 20px rgba(0, 0, 0, 0.2)'"
->
-  <img src="imagens/WhatsApp.svg.webp" alt="WhatsApp" style="width: 70px; height: 70px;">
-</a>
+      border-top-color: #e8d8b8;
+      animation: spin 1s linear infinite;
+    "></div>
+  </div>
+  
+  <style>
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+  
+  <script>
+    window.addEventListener('load', function() {
+      const preloader = document.getElementById('preloader');
+      preloader.style.opacity = '0';
+      preloader.style.transition = 'opacity 0.5s ease';
+      setTimeout(function() {
+        preloader.style.display = 'none';
+      }, 500);
+    });
+  </script>
 
-<!-- Animação pulsar -->
-<style>
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
-  }
-  70% {
-    transform: scale(1.05);
-    box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
-  }
-  100% {
-    transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-  }
-}
-</style>
+  <!-- WhatsApp Button -->
+  <a href="https://api.whatsapp.com/send?phone=912094963&text=Olá, gostaria de mais informações sobre suporte remoto."
+     target="_blank"
+     style="
+        position: fixed;
+        bottom: 80px;
+        right: 30px;
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: #25d366;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        animation: pulse 2s infinite;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+     "
+     onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 12px 24px rgba(0,0,0,0.3)'"
+     onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 8px 20px rgba(0, 0, 0, 0.2)'"
+     aria-label="Contactar via WhatsApp"
+  >
+    <img src="imagens/WhatsApp.svg.webp" alt="WhatsApp" style="width: 35px; height: 35px;">
+  </a>
 
+  <!-- Header -->
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container position-relative d-flex align-items-center justify-content-between">
 
@@ -118,18 +924,217 @@
 
     </div>
   </header>
-  <main class="main">
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="imagens/suporte_remoto.jpg" alt="Técnico de suporte remoto resolvendo problemas" class="hero-bg">
+    <div class="hero-content" data-aos="fade-up">
+      <h2 class="text-glow">Suporte Remoto Profissional</h2>
+      <p>Soluções técnicas rápidas e eficazes para resolver problemas informáticos sem necessidade de deslocações. Economize tempo e dinheiro com o nosso serviço especializado.</p>
+      <a href="#contact" class="hero-btn">Solicite Assistência <i class="bi bi-arrow-right ms-2"></i></a>
+    </div>
+  </section>
 
-    <!-- Page Title -->
-    <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/page-title-bg.webp);">
-      <div class="container position-relative">
-        <h1>Blog</h1>
-        <p>Esse dolorum voluptatum ullam est sint nemo et est ipsa porro placeat quibusdam quia assumenda numquam molestias.</p>
-        <nav class="breadcrumbs">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Blog</li>
-          </ol>
-        </nav>
+  <!-- Main Content -->
+  <main class="main">
+    <section class="section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-7" data-aos="fade-up">
+            <h2>Porque escolher o nosso suporte remoto?</h2>
+            <p class="lead">Na InfoSoluções, oferecemos suporte técnico remoto para resolver problemas informáticos de forma rápida e eficiente, eliminando a necessidade de deslocações e minimizando o tempo de inatividade.</p>
+            
+            <ul class="service-list">
+              <li>Diagnóstico e resolução de problemas em tempo real</li>
+              <li>Assistência imediata por técnicos especializados</li>
+              <li>Configuração e otimização de software e sistemas</li>
+              <li>Suporte para redes e conectividade</li>
+              <li>Remoção de vírus e malware remotamente</li>
+              <li>Manutenção preventiva e monitorização</li>
+              <li>Equipa técnica disponível 24/7</li>
+              <li>Soluções personalizadas para empresas e particulares</li>
+            </ul>
+            
+            <div class="mt-4">
+              <p>O nosso serviço de suporte remoto utiliza tecnologia avançada e segura para aceder ao seu dispositivo apenas com a sua autorização explícita, garantindo total privacidade e confidencialidade dos seus dados.</p>
+            </div>
+          </div>
+          <div class="col-lg-5" data-aos="fade-up" data-aos-delay="100">
+            <div class="card" id="contact">
+              <div class="card-body">
+                <h3 class="card-title">Solicite Suporte Agora</h3>
+                <form id="contactForm" action="processar_formulario.php" method="POST">
+                  <div class="mb-3">
+                    <label for="nome" class="form-label text-light mb-1">Nome</label>
+                    <input type="text" class="form-control" id="nome" name="nome" placeholder="Seu nome completo" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="email" class="form-label text-light mb-1">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="seu.email@exemplo.com" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="telefone" class="form-label text-light mb-1">Telefone</label>
+                    <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="912 345 678" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="assunto" class="form-label text-light mb-1">Assunto</label>
+                    <select class="form-control" id="assunto" name="assunto" required>
+                      <option value="">Selecione um assunto</option>
+                      <option value="Problemas de software">Problemas de software</option>
+                      <option value="Problemas de rede">Problemas de rede</option>
+                      <option value="Vírus/malware">Vírus/malware</option>
+                      <option value="Lentidão do sistema">Lentidão do sistema</option>
+                      <option value="Outro">Outro</option>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <label for="descricao" class="form-label text-light mb-1">Descrição do problema</label>
+                    <textarea class="form-control" id="descricao" name="descricao" rows="4" placeholder="Descreva detalhadamente o problema que está enfrentando..." required></textarea>
+                  </div>
+                  <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" id="privacidade" name="privacidade" required>
+                    <label class="form-check-label text-light" for="privacidade">
+                      Concordo com a <a href="politica-privacidade.html" class="text-secondary">Política de Privacidade</a>
+                    </label>
+                  </div>
+                  <button type="submit" class="btn btn-primary w-100">
+                    <i class="bi bi-headset me-2"></i>Solicitar Suporte
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+      <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <h2 class="text-center">Vantagens do Suporte Remoto</h2>
+          <p class="lead mx-auto" style="max-width: 700px;">Economize tempo e dinheiro com soluções rápidas que mantêm seus dispositivos funcionando perfeitamente.</p>
+        </div>
+        
+        <div class="row">
+          <div class="col-md-4" data-aos="fade-up">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="bi bi-speedometer2"></i>
+              </div>
+              <h4 class="feature-title">Resolução Rápida</h4>
+              <p class="feature-text">Solução imediata para a maioria dos problemas técnicos, sem necessidade de esperar por um técnico presencial.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="bi bi-cash-coin"></i>
+              </div>
+              <h4 class="feature-title">Economia</h4>
+              <p class="feature-text">Custos significativamente reduzidos em comparação com serviços técnicos presenciais e deslocações.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="bi bi-shield-check"></i>
+              </div>
+              <h4 class="feature-title">Segurança</h4>
+              <p class="feature-text">Conexão encriptada de ponta a ponta para garantir a proteção dos seus dados.</p>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="bi bi-lock-fill"></i>
+              </div>
+              <h4 class="feature-title">Privacidade Garantida</h4>
+              <p class="feature-text">Garantimos total confidencialidade e proteção dos seus dados durante o suporte remoto.</p>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="bi bi-clock-history"></i>
+              </div>
+              <h4 class="feature-title">Disponibilidade 24/7</h4>
+              <p class="feature-text">Nossa equipe está disponível a qualquer hora para resolver problemas críticos rapidamente.</p>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="500">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="bi bi-gear-fill"></i>
+              </div>
+              <h4 class="feature-title">Manutenção Preventiva</h4>
+              <p class="feature-text">Monitorização contínua para evitar problemas antes que eles aconteçam.</p>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="bi bi-people-fill"></i>
+              </div>
+              <h4 class="feature-title">Equipe Especializada</h4>
+              <p class="feature-text">Técnicos certificados e experientes prontos para atender às suas necessidades.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  
+
+    <!-- Call to Action Section -->
+    <section class="call-to-action section">
+      <div class="container text-center" data-aos="fade-up">
+        <h2>Pronto para resolver seus problemas técnicos?</h2>
+        <p>Entre em contato conosco agora e descubra como podemos ajudar você ou sua empresa.</p>
+        <a href="#contact" class="btn btn-primary">Fale Conosco</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="minimal-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <img src="imagens/Infosoluções_logo_Preto_page-0001-removebg-preview.png" alt="Logo InfoSoluções" class="footer-logo">
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Início</a>
+        <a href="#services">Serviços</a>
+        <a href="blog.html">Blog</a>
+        <a href="#about">Sobre</a>
+        <a href="#contact">Contato</a>
+      </div>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 InfoSoluções. Todos os direitos reservados.</p>
       </div>
     </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
