@@ -610,31 +610,59 @@
             <div class="card" id="contact">
               <div class="card-body">
                 <h3 class="card-title">Solicite uma Proposta</h3>
-                <form>
+                <form action="https://formsubmit.co/ruibulhosa@infosolucoes.pt" method="POST">
+                  <input type="hidden" name="_redirect" value="https://infosolucoes.pt/venda_equipamentos_emp.html">
+
                   <div class="mb-3">
-                    <input type="text" class="form-control" placeholder="Nome" required>
+                
+                    <input type="text" class="form-control" name="name" placeholder="Nome" required>
+                
                   </div>
+                
                   <div class="mb-3">
-                    <input type="email" class="form-control" placeholder="Email" required>
+                
+                    <input type="email" class="form-control" name="email" placeholder="Email" required>
+                
                   </div>
+                
                   <div class="mb-3">
-                    <input type="tel" class="form-control" placeholder="Telefone" required>
+                
+                    <input type="tel" class="form-control" name="phone" placeholder="Telefone" required>
+                
                   </div>
+                
                   <div class="mb-3">
-                    <select class="form-control">
+                
+                    <select class="form-control" name="equipment_type" required>
+                
                       <option value="" selected disabled>Tipo de equipamento</option>
+                
                       <option value="computadores">Computadores</option>
+                
                       <option value="servidores">Servidores</option>
+                
                       <option value="redes">Equipamentos de Rede</option>
+                
                       <option value="impressoras">Impressoras</option>
+                
                       <option value="software">Software</option>
+                
                       <option value="outros">Outros</option>
+                
                     </select>
+                
                   </div>
+                
                   <div class="mb-3">
-                    <textarea class="form-control" rows="3" placeholder="Mensagem" required></textarea>
+                
+                    <textarea class="form-control" name="message" rows="3" placeholder="Mensagem" required></textarea>
+                
                   </div>
-                  <button type="submit" class="btn btn-primary w-100">Solicitar Orçamento</button>
+                
+                  <input type="hidden" name="_redirect" value="https://infosolucoes.pt/venda_equipamentos_emp.html">
+                
+                  <button type="submit" class="btn btn-primary w-100">Enviar</button>
+                
                 </form>
               </div>
             </div>
