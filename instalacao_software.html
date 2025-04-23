@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-PT">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>InfoSoluções </title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <title>Instalação de Software - InfoSoluções</title>
+  <meta name="description" content="Serviços especializados em instalação de software para computadores, servidores e dispositivos empresariais.">
+  <meta name="keywords" content="instalação de software, manutenção, computadores, servidores, InfoSoluções, assistência técnica">
 
   <!-- Favicons -->
   <link href="imagens/simbolo_pagina.png" rel="icon">
@@ -15,7 +15,7 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -24,112 +24,176 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
+  <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-
 </head>
 
 <body class="blog-page">
 
-  <a href="https://api.whatsapp.com/send?phone=912094963&text=Texto%20aqui"
-   target="_blank"
-   style="
-      position: fixed;
-      bottom: 80px;
-      right: 30px;
-      z-index: 9999;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-      animation: pulse 2s infinite;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-   "
-   onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 12px 24px rgba(0,0,0,0.3)'"
-   onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 8px 20px rgba(0, 0, 0, 0.2)'"
->
-  <img src="imagens/WhatsApp.svg.webp" alt="WhatsApp" style="width: 70px; height: 70px;">
-</a>
+  <!-- WhatsApp Button -->
+  <a href="https://api.whatsapp.com/send?phone=912094963&text=Olá, gostaria de mais informações sobre instalação de software."
+     target="_blank"
+     style="
+        position: fixed;
+        bottom: 80px;
+        right: 30px;
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background-color: #25d366;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        animation: pulse 2s infinite;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+     "
+     onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 12px 24px rgba(0,0,0,0.3)'"
+     onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 8px 20px rgba(0, 0, 0, 0.2)'"
+     aria-label="Contactar via WhatsApp"
+  >
+    <img src="imagens/WhatsApp.svg.webp" alt="WhatsApp" style="width: 40px; height: 40px;">
+  </a>
 
-<!-- Animação pulsar -->
-<style>
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
-  }
-  70% {
-    transform: scale(1.05);
-    box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
-  }
-  100% {
-    transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-  }
-}
-</style>
-
+  <!-- Header -->
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container position-relative d-flex align-items-center justify-content-between">
-
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <img src="imagens/Infosoluções_logo_Preto_page-0001-removebg-preview.png" alt="Logo Info-Soluções" class="sitename">
+        <img src="imagens/Infosoluções_logo_Preto_page-0001-removebg-preview.png" alt="Logo InfoSoluções" class="sitename">
       </a>
-      
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#hero" class="active">Início</a></li>
-          <li class="dropdown"><a href="#"><span>Serviços</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <li><a href="index.html" class="active">Início</a></li>
+          <li class="dropdown">
+            <a href="#"><span>Serviços</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li class="dropdown"><a href="#"><span>Particular</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="assistencia_tecnica.html">Assistência técnica </a></li>
-                  <li><a href="reparacao_hardware.html">Reparações de hardware</a></li>
-                  <li><a href="montagem_de_pc.html">Montagem e upgrade de PCs</a></li>
-                  <li><a href="remocao_virus.html">Remoção de vírus</a></li>
-                  <li><a href="instalacao_software.html">Instalação de software</a></li>
-                </ul>
-              </li>
-              <li class="dropdown"><a href="#"><span>Empresarial</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="gestao_infra.html">Gestão de infraestruturas IT </a></li>
-                  <li><a href="gestao_redes.html">Gestão de redes</a></li>
-                  <li><a href="manutencao_servidor.html">Manutenção de servidores</a></li>
-                  <li><a href="suporte_remoto.html">Suporte técnico remoto</a></li>
-                  <li><a href="consultoria_tecn.html">Consultoria tecnológica</a></li>
-                  <li><a href="venda_equipamentos_emp.html">Venda de equipamentos empresariais</a></li>
-                </ul>
-              </li>
+              <li><a href="assistencia_tecnica.html">Assistência Técnica</a></li>
+              <li><a href="reparacao_hardware.html">Reparação de Hardware</a></li>
+              <li><a href="montagem_de_pc.html">Montagem e Upgrade de PCs</a></li>
+              <li><a href="remocao_virus.html">Remoção de Vírus</a></li>
+              <li><a href="instalacao_software.html">Instalação de Software</a></li>
             </ul>
           </li>
-          <li><a href="blog.html">blog</a></li>
-          <li><a href="#about">Sobre</a></li>
-          <li><a href="#contact">Contacto</a></li>
-          
+          <li class="dropdown">
+            <a href="#"><span>Empresarial</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="gestao_infra.html">Gestão de Infraestruturas IT</a></li>
+              <li><a href="gestao_redes.html">Gestão de Redes</a></li>
+              <li><a href="manutencao_servidor.html">Manutenção de Servidores</a></li>
+              <li><a href="suporte_remoto.html">Suporte Técnico Remoto</a></li>
+              <li><a href="consultoria_tecn.html">Consultoria Tecnológica</a></li>
+              <li><a href="venda_equipamentos_emp.html">Venda de Equipamentos Empresariais</a></li>
+            </ul>
+          </li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-
-      <a class="cta-btn" href="tel:912 094 963">Ligue-nos</a>
-
+      <a class="cta-btn" href="tel:912094963">Ligue-nos</a>
     </div>
   </header>
-  <main class="main">
 
+  <main class="main">
     <!-- Page Title -->
     <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/page-title-bg.webp);">
       <div class="container position-relative">
-        <h1>Blog</h1>
-        <p>Esse dolorum voluptatum ullam est sint nemo et est ipsa porro placeat quibusdam quia assumenda numquam molestias.</p>
+        <h1>Instalação de Software</h1>
+        <p>Serviços especializados em instalação de software para computadores, servidores e dispositivos empresariais.</p>
         <nav class="breadcrumbs">
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li class="current">Blog</li>
+            <li class="current">Instalação de Software</li>
           </ol>
         </nav>
       </div>
     </div>
+
+    <!-- Content Section -->
+    <section class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8" data-aos="fade-up">
+            <h2>Por que escolher nossos serviços de instalação de software?</h2>
+            <p class="lead">Na InfoSoluções, garantimos que o software seja instalado corretamente, configurado de acordo com suas necessidades e atualizado para as versões mais recentes.</p>
+            <ul>
+              <li>Instalação de sistemas operacionais (Windows, Linux, macOS)</li>
+              <li>Configuração de software empresarial (ERP, CRM, etc.)</li>
+              <li>Instalação de ferramentas de produtividade (Microsoft Office, Google Workspace)</li>
+              <li>Configuração de software de segurança (antivírus, firewalls)</li>
+              <li>Atualizações e patches de segurança</li>
+              <li>Suporte técnico pós-instalação</li>
+            </ul>
+          </div>
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="card" id="contact">
+              <div class="card-body">
+                <h3 class="card-title">Solicite uma Proposta</h3>
+                <form action="https://formspree.io/f/mblojrzd" method="POST">
+                  <div class="mb-3">
+                    <label for="nome" class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu nome" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Digite seu email" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="mensagem" class="form-label">Mensagem</label>
+                    <textarea class="form-control" id="mensagem" name="mensagem" rows="3" placeholder="Digite sua mensagem" required></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary w-100">Enviar</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="call-to-action section">
+      <div class="container text-center" data-aos="fade-up">
+        <h2>Pronto para otimizar seu ambiente de trabalho?</h2>
+        <p>Entre em contato conosco e descubra como nossas soluções podem transformar sua experiência com software.</p>
+        <a href="#contact" class="btn btn-primary">Fale Conosco</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="minimal-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <img src="imagens/Infosoluções_logo_Preto_page-0001-removebg-preview.png" alt="Logo InfoSoluções" class="footer-logo">
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Início</a>
+        <a href="#services">Serviços</a>
+        <a href="blog.html">Blog</a>
+        <a href="#about">Sobre</a>
+        <a href="#contact">Contato</a>
+      </div>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 InfoSoluções. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -577,7 +577,7 @@
 
   <!-- Hero Section -->
   <section class="hero">
-    <img src="imagens/hero.png" alt="Imagem Hero" class="hero-bg">
+    <img src="imagens/Equipamentos empresariais.jpg" alt="Imagem Hero" class="hero-bg">
     <div class="hero-content" data-aos="fade-up">
       <h2 class="text-glow">Venda de Equipamentos Empresariais</h2>
       <p>Soluções completas em tecnologia para impulsionar a produtividade e eficiência do seu negócio.</p>
@@ -610,59 +610,36 @@
             <div class="card" id="contact">
               <div class="card-body">
                 <h3 class="card-title">Solicite uma Proposta</h3>
-                <form action="https://formsubmit.co/ruibulhosa@infosolucoes.pt" method="POST">
-                  <input type="hidden" name="_redirect" value="https://infosolucoes.pt/venda_equipamentos_emp.html">
-
+                <form id="meuFormulario">
                   <div class="mb-3">
-                
                     <input type="text" class="form-control" name="name" placeholder="Nome" required>
-                
                   </div>
                 
                   <div class="mb-3">
-                
                     <input type="email" class="form-control" name="email" placeholder="Email" required>
-                
                   </div>
-                
+              
                   <div class="mb-3">
-                
                     <input type="tel" class="form-control" name="phone" placeholder="Telefone" required>
-                
                   </div>
                 
                   <div class="mb-3">
-                
                     <select class="form-control" name="equipment_type" required>
-                
                       <option value="" selected disabled>Tipo de equipamento</option>
-                
                       <option value="computadores">Computadores</option>
-                
                       <option value="servidores">Servidores</option>
-                
                       <option value="redes">Equipamentos de Rede</option>
-                
                       <option value="impressoras">Impressoras</option>
-                
                       <option value="software">Software</option>
-                
                       <option value="outros">Outros</option>
-                
                     </select>
-                
                   </div>
                 
                   <div class="mb-3">
-                
                     <textarea class="form-control" name="message" rows="3" placeholder="Mensagem" required></textarea>
-                
                   </div>
-                
-                  <input type="hidden" name="_redirect" value="https://infosolucoes.pt/venda_equipamentos_emp.html">
                 
                   <button type="submit" class="btn btn-primary w-100">Enviar</button>
-                
                 </form>
               </div>
             </div>
@@ -670,6 +647,31 @@
         </div>
       </div>
     </section>
+    <script>
+      document.getElementById('meuFormulario').addEventListener('submit', function (e) {
+        e.preventDefault();
+    
+        const form = e.target;
+        const data = new FormData(form);
+    
+        fetch('https://script.google.com/macros/s/AKfycbxLCWz0vGF3xxoSlVaIQDaw6_qe7hCc20_IVZ7Ie3SPPwU8BRU6b3xHDMuexp_NOhWtoA/exec', {
+          method: 'POST',
+          body: data
+        })
+        .then(response => {
+          if (response.ok) {
+            alert("Formulário enviado com sucesso!");
+            form.reset(); // limpa o formulário
+          } else {
+            alert("Ocorreu um erro ao enviar o formulário.");
+          }
+        })
+        .catch(error => {
+          alert("Erro na conexão. Tente novamente.");
+          console.error("Erro:", error);
+        });
+      });
+    </script>
 
     <!-- Featured Equipment Section -->
     <section class="featured-equipment">
