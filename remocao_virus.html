@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-PT">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>InfoSoluções </title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <title>Remoção de Vírus - InfoSoluções</title>
+  <meta name="description" content="Serviços especializados em remoção de vírus e malware para proteger seus dispositivos e dados.">
+  <meta name="keywords" content="remoção de vírus, malware, segurança informática, InfoSoluções, proteção de dados">
 
   <!-- Favicons -->
   <link href="imagens/simbolo_pagina.png" rel="icon">
@@ -15,7 +15,7 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -24,53 +24,467 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
+  <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-</head>
+  <!-- Custom CSS -->
+  <style>
+    :root {
+      --dark-color: #0a0a0a;
+      --darker-color: #000000;
+      --primary-color: #e8d8b8; /* Dourado principal */
+      --accent-color: #d4af37; /* Dourado mais intenso para destaques */
+      --default-color: #ffffff; /* Branco para texto */
+      --text-muted: #cccccc;
+    }
 
-<body class="blog-page">
+    body {
+      background-color: var(--dark-color);
+      color: var(--default-color);
+      font-family: 'Poppins', sans-serif;
+    }
 
-  <a href="https://api.whatsapp.com/send?phone=912094963&text=Texto%20aqui"
-   target="_blank"
-   style="
-      position: fixed;
-      bottom: 80px;
-      right: 30px;
-      z-index: 9999;
+    .hero {
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
+      text-align: center;
+      overflow: hidden;
+      background: var(--darker-color);
+    }
+
+    .hero img.hero-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+      opacity: 0.7;
+      filter: brightness(0.7);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.2) 100%);
+      z-index: 2;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      max-width: 800px;
+      padding: 20px;
+      color: var(--default-color);
+      animation: fadeInUp 1s ease-out;
+    }
+
+    .hero-content h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      font-weight: 700;
+      margin-bottom: 20px;
+      text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+      color: var(--primary-color);
+    }
+
+    .hero-content p {
+      font-size: clamp(1rem, 2vw, 1.3rem);
+      line-height: 1.8;
+      margin-bottom: 30px;
+      color: var(--default-color);
+    }
+
+    .hero-btn {
+      display: inline-block;
+      padding: 15px 30px;
+      background: transparent;
+      color: var(--primary-color);
+      border: 2px solid var(--primary-color);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      text-transform: uppercase;
+      transition: all 0.4s ease;
+    }
+
+    .hero-btn:hover {
+      background: var(--primary-color);
+      color: var(--dark-color);
+    }
+
+    .section {
+      background: linear-gradient(to bottom, var(--darker-color), var(--dark-color));
+      color: var(--primary-color);
+      padding: 80px 0;
+    }
+
+    .section-title {
+      color: var(--primary-color);
+      margin-bottom: 2.5rem;
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 3px;
+      background: var(--accent-color);
+      margin: 15px auto;
+    }
+
+    .service-list {
+      padding-left: 0;
+    }
+
+    .service-list li {
+      position: relative;
+      padding-left: 30px;
+      margin-bottom: 15px;
+      list-style: none;
+      color: var(--default-color);
+      font-size: 1.1rem;
+    }
+
+    .service-list li::before {
+      content: "\f00c";
+      font-family: bootstrap-icons;
+      position: absolute;
+      left: 0;
+      top: 2px;
+      color: var(--accent-color);
+      font-size: 1.2rem;
+    }
+
+    .feature-box {
+      background: rgba(10, 10, 10, 0.7);
+      border: 1px solid rgba(232, 216, 184, 0.2);
+      padding: 30px;
+      border-radius: 5px;
+      height: 100%;
+      transition: all 0.3s ease;
+    }
+
+    .feature-box:hover {
+      border-color: var(--accent-color);
+      transform: translateY(-5px);
+    }
+
+    .feature-icon {
+      font-size: 2.5rem;
+      color: var(--accent-color);
+      margin-bottom: 20px;
+    }
+
+    .feature-box h3 {
+      color: var(--primary-color);
+      font-family: 'Raleway', sans-serif;
+      margin-bottom: 15px;
+    }
+
+    .feature-box p {
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    .card {
+      background: rgba(10, 10, 10, 0.8);
+      border: 1px solid var(--primary-color);
+      color: var(--default-color);
+      border-radius: 5px;
+    }
+
+    .card-title {
+      color: var(--primary-color);
+      font-family: 'Raleway', sans-serif;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    /* Define a cor padrão para o texto no formulário */
+    .form-control {
+      background-color: rgba(255, 255, 255, 0.1); /* Fundo transparente */
+      border: 1px solid var(--primary-color); /* Borda */
+      color: rgba(232, 216, 184, 0.7); /* Cor padrão do texto */
+      padding: 12px 15px;
+      margin-bottom: 20px;
+      transition: all 0.3s;
+    }
+
+    /* Placeholder com a mesma cor padrão */
+    .form-control::placeholder {
+      color: rgba(232, 216, 184, 0.7);
+    }
+
+    /* Quando o campo for focado, o texto ficará preto */
+    .form-control:focus {
+      background-color: rgba(255, 255, 255, 0.2); /* Fundo ao focar */
+      border-color: var(--accent-color); /* Cor da borda ao focar */
+      color: rgba(0, 0, 0, 0.7); /* Texto preto ao focar */
+      box-shadow: 0 0 0 0.25rem rgba(212, 175, 55, 0.25);
+    }
+
+    /* Estilo específico para o campo de seleção */
+    select.form-control {
+      color: rgba(232, 216, 184, 0.7); /* Texto preto no campo de seleção */
+    }
+
+    .btn-primary {
+      background-color: var(--primary-color);
+      border-color: var(--primary-color);
+      color: rgba(0, 0, 0, 0.7);
+      padding: 12px 25px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.3s;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--accent-color);
+      border-color: var(--accent-color);
+      transform: translateY(-2px);
+    }
+
+    .process-step {
+      position: relative;
+      padding-left: 80px;
+      margin-bottom: 40px;
+    }
+
+    .step-number {
+      position: absolute;
+      left: 0;
+      top: 0;
       width: 60px;
       height: 60px;
+      background: var(--darker-color);
+      border: 2px solid var(--accent-color);
+      color: var(--accent-color);
       border-radius: 50%;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-      animation: pulse 2s infinite;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-   "
-   onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 12px 24px rgba(0,0,0,0.3)'"
-   onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 8px 20px rgba(0, 0, 0, 0.2)'"
->
-  <img src="imagens/WhatsApp.svg.webp" alt="WhatsApp" style="width: 70px; height: 70px;">
-</a>
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      font-weight: bold;
+      font-family: 'Playfair Display', serif;
+    }
 
-<!-- Animação pulsar -->
-<style>
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
-  }
-  70% {
-    transform: scale(1.05);
-    box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
-  }
-  100% {
-    transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-  }
-}
-</style>
+    .faq-item {
+      margin-bottom: 20px;
+      border: 1px solid rgba(232, 216, 184, 0.2);
+      border-radius: 5px;
+      overflow: hidden;
+    }
 
+    .faq-question {
+      background: rgba(10, 10, 10, 0.7);
+      padding: 15px 20px;
+      color: var(--primary-color);
+      font-weight: 600;
+      cursor: pointer;
+      position: relative;
+      transition: all 0.3s;
+    }
+
+    .faq-question:hover {
+      background: rgba(10, 10, 10, 0.9);
+    }
+
+    .faq-question::after {
+      content: "\f282";
+      font-family: bootstrap-icons;
+      position: absolute;
+      right: 20px;
+      top: 15px;
+      transition: all 0.3s;
+    }
+
+    .faq-question.collapsed::after {
+      content: "\f287";
+    }
+
+    .faq-answer {
+      padding: 20px;
+      background: rgba(20, 20, 20, 0.5);
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    .minimal-footer {
+      background: var(--darker-color);
+      color: var(--primary-color);
+      padding: 3rem 0 1.5rem;
+      border-top: 1px solid rgba(232, 216, 184, 0.2);
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+
+    .footer-logo {
+      height: 60px;
+      margin-bottom: 20px;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+
+    .footer-links a {
+      color: var(--primary-color);
+      text-decoration: none;
+      transition: color 0.3s;
+      margin: 0 15px;
+      font-size: 1rem;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent-color);
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    .social-icons a {
+      color: var(--primary-color);
+      transition: color 0.3s;
+      font-size: 1.5rem;
+      margin: 0 15px;
+    }
+
+    .social-icons a:hover {
+      color: var(--accent-color);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(232, 216, 184, 0.1);
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    #scroll-top {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: var(--primary-color);
+      color: var(--dark-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      text-decoration: none;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s;
+      z-index: 999;
+    }
+
+    #scroll-top.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    #scroll-top:hover {
+      background: var(--accent-color);
+      transform: translateY(-3px);
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      .hero-content h2 {
+        font-size: 2.2rem;
+      }
+      
+      .process-step {
+        padding-left: 60px;
+      }
+      
+      .step-number {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+      }
+      
+      .footer-links a {
+        margin: 0 10px;
+      }
+    }
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+      }
+      70% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+      }
+    }
+
+  </style>
+</head>
+
+<body class="blog-page">
+  <a href="https://api.whatsapp.com/send?phone=912094963&text=Olá, gostaria de mais informações sobre suporte remoto."
+     target="_blank"
+     style="
+        position: fixed;
+        bottom: 100px;
+        right: 30px;
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: #25d366;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        animation: pulse 2s infinite;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+     "
+     onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 12px 24px rgba(0,0,0,0.3)'"
+     onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 8px 20px rgba(0, 0, 0, 0.2)'"
+     aria-label="Contactar via WhatsApp"
+  >
+    <img src="imagens/WhatsApp.svg.webp" alt="WhatsApp" style="width: 35px; height: 35px;">
+  </a>
+
+  <!-- Header -->
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container position-relative d-flex align-items-center justify-content-between">
 
@@ -82,7 +496,7 @@
       
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#hero" class="active">Início</a></li>
+          <li><a href="index.html" class="active">Início</a></li>
           <li class="dropdown"><a href="#"><span>Serviços</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li class="dropdown"><a href="#"><span>Particular</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
@@ -118,18 +532,295 @@
 
     </div>
   </header>
-  <main class="main">
 
-    <!-- Page Title -->
-    <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/page-title-bg.webp);">
-      <div class="container position-relative">
-        <h1>Blog</h1>
-        <p>Esse dolorum voluptatum ullam est sint nemo et est ipsa porro placeat quibusdam quia assumenda numquam molestias.</p>
-        <nav class="breadcrumbs">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Blog</li>
-          </ol>
-        </nav>
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="imagens/remocaovirus.jpg" alt="Imagem de remoção de vírus" class="hero-bg">
+    <div class="hero-content" data-aos="fade-up">
+      <h2 class="text-glow">Remoção de Vírus e Malware</h2>
+      <p>Proteja seus dispositivos e dados com nossos serviços especializados em remoção de vírus e malware. Atendimento rápido e eficiente para resolver problemas de segurança digital.</p>
+      <a href="#contact" class="hero-btn">Solicite Assistência <i class="bi bi-arrow-right ms-2"></i></a>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="main">
+    <!-- Serviços Section -->
+    <section class="section" id="services">
+      <div class="container">
+        <h2 class="section-title">Nossos Serviços de Remoção de Vírus</h2>
+        <div class="row">
+          <div class="col-lg-4 mb-4" data-aos="fade-up">
+            <div class="feature-box">
+              <div class="feature-icon">
+                <i class="bi bi-shield-lock"></i>
+              </div>
+              <h3>Diagnóstico Completo</h3>
+              <p>Análise profunda do seu sistema para identificar todos os tipos de malware, vírus, spyware e outras ameaças digitais que possam estar comprometendo seu dispositivo.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="feature-box">
+              <div class="feature-icon">
+                <i class="bi bi-bug"></i>
+              </div>
+              <h3>Remoção Profissional</h3>
+              <p>Eliminação segura e completa de todas as ameaças identificadas, sem danificar seus arquivos pessoais ou o sistema operacional do seu dispositivo.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="feature-box">
+              <div class="feature-icon">
+                <i class="bi bi-shield-check"></i>
+              </div>
+              <h3>Proteção Preventiva</h3>
+              <p>Instalação e configuração de software de segurança premium para proteger seu dispositivo contra futuras infecções e ataques cibernéticos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Processo Section -->
+    <section class="section" style="background: var(--darker-color);">
+      <div class="container">
+        <h2 class="section-title">Como Funciona Nosso Processo</h2>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="process-step">
+              <div class="step-number">1</div>
+              <h3>Diagnóstico Inicial</h3>
+              <p>Realizamos uma análise completa do seu sistema para identificar o tipo e a extensão da infecção por malware. Usamos ferramentas profissionais para detectar até as ameaças mais sofisticadas.</p>
+            </div>
+            <div class="process-step">
+              <div class="step-number">2</div>
+              <h3>Remoção de Vírus</h3>
+              <p>Executamos a limpeza do sistema, removendo todos os arquivos maliciosos, registros infectados e quaisquer outros componentes comprometidos que possam representar risco à sua segurança.</p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="process-step">
+              <div class="step-number">3</div>
+              <h3>Recuperação de Dados</h3>
+              <p>Caso seus arquivos tenham sido danificados ou criptografados por ransomware, tentamos recuperar o máximo possível de dados importantes utilizando técnicas profissionais.</p>
+            </div>
+            <div class="process-step">
+              <div class="step-number">4</div>
+              <h3>Proteção Final</h3>
+              <p>Instalamos e configuramos soluções de segurança robustas para prevenir futuras infecções, além de fornecer orientações personalizadas sobre práticas seguras de navegação.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- FAQ Section -->
+    <section class="section" style="background: var(--darker-color);">
+      <div class="container">
+        <h2 class="section-title">Perguntas Frequentes</h2>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="faq-item">
+              <div class="faq-question" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true">
+                Quais são os sinais de que meu computador está infectado?
+              </div>
+              <div id="faq1" class="collapse show faq-answer">
+                Os sinais mais comuns incluem: computador lento, pop-ups indesejados, programas que abrem sozinhos, navegador redirecionando para sites desconhecidos, arquivos desaparecidos ou corrompidos, mensagens de erro incomuns e aumento inexplicável no uso da rede.
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question collapsed" data-bs-toggle="collapse" data-bs-target="#faq2">
+                Quanto tempo leva para remover um vírus?
+              </div>
+              <div id="faq2" class="collapse faq-answer">
+                O tempo varia conforme o tipo e gravidade da infecção. Casos simples podem ser resolvidos em 1-2 horas, enquanto infecções complexas (como ransomware) podem levar até 24 horas. Oferecemos um diagnóstico inicial gratuito para estimar o tempo necessário.
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question collapsed" data-bs-toggle="collapse" data-bs-target="#faq3">
+                Vocês conseguem recuperar arquivos perdidos por vírus?
+              </div>
+              <div id="faq3" class="collapse faq-answer">
+                Em muitos casos sim, especialmente se os arquivos foram deletados recentemente. Para arquivos criptografados por ransomware, a recuperação depende do tipo específico de vírus. Temos uma taxa de sucesso de aproximadamente 85% na recuperação de dados.
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question collapsed" data-bs-toggle="collapse" data-bs-target="#faq4">
+                Como posso prevenir futuras infecções?
+              </div>
+              <div id="faq4" class="collapse faq-answer">
+                Recomendamos: manter todos os softwares atualizados, usar um bom antivírus, evitar clicar em links suspeitos, não baixar arquivos de fontes desconhecidas, fazer backups regulares e utilizar senhas fortes. Após nosso serviço, fornecemos um guia personalizado de boas práticas.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contato Section -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-up">
+            <h2 class="section-title">Entre em Contato</h2>
+            <p class="lead">Estamos prontos para ajudar a proteger seus dispositivos. Preencha o formulário ou utilize nossos outros canais de contato.</p>
+            
+            <div class="mt-5">
+              <div class="d-flex align-items-start mb-4">
+                <div class="me-3">
+                  <i class="bi bi-geo-alt-fill" style="font-size: 1.5rem; color: var(--accent-color);"></i>
+                </div>
+                <div>
+                  <h5>Endereço</h5>
+                  <p>R. do Dourado 297 1º andar, Sala 4, 3700-172<br>São João da Madeira, Portugal</p>
+                </div>
+              </div>
+              
+              <div class="d-flex align-items-start mb-4">
+                <div class="me-3">
+                  <i class="bi bi-telephone-fill" style="font-size: 1.5rem; color: var(--accent-color);"></i>
+                </div>
+                <div>
+                  <h5>Telefone</h5>
+                  <p class="mb-0">+351 912 094 963<br>Seg-Sex: 9:30h-18:30h</p>
+                </div>
+              </div>
+              
+              <div class="d-flex align-items-start">
+                <div class="me-3">
+                  <i class="bi bi-envelope-fill" style="font-size: 1.5rem; color: var(--accent-color);"></i>
+                </div>
+                <div>
+                  <h5>Email</h5>
+                  <p class="mb-0">ruibulhosa@infosolucoes.pt<br>Resposta em até 2 horas úteis</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title">Solicite Suporte Agora</h3>
+                <form action="https://script.google.com/macros/s/AKfycbzv844pWsFW_eSGhmDQ_7p1iD8vBEUV6XeBOru0h3vGObBag6Hse6modweZx3i0BvOgIw/exec" method="POST" id="form-servico">
+                  <div class="mb-3">
+                    <input type="text" class="form-control" id="nome" name="nome" placeholder="Seu nome completo" required>
+                  </div>
+                  <div class="mb-3">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Seu email" required>
+                  </div>
+                  <div class="mb-3">
+                    <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="Seu telefone">
+                  </div>
+                  <div class="mb-3">
+                    <select class="form-control" id="servico" name="servico" required>
+                      <option value="" disabled selected>Selecione o serviço</option>
+                      <option value="Remoção de vírus">Remoção de vírus</option>
+                      <option value="Recuperação de dados">Recuperação de dados</option>
+                      <option value="Proteção preventiva">Proteção preventiva</option>
+                      <option value="Outro">Outro</option>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <textarea class="form-control" id="mensagem" name="mensagem" rows="4" placeholder="Descreva o problema que está enfrentando" required></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary w-100">Enviar Solicitação</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      document.getElementById("form-servico").addEventListener("submit", function(e) {
+        e.preventDefault();
+        const form = e.target;
+      
+        fetch(form.action, {
+          method: "POST",
+          body: new FormData(form)
+        })
+        .then(() => {
+          alert("Solicitação enviada com sucesso!");
+          form.reset();
+        })
+        .catch(() => {
+          alert("Erro ao enviar. Tente novamente.");
+        });
+      });
+      </script>
+      
+  </main>
+
+  <!-- Footer -->
+  <footer class="minimal-footer">
+    <div class="footer-container">
+      <div class="footer-brand text-center">
+        <img src="imagens/Infosoluções_logo_Preto_page-0001-removebg-preview.png" alt="Logo InfoSoluções" class="footer-logo">
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Início</a>
+        <a href="#services">Serviços</a>
+        <a href="blog.html">Blog</a>
+        <a href="#about">Sobre</a>
+        <a href="#contact">Contato</a>
+      </div>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 InfoSoluções. Todos os direitos reservados. | <a href="politica-privacidade.html" style="color: var(--primary-color);">Política de Privacidade</a></p>
       </div>
     </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Custom JS -->
+  <script>
+    // Scroll top button
+    window.addEventListener('scroll', function() {
+      var scrollTop = document.getElementById('scroll-top');
+      if (window.pageYOffset > 300) {
+        scrollTop.classList.add('active');
+      } else {
+        scrollTop.classList.remove('active');
+      }
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Initialize AOS animation
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true
+    });
+  </script>
+</body>
+
+</html>

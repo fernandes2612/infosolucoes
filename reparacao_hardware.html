@@ -548,67 +548,7 @@
       </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="testimonials-section py-5" style="background-color: #1a1a1a;">
-      <div class="container">
-        <div class="section-title text-center">
-          <h2 style="color: #b29146;">O Que Dizem Nossos Clientes</h2>
-        </div>
-        
-        <div class="row g-4">
-          <div class="col-md-4" data-aos="fade-up">
-            <div class="testimonial-card p-4">
-              <div class="rating mb-3" style="color: #b29146;">
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-              </div>
-              <p>"Recuperaram todos os dados do meu servidor após uma falha crítica no RAID. Profissionais altamente qualificados e transparentes no processo."</p>
-              <div class="client-info mt-3">
-                <strong style="color: #b29146;">Carlos M.</strong>
-                <span>Empresa TechSolutions</span>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="testimonial-card p-4">
-              <div class="rating mb-3" style="color: #b29146;">
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-              </div>
-              <p>"Repararam minha placa gráfica de última geração que outras lojas disseram ser impossível. O desempenho está como novo!"</p>
-              <div class="client-info mt-3">
-                <strong style="color: #b29146;">Ana R.</strong>
-                <span>Designer Gráfica</span>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="testimonial-card p-4">
-              <div class="rating mb-3" style="color: #b29146;">
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-half"></i>
-              </div>
-              <p>"Contrato de manutenção para nossa empresa há 2 anos. Reduzimos em 80% as falhas nos nossos equipamentos."</p>
-              <div class="client-info mt-3">
-                <strong style="color: #b29146;">Miguel S.</strong>
-                <span>Diretor de TI, FinCorp</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+   
 
     <!-- Call to Action Section -->
     <section id="contact" class="cta-section py-5" style="background-color: #0a0a0a;">
@@ -618,19 +558,19 @@
         
         <div class="row justify-content-center mt-4">
           <div class="col-md-8">
-            <form class="contact-form">
+            <form class="contact-form" action="https://script.google.com/macros/s/AKfycby73Q-38lytBxmLdvcDLc-1sAhLkgwqkVYPhKdQnMt-p7Q0rMYnci5H5a9nwh0v33Sn/exec" method="POST">
               <div class="row g-3">
                 <div class="col-md-6">
-                  <input type="text" class="form-control" placeholder="Seu Nome" required>
+                  <input type="text" name="nome" class="form-control" placeholder="Seu Nome" required>
                 </div>
                 <div class="col-md-6">
-                  <input type="email" class="form-control" placeholder="Seu Email" required>
+                  <input type="email" name="email" class="form-control" placeholder="Seu Email" required>
                 </div>
                 <div class="col-12">
-                  <input type="text" class="form-control" placeholder="Assunto">
+                  <input type="text" name="assunto" class="form-control" placeholder="Assunto">
                 </div>
                 <div class="col-12">
-                  <textarea class="form-control" rows="4" placeholder="Descreva o problema ou serviço necessário"></textarea>
+                  <textarea name="mensagem" class="form-control" rows="4" placeholder="Descreva o problema ou serviço necessário"></textarea>
                 </div>
                 <div class="col-12">
                   <button type="submit" class="btn btn-primary w-100">Enviar Mensagem</button>
@@ -646,27 +586,45 @@
               <div class="info-item">
                 <i class="bi bi-geo-alt" style="color: #b29146; font-size: 1.5rem;"></i>
                 <h5 style="color: #b29146;">Localização</h5>
-                <p>Rua da Tecnologia, 123<br>Lisboa, Portugal</p>
+                <p>R. do Dourado 297 1º andar, Sala 4, 3700-172<br>São João da Madeira, Portugal</p>
               </div>
             </div>
             <div class="col-md-4">
               <div class="info-item">
                 <i class="bi bi-telephone" style="color: #b29146; font-size: 1.5rem;"></i>
                 <h5 style="color: #b29146;">Telefone</h5>
-                <p>+351 912 094 963<br>Seg-Sex: 9h-18h</p>
+                <p>+351 912 094 963<br>Seg-Sex: 9:30h-18:30h</p>
               </div>
             </div>
             <div class="col-md-4">
               <div class="info-item">
                 <i class="bi bi-envelope" style="color: #b29146; font-size: 1.5rem;"></i>
                 <h5 style="color: #b29146;">Email</h5>
-                <p>info@infosolucoes.pt<br>Suporte técnico 24/7</p>
+                <p>ruibulhosa@infosolucoes.pt<br>Suporte técnico 24/7</p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+    <script>
+      document.querySelector(".contact-form").addEventListener("submit", function(e) {
+        e.preventDefault();
+        const form = e.target;
+      
+        fetch(form.action, {
+          method: "POST",
+          body: new FormData(form)
+        })
+        .then(() => {
+          alert("Mensagem enviada com sucesso!");
+          form.reset();
+        })
+        .catch(() => {
+          alert("Erro ao enviar. Tente novamente.");
+        });
+      });
+      </script>
   </main>
 
   <!-- Footer -->

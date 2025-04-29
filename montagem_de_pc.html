@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-PT">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>InfoSoluções </title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <title>Montagem e Upgrade de PCs - InfoSoluções</title>
+  <meta name="description" content="Serviços especializados em montagem e upgrade de PCs personalizados para atender às suas necessidades.">
+  <meta name="keywords" content="montagem de PCs, upgrade de hardware, InfoSoluções, computadores personalizados, assistência técnica">
 
   <!-- Favicons -->
   <link href="imagens/simbolo_pagina.png" rel="icon">
@@ -15,7 +15,7 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -24,53 +24,504 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
+  <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-</head>
+  <!-- Custom CSS -->
+  <style>
+    :root {
+      --dark-color: #0a0a0a;
+      --darker-color: #000000;
+      --primary-color: #e8d8b8; /* Dourado principal */
+      --accent-color: #d4af37; /* Dourado mais intenso para destaques */
+      --default-color: #ffffff; /* Branco para texto */
+      --text-muted: #cccccc;
+    }
 
-<body class="blog-page">
+    body {
+      background-color: var(--dark-color);
+      color: var(--default-color);
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
 
-  <a href="https://api.whatsapp.com/send?phone=912094963&text=Texto%20aqui"
-   target="_blank"
-   style="
-      position: fixed;
-      bottom: 80px;
-      right: 30px;
-      z-index: 9999;
+    /* Hero Section */
+    .hero {
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
+      text-align: center;
+      overflow: hidden;
+      background: var(--darker-color);
+    }
+
+    .hero img.hero-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+      opacity: 0.7;
+      filter: brightness(0.7);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.2) 100%);
+      z-index: 2;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      max-width: 800px;
+      padding: 20px;
+      color: var(--default-color);
+      animation: fadeInUp 1s ease-out;
+    }
+
+    .hero-content h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      font-weight: 700;
+      margin-bottom: 20px;
+      text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+      color: var(--primary-color);
+    }
+
+    .hero-content p {
+      font-size: clamp(1rem, 2vw, 1.3rem);
+      line-height: 1.8;
+      margin-bottom: 30px;
+      color: var(--default-color);
+    }
+
+    .hero-btn {
+      display: inline-block;
+      padding: 15px 30px;
+      background: transparent;
+      color: var(--primary-color);
+      border: 2px solid var(--primary-color);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      text-transform: uppercase;
+      transition: all 0.4s ease;
+    }
+
+    .hero-btn:hover {
+      background: var(--primary-color);
+      color: var(--dark-color);
+    }
+
+    /* Sections */
+    .section {
+      padding: 100px 0;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.5s ease;
+    }
+
+    .section-dark {
+      background: linear-gradient(to bottom, var(--darker-color), var(--dark-color));
+      color: var(--primary-color);
+    }
+
+    .section-light {
+      background: linear-gradient(to bottom, #111111, #0a0a0a);
+      color: var(--default-color);
+    }
+
+    .section-title {
+      color: var(--primary-color);
+      margin-bottom: 2.5rem;
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 3px;
+      background: var(--accent-color);
+      margin: 15px auto;
+    }
+
+    .section-subtitle {
+      color: var(--text-muted);
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 50px;
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+
+    /* Service List */
+    .service-list {
+      padding-left: 0;
+    }
+
+    .service-list li {
+      position: relative;
+      padding-left: 30px;
+      margin-bottom: 15px;
+      list-style: none;
+      color: var(--default-color);
+      font-size: 1.1rem;
+    }
+
+    .service-list li::before {
+      content: "\f00c";
+      font-family: bootstrap-icons;
+      position: absolute;
+      left: 0;
+      top: 2px;
+      color: var(--accent-color);
+      font-size: 1.2rem;
+    }
+
+    /* Feature Cards */
+    .feature-card {
+      background: rgba(10, 10, 10, 0.7);
+      border: 1px solid rgba(232, 216, 184, 0.2);
+      padding: 30px;
+      border-radius: 5px;
+      height: 100%;
+      transition: all 0.3s ease;
+      margin-bottom: 30px;
+    }
+
+    .feature-card:hover {
+      border-color: var(--accent-color);
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .feature-icon {
+      font-size: 2.5rem;
+      color: var(--accent-color);
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .feature-title {
+      color: var(--primary-color);
+      font-family: 'Raleway', sans-serif;
+      margin-bottom: 15px;
+      text-align: center;
+      font-size: 1.4rem;
+    }
+
+    .feature-text {
+      color: var(--text-muted);
+      line-height: 1.7;
+      text-align: center;
+    }
+
+    /* Process Steps */
+    .process-step {
+      position: relative;
+      padding-left: 80px;
+      margin-bottom: 40px;
+    }
+
+    .step-number {
+      position: absolute;
+      left: 0;
+      top: 0;
       width: 60px;
       height: 60px;
+      background: var(--darker-color);
+      border: 2px solid var(--accent-color);
+      color: var(--accent-color);
       border-radius: 50%;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-      animation: pulse 2s infinite;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-   "
-   onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 12px 24px rgba(0,0,0,0.3)'"
-   onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 8px 20px rgba(0, 0, 0, 0.2)'"
->
-  <img src="imagens/WhatsApp.svg.webp" alt="WhatsApp" style="width: 70px; height: 70px;">
-</a>
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      font-weight: bold;
+      font-family: 'Playfair Display', serif;
+    }
 
-<!-- Animação pulsar -->
-<style>
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
-  }
-  70% {
-    transform: scale(1.05);
-    box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
-  }
-  100% {
-    transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-  }
-}
-</style>
+    /* Card & Form */
+    .card {
+      background: rgba(10, 10, 10, 0.8);
+      border: 1px solid var(--primary-color);
+      color: var(--default-color);
+      border-radius: 5px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
 
+    .card-title {
+      color: var(--primary-color);
+      font-family: 'Raleway', sans-serif;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      font-size: 1.8rem;
+    }
+
+    .form-control {
+      background-color: rgba(255, 255, 255, 0.1); /* Fundo transparente */
+      border: 1px solid var(--primary-color); /* Borda */
+       color: rgba(232, 216, 184, 0.7);/* Cor da letra preta */
+      padding: 12px 15px;
+      margin-bottom: 20px;
+      transition: all 0.3s;
+    }
+
+    .form-control::placeholder {
+      color: rgba(232, 216, 184, 0.7); /* Cor do placeholder em preto claro */
+    }
+
+    .form-control:focus {
+      background-color: rgba(255, 255, 255, 0.2); /* Fundo ao focar */
+      border-color: var(--accent-color); /* Cor da borda ao focar */
+      color: #000; /* Cor da letra preta ao focar */
+      box-shadow: 0 0 0 0.25rem rgba(212, 175, 55, 0.25);
+    }
+
+    .btn-primary {
+      background-color: var(--primary-color);
+      border-color: var(--primary-color);
+      color: var(--dark-color);
+      padding: 12px 25px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.3s;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--accent-color);
+      border-color: var(--accent-color);
+      transform: translateY(-2px);
+    }
+
+    /* Call to Action */
+    .call-to-action {
+      text-align: center;
+      padding: 80px 0;
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('imagens/pc-components.jpg') center/cover no-repeat;
+    }
+
+    .call-to-action h2 {
+      color: var(--primary-color);
+      margin-bottom: 20px;
+      font-size: 2.5rem;
+    }
+
+    .call-to-action p {
+      color: var(--default-color);
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Gallery */
+    .gallery-item {
+      margin-bottom: 30px;
+      overflow: hidden;
+      border-radius: 5px;
+      border: 1px solid rgba(232, 216, 184, 0.2);
+      transition: all 0.3s;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-5px);
+      border-color: var(--accent-color);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      transition: transform 0.5s;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+    /* Footer */
+    .minimal-footer {
+      background: var(--darker-color);
+      color: var(--primary-color);
+      padding: 3rem 0 1.5rem;
+      border-top: 1px solid rgba(232, 216, 184, 0.2);
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+
+    .footer-logo {
+      height: 60px;
+      margin-bottom: 20px;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+
+    .footer-links a {
+      color: var(--primary-color);
+      text-decoration: none;
+      transition: color 0.3s;
+      margin: 0 15px;
+      font-size: 1rem;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent-color);
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    .social-icons a {
+      color: var(--primary-color);
+      transition: color 0.3s;
+      font-size: 1.5rem;
+      margin: 0 15px;
+    }
+
+    .social-icons a:hover {
+      color: var(--accent-color);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(232, 216, 184, 0.1);
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    /* Scroll Top */
+    #scroll-top {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: var(--primary-color);
+      color: var(--dark-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      text-decoration: none;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s;
+      z-index: 999;
+    }
+
+    #scroll-top.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    #scroll-top:hover {
+      background: var(--accent-color);
+      transform: translateY(-3px);
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      .hero-content h2 {
+        font-size: 2.2rem;
+      }
+      
+      .process-step {
+        padding-left: 60px;
+      }
+      
+      .step-number {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+      }
+      
+      .footer-links a {
+        margin: 0 10px;
+      }
+      
+      .section {
+        padding: 60px 0;
+      }
+    }
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+      }
+      70% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+      }
+    }
+  </style>
+</head>
+<a href="https://api.whatsapp.com/send?phone=912094963&text=Olá, gostaria de mais informações sobre suporte remoto."
+     target="_blank"
+     style="
+        position: fixed;
+        bottom: 100px;
+        right: 30px;
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: #25d366;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        animation: pulse 2s infinite;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+     "
+     onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 12px 24px rgba(0,0,0,0.3)'"
+     onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 8px 20px rgba(0, 0, 0, 0.2)'"
+     aria-label="Contactar via WhatsApp"
+  >
+    <img src="imagens/WhatsApp.svg.webp" alt="WhatsApp" style="width: 35px; height: 35px;">
+  </a>
+
+<body class="blog-page">
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container position-relative d-flex align-items-center justify-content-between">
 
@@ -118,18 +569,357 @@
 
     </div>
   </header>
-  <main class="main">
 
-    <!-- Page Title -->
-    <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/page-title-bg.webp);">
-      <div class="container position-relative">
-        <h1>Blog</h1>
-        <p>Esse dolorum voluptatum ullam est sint nemo et est ipsa porro placeat quibusdam quia assumenda numquam molestias.</p>
-        <nav class="breadcrumbs">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Blog</li>
-          </ol>
-        </nav>
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="imagens/pc.jpg" alt="Imagem de montagem de PCs" class="hero-bg">
+    <div class="hero-content" data-aos="fade-up">
+      <h2 class="text-glow">Montagem e Upgrade de PCs</h2>
+      <p>Personalize o seu computador com os melhores componentes e upgrades para desempenho máximo. Soluções sob medida para gamers, profissionais e entusiastas.</p>
+      <a href="#contact" class="hero-btn">Solicite um Orçamento <i class="bi bi-arrow-right ms-2"></i></a>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="main">
+    <!-- Serviços Section -->
+    <section class="section section-dark" id="services">
+      <div class="container">
+        <h2 class="section-title">Nossos Serviços de Montagem</h2>
+        <p class="section-subtitle">Oferecemos soluções completas para montagem e upgrade de computadores, desde configurações básicas até máquinas de alto desempenho.</p>
+        
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-up">
+            <h3 class="mb-4" style="color: var(--primary-color);">Por que escolher nossos serviços?</h3>
+            <p class="lead">Na InfoSoluções, combinamos expertise técnica com componentes de qualidade para criar computadores que atendam exatamente às suas necessidades.</p>
+            <ul class="service-list">
+              <li><strong>Montagem personalizada:</strong> PCs configurados para jogos, edição, trabalho ou uso geral</li>
+              <li><strong>Upgrades especializados:</strong> Melhorias de RAM, SSD, GPU e outros componentes</li>
+              <li><strong>Configuração profissional:</strong> Instalação e otimização de sistemas operacionais</li>
+              <li><strong>Refrigeração avançada:</strong> Sistemas air cooling ou water cooling para máximo desempenho</li>
+              <li><strong>Cable management:</strong> Organização profissional de cabos para melhor fluxo de ar</li>
+              <li><strong>Consultoria técnica:</strong> Ajudamos a escolher os melhores componentes para seu orçamento</li>
+            </ul>
+          </div>
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title">Solicite um Orçamento</h3>
+                <form action="https://script.google.com/macros/s/AKfycbzXRabQIgLPgPyBGbBTL5KSiYVg_iB1p9ZkoqBKB3qLihGIUe214ClZ83-Wjf5W8gciqw/exec" method="POST" id="form-pc">
+                  <div class="mb-3">
+                    <input type="text" class="form-control" id="nome" name="nome" placeholder="Seu nome completo" required>
+                  </div>
+                  <div class="mb-3">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Seu email" required>
+                  </div>
+                  <div class="mb-3">
+                    <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="Seu telefone">
+                  </div>
+                  <div class="mb-3">
+                    <select class="form-control" id="servico" name="servico" required>
+                      <option value="" disabled selected>Selecione o serviço desejado</option>
+                      <option value="Montagem de PC novo">Montagem de PC novo</option>
+                      <option value="Upgrade de componentes">Upgrade de componentes</option>
+                      <option value="Consulta técnica">Consulta técnica</option>
+                      <option value="Outro">Outro</option>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <textarea class="form-control" id="mensagem" name="mensagem" rows="4" placeholder="Descreva suas necessidades e orçamento" required></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary w-100">Enviar Solicitação</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      document.getElementById("form-pc").addEventListener("submit", function(e) {
+        e.preventDefault();
+        const form = e.target;
+      
+        fetch(form.action, {
+          method: "POST",
+          body: new FormData(form)
+        })
+        .then(() => {
+          alert("Solicitação enviada com sucesso!");
+          form.reset();
+        })
+        .catch(() => {
+          alert("Erro ao enviar. Tente novamente.");
+        });
+      });
+      </script>
+
+    <!-- Features Section -->
+    <section class="section section-light" id="features">
+      <div class="container">
+        <h2 class="section-title">Vantagens de um PC Personalizado</h2>
+        <p class="section-subtitle">Obtenha o máximo desempenho e eficiência com um computador feito sob medida para você.</p>
+        
+        <div class="row">
+          <div class="col-md-4" data-aos="fade-up">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="bi bi-speedometer2"></i>
+              </div>
+              <h4 class="feature-title">Desempenho Superior</h4>
+              <p class="feature-text">Componentes selecionados para atender suas necessidades específicas, garantindo o melhor desempenho em jogos, edição ou trabalho profissional.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="bi bi-cash-coin"></i>
+              </div>
+              <h4 class="feature-title">Custo-Benefício</h4>
+              <p class="feature-text">Invista apenas no que você realmente precisa, sem pagar por componentes desnecessários como em PCs pré-montados.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="bi bi-shield-check"></i>
+              </div>
+              <h4 class="feature-title">Confiabilidade</h4>
+              <p class="feature-text">Garantia em todos os componentes e montagem, com suporte técnico especializado para qualquer necessidade.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-4" data-aos="fade-up">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="bi bi-arrow-repeat"></i>
+              </div>
+              <h4 class="feature-title">Facilidade de Upgrade</h4>
+              <p class="feature-text">Planejamos sua montagem pensando no futuro, facilitando upgrades quando necessário.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="bi bi-fan"></i>
+              </div>
+              <h4 class="feature-title">Refrigeração Otimizada</h4>
+              <p class="feature-text">Sistemas de refrigeração adequados para manter seu PC funcionando na temperatura ideal.</p>
+            </div>
+          </div>
+          
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="bi bi-palette"></i>
+              </div>
+              <h4 class="feature-title">Design Personalizado</h4>
+              <p class="feature-text">Escolha de gabinetes, iluminação RGB e componentes que combinam com seu estilo.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="section section-dark" id="process">
+      <div class="container">
+        <h2 class="section-title">Nosso Processo de Montagem</h2>
+        <p class="section-subtitle">Trabalhamos com método e cuidado para garantir a melhor qualidade em cada computador que montamos.</p>
+        
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="process-step" data-aos="fade-up">
+              <div class="step-number">1</div>
+              <h3>Consulta Inicial</h3>
+              <p>Analisamos suas necessidades, orçamento e objetivos para recomendar a melhor configuração. Discutimos usos principais (jogos, trabalho, etc.) e preferências estéticas.</p>
+            </div>
+            
+            <div class="process-step" data-aos="fade-up" data-aos-delay="100">
+              <div class="step-number">2</div>
+              <h3>Seleção de Componentes</h3>
+              <p>Escolhemos cuidadosamente cada peça, garantindo compatibilidade e desempenho equilibrado. Priorizamos marcas reconhecidas e com boa relação custo-benefício.</p>
+            </div>
+          </div>
+          
+          <div class="col-lg-6">
+            <div class="process-step" data-aos="fade-up" data-aos-delay="200">
+              <div class="step-number">3</div>
+              <h3>Montagem Profissional</h3>
+              <p>Nossos técnicos montam seu PC com extremo cuidado, seguindo protocolos anti-estática e garantindo perfeita organização de cabos para otimizar fluxo de ar.</p>
+            </div>
+            
+            <div class="process-step" data-aos="fade-up" data-aos-delay="300">
+              <div class="step-number">4</div>
+              <h3>Testes e Entrega</h3>
+              <p>Realizamos testes rigorosos de desempenho e estabilidade. Instalamos sistema operacional, drivers e software básico. Entregamos com manual de cuidados e garantia.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section section-light" id="gallery">
+      <div class="container">
+        <h2 class="section-title">Nossos Trabalhos</h2>
+        <p class="section-subtitle">Alguns exemplos de montagens personalizadas que realizamos para nossos clientes.</p>
+        
+        <div class="row">
+          <div class="col-md-4" data-aos="fade-up">
+            <div class="gallery-item">
+              <img src="imagens/pc-gamer.jpg" alt="PC Gamer montado" class="img-fluid">
+            </div>
+          </div>
+          
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="gallery-item">
+              <img src="imagens/workstation.jpg" alt="Workstation profissional" class="img-fluid">
+            </div>
+          </div>
+          
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="gallery-item">
+              <img src="imagens/setup-completo.jpg" alt="Setup completo" class="img-fluid">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="call-to-action" id="cta">
+      <div class="container text-center">
+        <h2 data-aos="fade-up">Pronto para montar o PC dos seus sonhos?</h2>
+        <p data-aos="fade-up" data-aos-delay="100">Entre em contato conosco agora e descubra como podemos ajudá-lo a criar o computador perfeito para suas necessidades.</p>
+        <a href="#contact" class="btn btn-primary mt-4" data-aos="fade-up" data-aos-delay="200">Fale Conosco</a>
+      </div>
+    </section>
+
+    <!-- Brands Section -->
+    <section class="section section-dark" id="brands">
+      <div class="container">
+        <h2 class="section-title">Trabalhamos com as Melhores Marcas</h2>
+        <p class="section-subtitle">Utilizamos apenas componentes de fabricantes reconhecidos pela qualidade e desempenho.</p>
+        
+        <div class="row align-items-center justify-content-center">
+          <div class="col-6 col-md-2 mb-4" data-aos="fade-up">
+            <img src="imagens/intel.png" alt="Intel" class="img-fluid" style="filter: brightness(0) invert(1); opacity: 0.8;">
+          </div>
+          <div class="col-6 col-md-2 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <img src="imagens/amd.png" alt="AMD" class="img-fluid" style="filter: brightness(0) invert(1); opacity: 0.8;">
+          </div>
+          <div class="col-6 col-md-2 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <img src="imagens/nvidia.png" alt="Nvidia" class="img-fluid" style="filter: brightness(0) invert(1); opacity: 0.8;">
+          </div>
+          <div class="col-6 col-md-2 mb-4" data-aos="fade-up" data-aos-delay="300">
+            <img src="imagens/asus.png" alt="Asus" class="img-fluid" style="filter: brightness(0) invert(1); opacity: 0.8;">
+          </div>
+          <div class="col-6 col-md-2 mb-4" data-aos="fade-up" data-aos-delay="400">
+            <img src="imagens/corsair.png" alt="Corsair" class="img-fluid" style="filter: brightness(0) invert(1); opacity: 0.8;">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="minimal-footer">
+    <div class="footer-container">
+      <div class="footer-brand text-center">
+        <img src="imagens/Infosoluções_logo_Preto_page-0001-removebg-preview.png" alt="Logo InfoSoluções" class="footer-logo">
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Início</a>
+        <a href="#services">Serviços</a>
+        <a href="blog.html">Blog</a>
+        <a href="#about">Sobre</a>
+        <a href="#contact">Contato</a>
+      </div>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 InfoSoluções. Todos os direitos reservados. | <a href="politica-privacidade.html" style="color: var(--primary-color);">Política de Privacidade</a></p>
       </div>
     </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Custom JS -->
+  <script>
+    // Initialize AOS animation
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true,
+      offset: 100
+    });
+
+    // Scroll top button
+    window.addEventListener('scroll', function() {
+      var scrollTop = document.getElementById('scroll-top');
+      if (window.pageYOffset > 300) {
+        scrollTop.classList.add('active');
+      } else {
+        scrollTop.classList.remove('active');
+      }
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Section fade effect on scroll
+    const sections = document.querySelectorAll('.section');
+    
+    function checkSections() {
+      sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        
+        if (sectionTop < windowHeight * 0.75) {
+          section.style.opacity = '1';
+          section.style.transform = 'translateY(0)';
+        }
+      });
+    }
+    
+    // Set initial styles for fade effect
+    sections.forEach(section => {
+      section.style.opacity = '0';
+      section.style.transform = 'translateY(20px)';
+      section.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+    });
+    
+    // Check on load and scroll
+    window.addEventListener('load', checkSections);
+    window.addEventListener('scroll', checkSections);
+  </script>
+</body>
+
+</html>
