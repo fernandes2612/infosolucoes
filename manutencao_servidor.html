@@ -549,6 +549,46 @@
         box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
       }
     }
+
+    .contact-section {
+      background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%); /* Fundo mais escuro */
+      padding: 100px 0;
+      position: relative;
+    }
+
+    .contact-card {
+      background: #111; /* Fundo mais escuro para o cartão */
+      color: #e8d8b8; /* Texto em dourado claro */
+      border-radius: 15px;
+      padding: 40px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5); /* Sombra mais intensa */
+      height: 100%;
+    }
+
+    .form-label, .contact-details h4 {
+      color: #e8d8b8; /* Ajuste da cor do texto para contraste */
+    }
+
+    .form-control, .form-select {
+      background-color: #222; /* Fundo mais escuro para os campos */
+      color: #e8d8b8; /* Texto claro */
+      border: 1px solid #444; /* Borda mais escura */
+    }
+
+    .form-control:focus, .form-select:focus {
+      border-color: #b29146; /* Cor de foco dourada */
+      box-shadow: 0 0 0 0.25rem rgba(178, 145, 70, 0.25);
+    }
+
+    .submit-btn {
+      background: #b29146; /* Botão dourado */
+      color: #0a0a0a; /* Texto escuro */
+    }
+
+    .submit-btn:hover {
+      background: #e8d8b8; /* Botão dourado claro ao passar o mouse */
+      color: #0a0a0a;
+    }
   </style>
 </head>
 
@@ -592,7 +632,7 @@
       
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#hero" class="active">Início</a></li>
+          <li><a href="index.html" class="active">Início</a></li>
           <li class="dropdown"><a href="#"><span>Serviços</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li class="dropdown"><a href="#"><span>Particular</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
@@ -841,8 +881,6 @@
       </div>
     </section>
 
-   
-
     <!-- FAQ Section -->
     <section class="section dark-section" id="faq">
       <div class="container">
@@ -910,6 +948,354 @@
         </div>
       </div>
     </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Coluna de Informações -->
+          <div class="col-lg-5 mb-5 mb-lg-0" data-aos="fade-right">
+            <h2 class="section-title">Fale Conosco</h2>
+            <p class="mb-4">Estamos prontos para ajudar com sua infraestrutura de servidores. Entre em contato por qualquer um dos canais abaixo ou preencha o formulário.</p>
+            
+            <div class="contact-info">
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="bi bi-geo-alt"></i>
+                </div>
+                <div class="contact-details">
+                  <h4>Endereço</h4>
+                  <p>R. do Dourado 297 1º andar, Sala 4, 3700-172 <br> São João da Madeira, Portugal</p>
+                </div>
+              </div>
+              
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="bi bi-telephone"></i>
+                </div>
+                <div class="contact-details">
+                  <h4>Telefone</h4>
+                  <p><a href="tel:+351912094963">+351 912 094 963</a></p>
+                </div>
+              </div>
+              
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="bi bi-envelope"></i>
+                </div>
+                <div class="contact-details">
+                  <h4>Email</h4>
+                  <p><a href="mailto:info@infosolucoes.pt">info@infosolucoes.pt</a></p>
+                </div>
+              </div>
+              
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="bi bi-clock"></i>
+                </div>
+                <div class="contact-details">
+                  <h4>Horário</h4>
+                  <p>Seg-Sex: 9h30 - 18h30</p>  
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          
+          <!-- Coluna do Formulário -->
+          <div class="col-lg-7" data-aos="fade-left" data-aos-delay="100">
+            <div class="contact-card">
+              <h3 class="form-title">Solicite um Orçamento</h3>
+              <p class="form-subtitle">Preencha o formulário e entraremos em contato dentro de 24h</p>
+              
+              <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form" id="contactForm">
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <div class="form-group">
+                      <label for="name" class="form-label">Nome Completo *</label>
+                      <input type="text" class="form-control" id="name" name="name" required>
+                      <div class="invalid-feedback">Por favor, insira seu nome</div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-md-6 mb-3">
+                    <div class="form-group">
+                      <label for="email" class="form-label">Email *</label>
+                      <input type="email" class="form-control" id="email" name="email" required>
+                      <div class="invalid-feedback">Por favor, insira um email válido</div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <div class="form-group">
+                      <label for="phone" class="form-label">Telefone *</label>
+                      <input type="tel" class="form-control" id="phone" name="phone" required>
+                      <div class="invalid-feedback">Por favor, insira seu telefone</div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-md-6 mb-3">
+                    <div class="form-group">
+                      <label for="company" class="form-label">Empresa</label>
+                      <input type="text" class="form-control" id="company" name="company">
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="mb-3">
+                  <div class="form-group">
+                    <label for="service" class="form-label">Serviço de Interesse *</label>
+                    <select class="form-select" id="service" name="service" required>
+                      <option value="" selected disabled>Selecione um serviço</option>
+                      <option value="Manutenção de Servidores">Manutenção de Servidores</option>
+                      <option value="Virtualização">Virtualização</option>
+                      <option value="Migração para Cloud">Migração para Cloud</option>
+                      <option value="Backup e Recuperação">Backup e Recuperação</option>
+                      <option value="Outro">Outro</option>
+                    </select>
+                    <div class="invalid-feedback">Por favor, selecione um serviço</div>
+                  </div>
+                </div>
+                
+                <div class="mb-3">
+                  <div class="form-group">
+                    <label for="message" class="form-label">Mensagem *</label>
+                    <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                    <div class="invalid-feedback">Por favor, insira sua mensagem</div>
+                  </div>
+                </div>
+                
+                <button type="submit" class="btn btn-primary w-100 submit-btn">
+                  <span class="submit-text">Enviar Mensagem</span>
+                  <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                </button>
+                
+                <div class="alert alert-success mt-3 d-none" id="successAlert">
+                  Mensagem enviada com sucesso! Entraremos em contato em breve.
+                </div>
+                <div class="alert alert-danger mt-3 d-none" id="errorAlert">
+                  Ocorreu um erro ao enviar. Por favor, tente novamente mais tarde.
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <style>
+      .contact-section {
+        background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%); /* Fundo mais escuro */
+        padding: 100px 0;
+        position: relative;
+      }
+      
+      .contact-info {
+        margin-top: 30px;
+      }
+      
+      .contact-item {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 25px;
+      }
+      
+      .contact-icon {
+        width: 50px;
+        height: 50px;
+        background: var(--primary-color);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        margin-right: 15px;
+        flex-shrink: 0;
+      }
+      
+      .contact-details h4 {
+        color: var(--secondary-color);
+        margin-bottom: 5px;
+        font-size: 1.1rem;
+      }
+      
+      .contact-details p, .contact-details a {
+        color: #e2cdac;
+        margin-bottom: 0;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+      
+      .contact-details a:hover {
+        color: #bd8732
+      }
+      
+      .social-links {
+        display: flex;
+        gap: 15px;
+      }
+      
+      
+      
+      
+      .contact-card {
+        background: #111; /* Fundo mais escuro para o cartão */
+        color: #e8d8b8; /* Texto em dourado claro */
+        border-radius: 15px;
+        padding: 40px;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5); /* Sombra mais intensa */
+        height: 100%;
+      }
+      
+      .form-title {
+        color: var(--secondary-color);
+        margin-bottom: 5px;
+        font-size: 1.8rem;
+      }
+      
+      .form-subtitle {
+        color: #6c757d;
+        margin-bottom: 30px;
+        font-size: 1rem;
+      }
+      
+      .form-group {
+        margin-bottom: 1.5rem;
+      }
+      
+      .form-label {
+        font-weight: 500;
+        color: #e8d8b8; /* Ajuste da cor do texto para contraste */
+        margin-bottom: 8px;
+        display: block;
+      }
+      
+      .form-control, .form-select {
+        background-color: #222; /* Fundo mais escuro para os campos */
+        color: #e8d8b8; /* Texto claro */
+        border: 1px solid #444; /* Borda mais escura */
+        border-radius: 8px;
+        padding: 12px 15px;
+        transition: all 0.3s;
+      }
+      
+      .form-control:focus, .form-select:focus {
+        border-color: #b29146; /* Cor de foco dourada */
+        box-shadow: 0 0 0 0.25rem rgba(178, 145, 70, 0.25);
+      }
+      
+      .form-check-input:checked {
+        background-color: var(--primary-color);
+        border-color: var(--primary-color);
+      }
+      
+      .form-check-label {
+        font-size: 0.9rem;
+      }
+      
+      .submit-btn {
+        background: #b29146; /* Botão dourado */
+        color: #0a0a0a; /* Texto escuro */
+        padding: 12px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        border-radius: 8px;
+        transition: all 0.3s;
+        position: relative;
+      }
+      
+      .submit-btn:hover {
+        background: #e8d8b8; /* Botão dourado claro ao passar o mouse */
+        color: #0a0a0a;
+        border-color: var(--secondary-color);
+        transform: translateY(-2px);
+      }
+      
+      @media (max-width: 991.98px) {
+        .contact-section {
+          padding: 70px 0;
+        }
+        
+        .contact-card {
+          padding: 30px;
+        }
+      }
+      
+      @media (max-width: 767.98px) {
+        .contact-section {
+          padding: 50px 0;
+        }
+        
+        .contact-card {
+          padding: 25px;
+        }
+        
+        .contact-icon {
+          width: 40px;
+          height: 40px;
+          font-size: 1rem;
+        }
+      }
+    </style>
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const contactForm = document.getElementById('contactForm');
+        const submitBtn = contactForm.querySelector('.submit-btn');
+        const submitText = contactForm.querySelector('.submit-text');
+        const spinner = contactForm.querySelector('.spinner-border');
+        const successAlert = document.getElementById('successAlert');
+        const errorAlert = document.getElementById('errorAlert');
+        
+        contactForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          
+          // Validação do formulário
+          if (!contactForm.checkValidity()) {
+            e.stopPropagation();
+            contactForm.classList.add('was-validated');
+            return;
+          }
+          
+          // Mostrar spinner e desativar botão
+          submitText.textContent = 'Enviando...';
+          spinner.classList.remove('d-none');
+          submitBtn.disabled = true;
+          
+          // Simular envio (substituir por AJAX real)
+          setTimeout(function() {
+            // Esconder spinner e reativar botão
+            submitText.textContent = 'Enviar Mensagem';
+            spinner.classList.add('d-none');
+            submitBtn.disabled = false;
+            
+            // Mostrar mensagem de sucesso
+            successAlert.classList.remove('d-none');
+            contactForm.reset();
+            contactForm.classList.remove('was-validated');
+            
+            // Esconder mensagem após 5 segundos
+            setTimeout(function() {
+              successAlert.classList.add('d-none');
+            }, 5000);
+          }, 1500);
+        });
+        
+        // Validação em tempo real
+        contactForm.querySelectorAll('.form-control, .form-select, .form-check-input').forEach(input => {
+          input.addEventListener('input', function() {
+            if (this.checkValidity()) {
+              this.classList.remove('is-invalid');
+            } else {
+              this.classList.add('is-invalid');
+            }
+          });
+        });
+      });
+    </script>
   </main>
 
   <!-- Footer -->

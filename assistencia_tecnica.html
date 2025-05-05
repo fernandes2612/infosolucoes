@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Assistência Técnica - InfoSoluções</title>
+  <meta name="description" content="Serviços especializados em assistência técnica para computadores, servidores e dispositivos empresariais.">
+  <meta name="keywords" content="assistência técnica, manutenção, computadores, servidores, InfoSoluções, suporte técnico">
+
+  <!-- Favicons -->
+  <link href="imagens/simbolo_pagina.png" rel="icon">
+  <link href="imagens/simbolo_pagina.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  
+  <style>
+    /* Cores principais */
+    :root {
+      --primary-color: #cfbb83; /* Cor do botão Ligue-nos (Bootstrap primary) */
+      --secondary-color: #25d366; /* Verde WhatsApp apenas para elementos específicos */
+      --dark-bg: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+      --light-bg: rgba(255, 255, 255, 0.05);
+      --border-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    /* Hero Section */
+    .hero {
+      position: relative;
+      height: 80vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+    }
+    
+    .hero-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      filter: brightness(0.5);
+    }
+    
+    .hero-content {
+      max-width: 800px;
+      padding: 0 20px;
+      z-index: 1;
+    }
+    
+    .hero-btn {
+      display: inline-block;
+     
+      color: white;
+      padding: 12px 30px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 20px;
+      
+    }
+    
+    .hero-btn:hover {
+      background-color: transparent;
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Section Styling */
+    .section {
+      padding: 100px 0;
+      position: relative;
+    }
+    
+    .dark-background {
+      background: var(--dark-bg);
+      color: white;
+    }
+    
+    .section-title {
+      text-align: center;
+      margin-bottom: 60px;
+      font-size: 2.5rem;
+      position: relative;
+      display: inline-block;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: var(--primary-color);
+      border-radius: 3px;
+    }
+    
+    /* Service Boxes */
+    .service-box {
+      background: var(--light-bg);
+      border-radius: 10px;
+      padding: 40px 30px;
+      transition: all 0.3s ease;
+      height: 100%;
+      backdrop-filter: blur(5px);
+      border: 1px solid var(--border-color);
+    }
+    
+    .service-box h3 {
+      color: var(--primary-color);
+      margin-bottom: 15px;
+    }
+    
+    .service-box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+      border-color: var(--primary-color);
+    }
+    
+    /* Process Steps */
+    .process-step {
+      background: rgba(13, 110, 253, 0.1);
+      border-left: 3px solid var(--primary-color);
+      padding: 30px;
+      border-radius: 0 10px 10px 0;
+      height: 100%;
+      transition: all 0.3s ease;
+    }
+    
+    .process-step h3 {
+      color: var(--primary-color);
+    }
+    
+    .process-step:hover {
+      transform: scale(1.03);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* FAQ Section */
+    .faq-item {
+      background: var(--light-bg);
+      margin-bottom: 20px;
+      padding: 25px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      border: 1px solid var(--border-color);
+    }
+    
+    .faq-item h3 {
+      color: var(--primary-color);
+      margin-bottom: 10px;
+    }
+    
+    .faq-item:hover {
+      background: rgba(13, 110, 253, 0.1);
+      border-color: var(--primary-color);
+    }
+    
+    /* Contact Form */
+    .contact-form {
+        background: rgba(30, 30, 30, 0.9); /* Fundo mais escuro para melhor contraste */
+        padding: 30px;
+        border-radius: 10px;
+        border: 1px solid var(--primary-color); /* Borda com a cor principal */
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .form-label {
+        color: var(--primary-color);
+        font-weight: 600;
+        margin-bottom: 8px;
+        display: block;
+        font-size: 1.1rem;
+    }
+
+    .form-control {
+        background: rgba(50, 50, 50, 0.7) !important;
+        border: 1px solid rgba(255, 255, 255, 0.3) !important;
+        color: white !important;
+        padding: 12px 15px !important;
+        margin-bottom: 20px !important;
+        border-radius: 6px !important;
+        transition: all 0.3s ease;
+        font-size: 1rem;
+    }
+
+    .form-control:focus {
+        background: rgba(70, 70, 70, 0.7) !important;
+        border-color: var(--primary-color) !important;
+        box-shadow: 0 0 0 0.3rem rgba(207, 187, 131, 0.3) !important;
+    }
+
+    .form-control::placeholder {
+        color: rgba(255, 255, 255, 0.6);
+        opacity: 1;
+    }
+
+    .btn-primary {
+        background-color: var(--primary-color) !important;
+        border-color: var(--primary-color) !important;
+        color: #1a1a1a !important;
+        font-weight: 700;
+        padding: 12px 30px;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+        width: 100%;
+        margin-top: 10px;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .btn-primary:hover {
+        background-color: #e6d5a2 !important;
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(207, 187, 131, 0.4);
+    }
+
+    /* Ajuste para a seção de contato */
+    #contact {
+      background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(240, 240, 240, 0.9)), url('imagens/tech-bg.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      padding: 100px 0;
+      color: #333; /* Texto mais escuro para contraste */
+    }
+
+    .contact-info .info-item {
+        background: rgba(40, 40, 40, 0.7);
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        border-left: 3px solid var(--primary-color);
+    }
+
+    .contact-info h4 {
+        color: var(--primary-color);
+        margin-bottom: 5px;
+    }
+
+    .contact-info p {
+        margin-bottom: 0;
+        color: #ddd;
+    }
+
+    /* Ajuste para dispositivos móveis */
+    @media (max-width: 768px) {
+        .contact-form {
+            padding: 20px;
+        }
+        
+        #contact {
+            padding: 60px 0;
+            background-attachment: scroll;
+        }
+    }
+  </style>
+</head>
+
+<body class="blog-page">
+
+    <a href="https://api.whatsapp.com/send?phone=912094963&text=Texto%20aqui"
+    target="_blank"
+    style="
+       position: fixed;
+       bottom: 80px;
+       right: 30px;
+       z-index: 9999;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       width: 60px;
+       height: 60px;
+       border-radius: 50%;
+       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+       animation: pulse 2s infinite;
+       transition: transform 0.3s ease, box-shadow 0.3s ease;
+    "
+    onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 12px 24px rgba(0,0,0,0.3)'"
+    onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 8px 20px rgba(0, 0, 0, 0.2)'"
+ >
+   <img src="imagens/WhatsApp.svg.webp" alt="WhatsApp" style="width: 70px; height: 70px;">
+ </a>
+ 
+ <!-- Animação pulsar -->
+ <style>
+ @keyframes pulse {
+   0% {
+     transform: scale(1);
+     box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+   }
+   70% {
+     transform: scale(1.05);
+     box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+   }
+   100% {
+     transform: scale(1);
+     box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+   }
+ }
+ </style>
+
+  <!-- Header -->
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <img src="imagens/Infosoluções_logo_Preto_page-0001-removebg-preview.png" alt="Logo Info-Soluções" class="sitename">
+      </a>
+      
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Início</a></li>
+          <li class="dropdown"><a href="#"><span>Serviços</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li class="dropdown"><a href="#"><span>Particular</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="assistencia_tecnica.html">Assistência técnica </a></li>
+                  <li><a href="reparacao_hardware.html">Reparações de hardware</a></li>
+                  <li><a href="montagem_de_pc.html">Montagem e upgrade de PCs</a></li>
+                  <li><a href="remocao_virus.html">Remoção de vírus</a></li>
+                  <li><a href="instalacao_software.html">Instalação de software</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#"><span>Empresarial</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="gestao_infra.html">Gestão de infraestruturas IT </a></li>
+                  <li><a href="gestao_redes.html">Gestão de redes</a></li>
+                  <li><a href="manutencao_servidor.html">Manutenção de servidores</a></li>
+                  <li><a href="suporte_remoto.html">Suporte técnico remoto</a></li>
+                  <li><a href="consultoria_tecn.html">Consultoria tecnológica</a></li>
+                  <li><a href="venda_equipamentos_emp.html">Venda de equipamentos empresariais</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="blog.html">blog</a></li>
+          <li><a href="#about">Sobre</a></li>
+          <li><a href="#contact">Contacto</a></li>
+          
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="cta-btn" href="tel:912 094 963">Ligue-nos</a>
+
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="imagens/assistencia-tecnica.jpg" alt="Imagem de assistência técnica" class="hero-bg">
+    <div class="hero-content" data-aos="fade-up">
+      <h2 class="text-glow">Assistência Técnica Especializada</h2>
+      <p>Oferecemos suporte técnico confiável para computadores, servidores e dispositivos empresariais. Soluções rápidas e eficazes para todos os problemas técnicos.</p>
+      <a href="#contact" class="hero-btn">Solicite Assistência</a>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="main">
+    <!-- Serviços Section -->
+    <section class="section dark-background" id="services">
+      <div class="container">
+        <h2 class="section-title">Nossos Serviços de Assistência Técnica</h2>
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-box">
+              <div class="icon-box">
+                <i class="bi bi-laptop"></i>
+              </div>
+              <h3>Diagnóstico e Reparação</h3>
+              <p>Identificamos e resolvemos problemas técnicos com rapidez e precisão, utilizando equipamentos de última geração para garantir o melhor serviço.</p>
+              <ul class="service-features">
+                <li><i class="bi bi-check-circle"></i> Análise completa do sistema</li>
+                <li><i class="bi bi-check-circle"></i> Relatório detalhado</li>
+                <li><i class="bi bi-check-circle"></i> Orçamento transparente</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-box">
+              <div class="icon-box">
+                <i class="bi bi-shield-check"></i>
+              </div>
+              <h3>Manutenção Preventiva</h3>
+              <p>Garantimos o funcionamento ideal dos seus equipamentos com check-ups regulares que previnem falhas e aumentam a vida útil dos dispositivos.</p>
+              <ul class="service-features">
+                <li><i class="bi bi-check-circle"></i> Limpeza interna</li>
+                <li><i class="bi bi-check-circle"></i> Atualizações de sistema</li>
+                <li><i class="bi bi-check-circle"></i> Backup de dados</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-box">
+              <div class="icon-box">
+                <i class="bi bi-cpu"></i>
+              </div>
+              <h3>Atualização de Hardware</h3>
+              <p>Melhoramos o desempenho dos seus dispositivos com upgrades personalizados para atender suas necessidades específicas.</p>
+              <ul class="service-features">
+                <li><i class="bi bi-check-circle"></i> Componentes de qualidade</li>
+                <li><i class="bi bi-check-circle"></i> Compatibilidade garantida</li>
+                <li><i class="bi bi-check-circle"></i> Melhor custo-benefício</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Processo Section -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Como Funciona Nosso Processo</h2>
+        <div class="row gy-4">
+          <div class="col-md-4" data-aos="fade-right" data-aos-delay="100">
+            <div class="process-step">
+              <div class="step-number">1</div>
+              <h3>Diagnóstico</h3>
+              <p>Avaliamos o problema e identificamos a solução ideal através de testes precisos e análise técnica especializada.</p>
+              <div class="step-icon">
+                <i class="bi bi-search"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-right" data-aos-delay="200">
+            <div class="process-step">
+              <div class="step-number">2</div>
+              <h3>Reparação</h3>
+              <p>Executamos os reparos necessários com eficiência, utilizando peças originais e técnicas certificadas.</p>
+              <div class="step-icon">
+                <i class="bi bi-tools"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-right" data-aos-delay="300">
+            <div class="process-step">
+              <div class="step-number">3</div>
+              <h3>Entrega</h3>
+              <p>Garantimos que o equipamento esteja funcionando perfeitamente com testes finais e orientações ao cliente.</p>
+              <div class="step-icon">
+                <i class="bi bi-check-circle"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Destaques Section -->
+    <section class="section dark-background">
+      <div class="container">
+        <h2 class="section-title">Porque Escolher a InfoSoluções</h2>
+        <div class="row gy-4">
+          <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+            <div class="feature-box">
+              <i class="bi bi-award"></i>
+              <h3>10+ Anos de Experiência</h3>
+              <p>Equipe qualificada com vasta experiência no mercado de TI</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+            <div class="feature-box">
+              <i class="bi bi-shield-lock"></i>
+              <h3>Garantia de Serviço</h3>
+              <p>Todos os nossos serviços possuem garantia de qualidade</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+            <div class="feature-box">
+              <i class="bi bi-people"></i>
+              <h3>Atendimento Personalizado</h3>
+              <p>Soluções adaptadas às necessidades de cada cliente</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+            <div class="feature-box">
+              <i class="bi bi-speedometer2"></i>
+              <h3>Rapidez no Atendimento</h3>
+              <p>Resposta ágil e soluções eficientes em tempo recorde</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section" id="faq">
+      <div class="container">
+        <h2 class="section-title">Perguntas Frequentes</h2>
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-right">
+            <div class="faq-item">
+              <h3><i class="bi bi-question-circle"></i> Quanto tempo leva para consertar meu computador?</h3>
+              <p>O tempo de reparo depende do problema identificado, mas geralmente concluímos os serviços em até 48 horas. Casos mais complexos podem levar mais tempo, mas sempre mantemos você informado sobre o progresso.</p>
+            </div>
+            <div class="faq-item">
+              <h3><i class="bi bi-question-circle"></i> Vocês oferecem suporte remoto?</h3>
+              <p>Sim, oferecemos suporte remoto para resolver problemas de software, configuração e otimização de sistemas. Utilizamos ferramentas seguras e protegidas para acesso remoto, sempre com sua autorização.</p>
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-left">
+            <div class="faq-item">
+              <h3><i class="bi bi-question-circle"></i> Quais marcas vocês atendem?</h3>
+              <p>Atendemos todas as marcas de computadores e dispositivos, incluindo Dell, HP, Lenovo, Apple, Asus, Acer e outras. Também trabalhamos com servidores e equipamentos de rede de diversos fabricantes.</p>
+            </div>
+            <div class="faq-item">
+              <h3><i class="bi bi-question-circle"></i> Vocês recuperam dados perdidos?</h3>
+              <p>Sim, oferecemos serviço de recuperação de dados em casos de falha de hardware, exclusão acidental ou corrupção de arquivos. A taxa de sucesso depende do tipo de dano, mas temos equipamentos especializados para maximizar as chances.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contato Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <h2 class="section-title">Entre em Contato</h2>
+            <p class="text-center mb-5" style="color: var(--primary-color); font-size: 1.2rem;">Preencha o formulário ou utilize nossos outros canais</p>
+            
+            <div class="row">
+                <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="icon-box me-3" style="color: var(--primary-color);">
+                                    <i class="bi bi-geo-alt" style="font-size: 1.8rem;"></i>
+                                </div>
+                                <h3 style="color: var(--primary-color); margin-bottom: 0;">Localização</h3>
+                            </div>
+                            <p>Av. da República, 1234, Lisboa</p>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="icon-box me-3" style="color: var(--primary-color);">
+                                    <i class="bi bi-envelope" style="font-size: 1.8rem;"></i>
+                                </div>
+                                <h3 style="color: var(--primary-color); margin-bottom: 0;">Email</h3>
+                            </div>
+                            <p>contato@infosolucoes.pt</p>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="icon-box me-3" style="color: var(--primary-color);">
+                                    <i class="bi bi-phone" style="font-size: 1.8rem;"></i>
+                                </div>
+                                <h3 style="color: var(--primary-color); margin-bottom: 0;">Telefone</h3>
+                            </div>
+                            <p>+351 912 094 963</p>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="icon-box me-3" style="color: var(--primary-color);">
+                                    <i class="bi bi-clock" style="font-size: 1.8rem;"></i>
+                                </div>
+                                <h3 style="color: var(--primary-color); margin-bottom: 0;">Horário</h3>
+                            </div>
+                            <p>Seg-Sex: 9:00 - 18:00<br>Sábado: 10:00 - 14:00</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6" data-aos="fade-left">
+                    <form action="https://script.google.com/macros/s/AKfycbyvwOEXobxBt77nogphW8DyljforjtkwPO13ea89X1HXhx0j4YFDzBEiHGnFtUL67He/exec" method="POST" class="contact-form">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="nome" class="form-label">Nome Completo*</label>
+                                <input type="text" class="form-control" id="nome" name="nome" placeholder="Seu nome completo" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="email" class="form-label">Email*</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="seu@email.com" required>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="telefone" class="form-label">Telefone</label>
+                            <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="+351 ...">
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="servico" class="form-label">Serviço de Interesse</label>
+                            <select class="form-control" id="servico" name="servico">
+                                <option value="">Selecione um serviço</option>
+                                <option value="Assistência Técnica">Assistência Técnica</option>
+                                <option value="Reparação de Hardware">Reparação de Hardware</option>
+                                <option value="Montagem de PCs">Montagem de PCs</option>
+                                <option value="Remoção de Vírus">Remoção de Vírus</option>
+                                <option value="Outro">Outro</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="mensagem" class="form-label">Mensagem*</label>
+                            <textarea class="form-control" id="mensagem" name="mensagem" rows="5" placeholder="Descreva como podemos ajudar..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary mt-3">
+                            <i class="bi bi-send-fill me-2"></i> Enviar Mensagem
+                        </button>
+                    </form>
+                    <script>
+                        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+                          e.preventDefault();
+                          const form = e.target;
+                        
+                          fetch(form.action, {
+                            method: 'POST',
+                            body: new FormData(form)
+                          })
+                          .then(response => {
+                            if (response.ok) {
+                              alert('Mensagem enviada com sucesso!');
+                              form.reset();
+                            } else {
+                              alert('Erro ao enviar. Tente novamente mais tarde.');
+                            }
+                          })
+                          .catch(error => {
+                            console.error('Erro:', error);
+                            alert('Erro ao enviar. Verifique sua conexão.');
+                          });
+                        });
+                        </script>
+                </div>
+            </div>
+        </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="minimal-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <img src="imagens/Infosoluções_logo_Preto_page-0001-removebg-preview.png" alt="Logo" class="footer-logo">
+        
+      </div>
+      
+      <div class="footer-links">
+        <a href="#">Início</a>
+        <a href="#">Serviços</a>
+        <a href="#">Blog</a>
+        <a href="#">Sobre</a>
+        <a href="#">Contato</a>
+      </div>
+      
+      <div class="social-icons">
+        <!-- Instagram -->
+        <a href="#" aria-label="Instagram" class="social-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M17 3H7C4.79086 3 3 4.79086 3 7V17C3 19.2091 4.79086 21 7 21H17C19.2091 21 21 19.2091 21 17V7C21 4.79086 19.2091 3 17 3Z" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M17.5 7.5V7.501" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </a>
+        
+        <!-- Facebook -->
+        <a href="#" aria-label="Facebook" class="social-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 2H15C13.6739 2 12.4021 2.52678 11.4645 3.46447C10.5268 4.40215 10 5.67392 10 7V10H7V14H10V22H14V14H17L18 10H14V7C14 6.73478 14.1054 6.48043 14.2929 6.29289C14.4804 6.10536 14.7348 6 15 6H18V2Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        
+        <!-- Twitter/X -->
+        <a href="#" aria-label="Twitter" class="social-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M23 3C22.0424 3.67548 20.9821 4.19211 19.86 4.53C19.2577 3.83751 18.4573 3.34669 17.567 3.12393C16.6767 2.90116 15.7395 2.9572 14.8821 3.28445C14.0247 3.61171 13.2884 4.1944 12.773 4.95372C12.2575 5.71303 11.9877 6.61234 12 7.53V8.53C10.2426 8.57557 8.50127 8.18581 6.93101 7.39545C5.36074 6.60508 4.01032 5.43864 3 4C3 4 -1 13 8 17C5.94053 18.398 3.48716 19.0989 1 19C10 24 21 19 21 7.5C20.9991 7.22145 20.9723 6.94359 20.92 6.67C21.9406 5.66349 22.6608 4.39271 23 3V3Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        
+        <!-- LinkedIn -->
+        <a href="#" aria-label="LinkedIn" class="social-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 8C17.5913 8 19.1174 8.63214 20.2426 9.75736C21.3679 10.8826 22 12.4087 22 14V21H18V14C18 13.4696 17.7893 12.9609 17.4142 12.5858C17.0391 12.2107 16.5304 12 16 12C15.4696 12 14.9609 12.2107 14.5858 12.5858C14.2107 12.9609 14 13.4696 14 14V21H10V14C10 12.4087 10.6321 10.8826 11.7574 9.75736C12.8826 8.63214 14.4087 8 16 8Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M6 9H2V21H6V9Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M4 6C5.10457 6 6 5.10457 6 4C6 2.89543 5.10457 2 4 2C2.89543 2 2 2.89543 2 4C2 5.10457 2.89543 6 4 6Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 Sua Empresa. Todos os direitos reservados.</p>
+        <div class="legal-links">
+          <a href="#">Privacidade</a>
+          <span>•</span>
+          <a href="#">Termos</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+  
+  <script>
+    // Inicialização AOS
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true
+    });
+    
+    // Form submission handler
+    document.querySelector('.contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Simulate form submission
+      const form = this;
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalText = submitBtn.textContent;
+      
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Enviando...';
+      
+      // Simulate API call
+      setTimeout(function() {
+        submitBtn.innerHTML = '<i class="bi bi-check-circle"></i> Enviado!';
+        form.reset();
+        
+        // Show success message
+        alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
+        
+        // Reset button after 3 seconds
+        setTimeout(function() {
+          submitBtn.disabled = false;
+          submitBtn.textContent = originalText;
+        }, 3000);
+      }, 1500);
+    });
+  </script>
+</body>
+
+</html>
