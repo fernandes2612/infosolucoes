@@ -671,7 +671,7 @@
 
   <!-- Hero Section -->
   <section class="hero">
-    <img src="imagens/manutencao_servidor.jpg" alt="Imagem de manutenção de servidores" class="hero-bg">
+    <img src="imagens/manutencao_servidores.jpg" alt="Imagem de manutenção de servidores" class="hero-bg">
     <div class="hero-content" data-aos="fade-up">
       <h2 class="text-glow">Manutenção de Servidores Profissional</h2>
       <p>Garantimos o desempenho máximo e a segurança da sua infraestrutura de TI com serviços especializados em manutenção de servidores. Nossa equipe certificada oferece suporte 24/7 para manter seus sistemas sempre operacionais.</p>
@@ -936,6 +936,7 @@
         </div>
       </div>
     </section>
+    
 
     <!-- Call to Action Section -->
     <section class="call-to-action section dark-section">
@@ -957,7 +958,7 @@
           <div class="col-lg-5 mb-5 mb-lg-0" data-aos="fade-right">
             <h2 class="section-title">Fale Conosco</h2>
             <p class="mb-4">Estamos prontos para ajudar com sua infraestrutura de servidores. Entre em contato por qualquer um dos canais abaixo ou preencha o formulário.</p>
-            
+    
             <div class="contact-info">
               <div class="contact-item">
                 <div class="contact-icon">
@@ -968,7 +969,7 @@
                   <p>R. do Dourado 297 1º andar, Sala 4, 3700-172 <br> São João da Madeira, Portugal</p>
                 </div>
               </div>
-              
+    
               <div class="contact-item">
                 <div class="contact-icon">
                   <i class="bi bi-telephone"></i>
@@ -978,7 +979,7 @@
                   <p><a href="tel:+351912094963">+351 912 094 963</a></p>
                 </div>
               </div>
-              
+    
               <div class="contact-item">
                 <div class="contact-icon">
                   <i class="bi bi-envelope"></i>
@@ -988,27 +989,26 @@
                   <p><a href="mailto:info@infosolucoes.pt">info@infosolucoes.pt</a></p>
                 </div>
               </div>
-              
+    
               <div class="contact-item">
                 <div class="contact-icon">
                   <i class="bi bi-clock"></i>
                 </div>
                 <div class="contact-details">
                   <h4>Horário</h4>
-                  <p>Seg-Sex: 9h30 - 18h30</p>  
+                  <p>Seg-Sex: 9h30 - 18h30</p>
                 </div>
               </div>
             </div>
-            
           </div>
-          
+    
           <!-- Coluna do Formulário -->
           <div class="col-lg-7" data-aos="fade-left" data-aos-delay="100">
             <div class="contact-card">
               <h3 class="form-title">Solicite um Orçamento</h3>
               <p class="form-subtitle">Preencha o formulário e entraremos em contato dentro de 24h</p>
-              
-              <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form" id="contactForm">
+    
+              <form action="https://script.google.com/macros/s/AKfycbzFHuCSmuL6IpKZqUAw8tUI_5KdgmLfXZqJO0SKKWEhkOBumxi7Vyx8duGJlu2CpQYg/exec" method="POST" class="contact-form" id="contactForm">
                 <div class="row">
                   <div class="col-md-6 mb-3">
                     <div class="form-group">
@@ -1017,7 +1017,7 @@
                       <div class="invalid-feedback">Por favor, insira seu nome</div>
                     </div>
                   </div>
-                  
+    
                   <div class="col-md-6 mb-3">
                     <div class="form-group">
                       <label for="email" class="form-label">Email *</label>
@@ -1026,7 +1026,7 @@
                     </div>
                   </div>
                 </div>
-                
+    
                 <div class="row">
                   <div class="col-md-6 mb-3">
                     <div class="form-group">
@@ -1035,7 +1035,7 @@
                       <div class="invalid-feedback">Por favor, insira seu telefone</div>
                     </div>
                   </div>
-                  
+    
                   <div class="col-md-6 mb-3">
                     <div class="form-group">
                       <label for="company" class="form-label">Empresa</label>
@@ -1043,7 +1043,7 @@
                     </div>
                   </div>
                 </div>
-                
+    
                 <div class="mb-3">
                   <div class="form-group">
                     <label for="service" class="form-label">Serviço de Interesse *</label>
@@ -1058,7 +1058,7 @@
                     <div class="invalid-feedback">Por favor, selecione um serviço</div>
                   </div>
                 </div>
-                
+    
                 <div class="mb-3">
                   <div class="form-group">
                     <label for="message" class="form-label">Mensagem *</label>
@@ -1066,12 +1066,12 @@
                     <div class="invalid-feedback">Por favor, insira sua mensagem</div>
                   </div>
                 </div>
-                
+    
                 <button type="submit" class="btn btn-primary w-100 submit-btn">
                   <span class="submit-text">Enviar Mensagem</span>
                   <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
                 </button>
-                
+    
                 <div class="alert alert-success mt-3 d-none" id="successAlert">
                   Mensagem enviada com sucesso! Entraremos em contato em breve.
                 </div>
@@ -1084,6 +1084,53 @@
         </div>
       </div>
     </section>
+    
+    <script>
+      const form = document.getElementById("contactForm");
+      const submitBtn = form.querySelector(".submit-btn");
+      const submitText = submitBtn.querySelector(".submit-text");
+      const spinner = submitBtn.querySelector(".spinner-border");
+      const successAlert = document.getElementById("successAlert");
+      const errorAlert = document.getElementById("errorAlert");
+    
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+    
+        // Reset alerts
+        successAlert.classList.add("d-none");
+        errorAlert.classList.add("d-none");
+    
+        // Disable button and show spinner
+        submitBtn.disabled = true;
+        submitText.classList.add("d-none");
+        spinner.classList.remove("d-none");
+    
+        fetch(form.action, {
+          method: "POST",
+          body: new FormData(form),
+          headers: {
+            Accept: "application/json"
+          }
+        })
+        .then(response => {
+          if (response.ok) {
+            successAlert.classList.remove("d-none");
+            form.reset();
+          } else {
+            throw new Error("Erro ao enviar");
+          }
+        })
+        .catch(() => {
+          errorAlert.classList.remove("d-none");
+        })
+        .finally(() => {
+          // Re-enable button and hide spinner
+          submitBtn.disabled = false;
+          submitText.classList.remove("d-none");
+          spinner.classList.add("d-none");
+        });
+      });
+    </script>
     
     <style>
       .contact-section {
