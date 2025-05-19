@@ -595,30 +595,46 @@
 <body class="blog-page">
 
   <!-- WhatsApp Button -->
-  <a href="https://api.whatsapp.com/send?phone=912094963&text=Olá, gostaria de mais informações sobre manutenção de servidores."
-     target="_blank"
-     style="
-        position: fixed;
-        bottom: 80px;
-        right: 30px;
-        z-index: 9999;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        background-color: #25d366;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-        animation: pulse 2s infinite;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-     "
-     onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 12px 24px rgba(0,0,0,0.3)'"
-     onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 8px 20px rgba(0, 0, 0, 0.2)'"
-     aria-label="Contactar via WhatsApp"
-  >
-    <img src="imagens/WhatsApp.svg.webp" alt="WhatsApp" style="width: 35px; height: 35px;">
-  </a>
+  <a href="https://api.whatsapp.com/send?phone=912094963&text=Texto%20aqui"
+   target="_blank"
+   style="
+      position: fixed;
+      bottom: 80px;
+      right: 30px;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      animation: pulse 2s infinite;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+   "
+   onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 12px 24px rgba(0,0,0,0.3)'"
+   onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 8px 20px rgba(0, 0, 0, 0.2)'"
+>
+  <img src="imagens/WhatsApp.svg.webp" alt="WhatsApp" style="width: 70px; height: 70px;">
+</a>
+
+<!-- Animação pulsar -->
+<style>
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+</style>
 
   <!-- Header -->
   <header id="header" class="header d-flex align-items-center fixed-top">

@@ -1905,6 +1905,66 @@ section,
   z-index: 9999;
 }
 
+/* Estilo para o formulário */
+.contact-form {
+  background-color: rgba(26, 26, 26, 0.9); /* Fundo mais escuro para contraste */
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid var(--primary-color); /* Borda com a cor principal */
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.form-label {
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 8px;
+  display: block;
+  font-size: 1.1rem;
+}
+
+.form-control {
+  background: rgba(50, 50, 50, 0.7) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  color: white !important;
+  padding: 12px 15px !important;
+  margin-bottom: 20px !important;
+  border-radius: 6px !important;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.form-control:focus {
+  background: rgba(70, 70, 70, 0.7) !important;
+  border-color: var(--primary-color) !important;
+  box-shadow: 0 0 0 0.3rem rgba(207, 187, 131, 0.3) !important;
+}
+
+.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+  opacity: 1;
+}
+
+.btn-primary {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+  color: #1a1a1a !important;
+  font-weight: 700;
+  padding: 12px 30px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-top: 10px;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn-primary:hover {
+  background-color: #e6d5a2 !important;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(207, 187, 131, 0.4);
+}
+
 
 
 
