@@ -22,45 +22,128 @@
   
   <style>
     :root {
-      --primary: #c9a754;
-      --primary-dark: #b29146;
-      --primary-light: #e0c78e;
-      --accent: #d4af37;
-      --accent-light: #f4d03f;
-      --dark: #0a0a0a;
-      --darker: #020202;
-      --dark-medium: #1a1a1a;
-      --dark-light: #2a2a2a;
-      --light: #ffffff;
-      --light-medium: #f8f9fa;
-      --text-muted: #8a8a8a;
-      --success: #00ff88;
-      --warning: #ffd700;
-      --gradient-primary: linear-gradient(135deg, #c9a754 0%, #b29146 100%);
-      --gradient-accent: linear-gradient(135deg, #d4af37 0%, #c9a754 100%);
-      --gradient-dark: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
-      --shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-      --shadow-light: 0 5px 15px rgba(0, 0, 0, 0.1);
-      --transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-      --border-radius: 20px;
-      --border-radius-small: 12px;
+      
+      --dark-color: #0a0a0a;
+      --darker-color: #000000;
+      --primary-color: #b29146; /* Dourado principal */ /* Dourado mais intenso para destaques */
+      --default-color: #ffffff; /* Branco para texto */
+      --text-muted: #cccccc;
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+     /* Ajuste global para texto */
+body {
+  color: #eaeaea; /* Texto mais claro */
+  background-color: #1a1a1a; /* Fundo escuro */
+}
 
-    body {
-      font-family: 'Inter', sans-serif;
-      color: var(--light);
-      background: var(--dark);
-      line-height: 1.6;
-      overflow-x: hidden;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
+/* Ajuste para títulos */
+h1, h2, h3, h4, h5, h6 {
+  color: #f5f5f5; /* Títulos mais claros */
+}
+
+/* Ajuste para parágrafos */
+p {
+  color: #dcdcdc; /* Texto mais claro para parágrafos */
+}
+
+/* Links */
+a {
+  color: #ffd700; /* Amarelo dourado para links */
+}
+
+a:hover {
+  color: #ffcc00; /* Amarelo mais claro ao passar o mouse */
+}
+
+/* Botões */
+.btn-primary {
+  background-color: #ffd700; /* Amarelo dourado */
+  color: #1a1a1a; /* Texto escuro para contraste */
+  border-color: #ffd700;
+}
+
+.btn-primary:hover {
+  background-color: #ffcc00; /* Amarelo mais claro */
+  border-color: #ffcc00;
+}
+
+/* Ajuste para seções escuras */
+.section-title {
+  color: #f5f5f5; /* Títulos das seções mais claros */
+}
+
+.service-box p, .service-box ul li {
+  color: #dcdcdc; /* Texto dentro das caixas de serviço */
+}
+
+.info-item p {
+  color: #dcdcdc; /* Texto das informações de contato */
+}
+
+    .header {
+  --background-color: rgba(0, 0, 0, 0);
+  --default-color: #ffffff;
+  --heading-color: #ffffff;
+  color: var(--default-color);
+  background-color: var(--background-color);
+  padding: 10px 0;
+  transition: all 0.5s;
+  z-index: 997;
+  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+}
+
+
+
+.header .logo img {
+  max-height: 70px;
+  margin-left: 0; /* Remove qualquer margem à esquerda */
+  padding-right: 100px;
+}
+
+.header .logo h1 {
+  font-size: 20px;
+  margin: 0;
+  font-weight: 700;
+  color: var(--heading-color);
+}
+
+.header .cta-btn,
+.header .cta-btn:focus {
+  color: var(--contrast-color);
+  background: var(--accent-color);
+  font-size: 14px;
+  padding: 8px 26px;
+  margin: 0;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+
+.header .cta-btn:hover,
+.header .cta-btn:focus:hover {
+  color: var(--contrast-color);
+  background: color-mix(in srgb, var(--accent-color), transparent 15%);
+}
+
+@media (max-width: 450px) {
+  .header .logo {
+    order: 1;
+  }
+
+  .header .logo img {
+    max-width: 50px; /* Ajuste para um tamanho visível */
+    height: auto; /* Mantém a proporção da imagem */
+  }
+
+  .header .cta-btn {
+    order: 2;
+    margin: 0 15px 0 0;
+    padding: 6px 20px;
+  }
+
+  .header .navmenu {
+    order: 3;
+  }
+}
 
     h1, h2, h3, h4, h5, h6 {
       font-family: 'Space Grotesk', sans-serif;
@@ -731,7 +814,7 @@
     <div class="hero-content" data-aos="fade-up">
       <h2 class="text-glow">Consultoria Tecnológica Especializada</h2>
       <p style="color: #ffffff;">Oferecemos soluções personalizadas para otimizar sua infraestrutura de TI, aumentar a eficiência e garantir a segurança do seu negócio.</p>
-      <a href="#contact" class="hero-btn">Solicite Consultoria</a>
+      <a href="#contact" class="hero-btn">Solicite Consultoria <i class="bi bi-arrow-right ms-2"></i></a>
     </div>
   </section>
 
@@ -812,93 +895,127 @@
   </section>
 
   <!-- Process Section -->
-  <section class="section bg-glass">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-badge">Metodologia</div>
-        <h2 class="section-title">Processo de Consultoria</h2>
-        <p class="section-description">
-          Seguimos uma metodologia comprovada e estruturada para garantir resultados excepcionais 
-          em todos os projetos de consultoria tecnológica.
-        </p>
+  <section class="section dark-section">
+  <div class="container">
+    <div class="section-header text-center mb-5">
+      <h2 class="section-title">Nosso Processo</h2>
+      <p class="lead">Entenda como trabalhamos para oferecer as melhores soluções tecnológicas para sua empresa.</p>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 mb-4">
+        <div class="process-step">
+          <h3 class="step-title">1. Diagnóstico Inicial</h3>
+          <p>Realizamos uma análise detalhada para identificar as necessidades e desafios tecnológicos da sua empresa.</p>
+        </div>
       </div>
-
-      <div class="process-timeline">
+      <div class="col-md-6 mb-4">
         <div class="process-step">
-          <div class="step-number">1</div>
-          <div class="step-content">
-            <h3>Diagnóstico Inicial</h3>
-            <p>Realizamos uma análise detalhada para identificar as necessidades e desafios tecnológicos da sua empresa.</p>
-          </div>
+          <h3 class="step-title">2. Planejamento Estratégico</h3>
+          <p>Desenvolvemos um plano personalizado com soluções tecnológicas alinhadas aos objetivos do seu negócio.</p>
         </div>
-
+      </div>
+      <div class="col-md-6 mb-4">
         <div class="process-step">
-          <div class="step-number">2</div>
-          <div class="step-content">
-            <h3>Planejamento Estratégico</h3>
-            <p>Desenvolvemos um plano personalizado com soluções tecnológicas alinhadas aos objetivos do seu negócio.</p>
-          </div>
+          <h3 class="step-title">3. Implementação</h3>
+          <p>Executamos as soluções propostas com acompanhamento contínuo para garantir a máxima eficiência.</p>
         </div>
-
+      </div>
+      <div class="col-md-6 mb-4">
         <div class="process-step">
-          <div class="step-number">3</div>
-          <div class="step-content">
-            <h3>Implementação</h3>
-            <p>Executamos as soluções propostas com acompanhamento contínuo para garantir a máxima eficiência.</p>
-          </div>
-        </div>
-
-        <div class="process-step">
-          <div class="step-number">4</div>
-          <div class="step-content">
-            <h3>Suporte e Monitoramento</h3>
-            <p>Oferecemos suporte técnico e monitoramento contínuo para garantir o sucesso das soluções implementadas.</p>
-          </div>
+          <h3 class="step-title">4. Suporte e Monitoramento</h3>
+          <p>Oferecemos suporte técnico e monitoramento contínuo para garantir o sucesso das soluções implementadas.</p>
         </div>
       </div>
     </div>
-  </section>
-
-
+  </div>
+</section>
 
   <!-- Contact Section -->
-  <section id="contact" class="section contact-section">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-badge">Contato</div>
-        <h2 class="section-title">Entre em Contato</h2>
-        <p class="section-description">
-          Preencha o formulário abaixo e nossa equipe entrará em contato com você o mais breve possível.
-        </p>
-      </div>
-
-      <div class="row justify-content-center">
-        <div class="col-lg-8">
-          <form class="contact-form">
-            <div class="mb-3">
-              <label for="name" class="form-label">Nome</label>
-              <input type="text" class="form-control" id="name" placeholder="Seu nome" required>
-            </div>
-            <div class="mb-3">
-              <label for="email" class="form-label">Email</label>
-              <input type="email" class="form-control" id="email" placeholder="Seu email" required>
-            </div>
-            <div class="mb-3">
-              <label for="message" class="form-label">Mensagem</label>
-              <textarea class="form-control" id="message" rows="5" placeholder="Sua mensagem" required></textarea>
-            </div>
-            <button type="submit" class="btn-submit">Enviar Mensagem</button>
-          </form>
-        </div>
-      </div>
+  <section class="section dark-section" id="contact">
+  <div class="container">
+    <div class="section-header text-center mb-5">
+      <h2 class="section-title">Solicite um <span class="gold-text">Orçamento</span></h2>
+      <p class="lead">Preencha o formulário abaixo e entraremos em contacto para discutir suas necessidades de consultoria tecnológica.</p>
     </div>
-  </section>
+
+    <div class="contact-form">
+      <form id="consultingForm">
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <label for="name" class="form-label">Nome Completo*</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+          </div>
+          <div class="col-md-6 mb-4">
+            <label for="email" class="form-label">Email*</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <label for="phone" class="form-label">Telefone*</label>
+            <input type="tel" class="form-control" id="phone" name="phone" required>
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <label for="services" class="form-label">Quais serviços você precisa?*</label>
+          <textarea class="form-control" id="services" name="services" rows="4" required placeholder="Descreva os serviços de consultoria que você precisa, incluindo detalhes específicos."></textarea>
+        </div>
+
+        <div class="mb-4">
+          <label for="message" class="form-label">Informações Adicionais</label>
+          <textarea class="form-control" id="message" name="message" rows="3" placeholder="Descreva brevemente suas necessidades específicas ou dúvidas."></textarea>
+        </div>
+
+        <div class="mb-4 form-check">
+          <input type="checkbox" class="form-check-input" id="privacy" name="privacy" required>
+          <label class="form-check-label" for="privacy">Concordo com a <a href="#" class="text-gold">política de privacidade</a>*</label>
+        </div>
+
+        <button type="submit" class="btn-submit">Enviar Pedido</button>
+        <div id="form-status" class="mt-3"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbx_I4YVUXDEtxXry_QY-dqzYHz_ODJAOlgZf_mBaOxiiwNlD05e7B7LfESU3_L6qiQB/exec';
+  const form = document.getElementById('consultingForm');
+  const status = document.getElementById('form-status');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    status.textContent = "Enviando...";
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(scriptURL, {
+        method: 'POST',
+        body: formData
+      });
+
+      if (response.ok) {
+        status.innerHTML = "<span style='color:green;'>Mensagem enviada com sucesso!</span>";
+        form.reset();
+      } else {
+        status.innerHTML = "<span style='color:red;'>Erro ao enviar. Tente novamente.</span>";
+      }
+    } catch (error) {
+      console.error('Erro:', error);
+      status.innerHTML = "<span style='color:red;'>Erro de rede. Verifique sua ligação.</span>";
+    }
+  });
+</script>
 
   <!-- Footer -->
   <footer class="minimal-footer">
     <div class="footer-container">
       <div class="footer-brand">
-        <img src="imagens/Infosoluções_logo_Preto_page-0001-removebg-preview.png" alt="Logo" class="footer-logo">
+        <img src="imagens/Infosoluções_logo_Preto_page-0001_removebg-preview.png" alt="Logo" class="footer-logo">
         
       </div>
       

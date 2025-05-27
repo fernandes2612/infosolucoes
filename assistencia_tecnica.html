@@ -5,37 +5,146 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Assistência Técnica - InfoSoluções</title>
-  <meta name="description" content="Serviços especializados em assistência técnica para computadores, servidores e dispositivos empresariais.">
-  <meta name="keywords" content="assistência técnica, manutenção, computadores, servidores, InfoSoluções, suporte técnico">
+  <meta name="description" content="Consultoria tecnológica para empresas. Soluções personalizadas para otimizar sua infraestrutura de TI.">
+  <meta name="keywords" content="consultoria tecnológica, TI, InfoSoluções, tecnologia empresarial">
 
   <!-- Favicons -->
   <link href="imagens/simbolo_pagina.png" rel="icon">
   <link href="imagens/simbolo_pagina.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
+
+
   
   <style>
     /* Cores principais */
     :root {
-      --primary-color: #cfbb83; /* Cor do botão Ligue-nos (Bootstrap primary) */
+      --primary-color: #b29146; /* Cor do botão Ligue-nos (Bootstrap primary) */
       --secondary-color: #25d366; /* Verde WhatsApp apenas para elementos específicos */
       --dark-bg: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
       --light-bg: rgba(255, 255, 255, 0.05);
       --border-color: rgba(255, 255, 255, 0.1);
     }
+     /* Ajuste global para texto */
+body {
+  color: #eaeaea; /* Texto mais claro */
+  background-color: #1a1a1a; /* Fundo escuro */
+}
+
+/* Ajuste para títulos */
+h1, h2, h3, h4, h5, h6 {
+  color: #f5f5f5; /* Títulos mais claros */
+}
+
+/* Ajuste para parágrafos */
+p {
+  color: #dcdcdc; /* Texto mais claro para parágrafos */
+}
+
+/* Links */
+a {
+  color: #ffd700; /* Amarelo dourado para links */
+}
+
+a:hover {
+  color: #ffcc00; /* Amarelo mais claro ao passar o mouse */
+}
+
+/* Botões */
+.btn-primary {
+  background-color: #ffd700; /* Amarelo dourado */
+  color: #1a1a1a; /* Texto escuro para contraste */
+  border-color: #ffd700;
+}
+
+.btn-primary:hover {
+  background-color: #ffcc00; /* Amarelo mais claro */
+  border-color: #ffcc00;
+}
+
+/* Ajuste para seções escuras */
+.section-title {
+  color: #f5f5f5; /* Títulos das seções mais claros */
+}
+
+.service-box p, .service-box ul li {
+  color: #dcdcdc; /* Texto dentro das caixas de serviço */
+}
+
+.info-item p {
+  color: #dcdcdc; /* Texto das informações de contato */
+}
+
+    .header {
+  --background-color: rgba(0, 0, 0, 0);
+  --default-color: #ffffff;
+  --heading-color: #ffffff;
+  color: var(--default-color);
+  background-color: var(--background-color);
+  padding: 10px 0;
+  transition: all 0.5s;
+  z-index: 997;
+  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+}
+
+
+
+.header .logo img {
+  max-height: 70px;
+  margin-left: 0; /* Remove qualquer margem à esquerda */
+  padding-right: 100px;
+}
+
+.header .logo h1 {
+  font-size: 20px;
+  margin: 0;
+  font-weight: 700;
+  color: var(--heading-color);
+}
+
+.header .cta-btn,
+.header .cta-btn:focus {
+  color: var(--contrast-color);
+  background: var(--accent-color);
+  font-size: 14px;
+  padding: 8px 26px;
+  margin: 0;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+
+.header .cta-btn:hover,
+.header .cta-btn:focus:hover {
+  color: var(--contrast-color);
+  background: color-mix(in srgb, var(--accent-color), transparent 15%);
+}
+
+@media (max-width: 450px) {
+  .header .logo {
+    order: 1;
+  }
+
+  .header .logo img {
+    max-width: 50px; /* Ajuste para um tamanho visível */
+    height: auto; /* Mantém a proporção da imagem */
+  }
+
+  .header .cta-btn {
+    order: 2;
+    margin: 0 15px 0 0;
+    padding: 6px 20px;
+  }
+
+  .header .navmenu {
+    order: 3;
+  }
+}
     
      /* Global Header on Scroll
 ------------------------------*/
@@ -52,7 +161,7 @@
     justify-content: center;
     text-align: center;
     overflow: hidden;
-    background: #000 url('/api/placeholder/1920/1080') center/cover no-repeat;
+    
 }
 
 .hero-bg {
@@ -476,7 +585,7 @@
     <div class="hero-content" data-aos="fade-up">
       <h2 class="text-glow">Assistência Técnica Especializada</h2>
       <p style="color: #ffffff;">Oferecemos suporte técnico confiável para computadores, servidores e dispositivos empresariais. Soluções rápidas e eficazes para todos os problemas técnicos.</p>
-      <a href="#contact" class="hero-btn">Solicite Assistência</a>
+      <a href="#contact" class="hero-btn">Solicite Assistência <i class="bi bi-arrow-right ms-2"></i></a>
     </div>
   </section>
 

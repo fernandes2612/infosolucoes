@@ -5,169 +5,1234 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Gestão de Redes - InfoSoluções</title>
-  <meta name="description" content="Serviços especializados em gestão de redes empresariais. Garantimos conectividade, segurança e desempenho para sua infraestrutura de TI.">
-  <meta name="keywords" content="gestão de redes, redes empresariais, InfoSoluções, conectividade, segurança, desempenho, infraestrutura de TI">
+  <meta name="description" content="Consultoria tecnológica para empresas. Soluções personalizadas para otimizar sua infraestrutura de TI.">
+  <meta name="keywords" content="consultoria tecnológica, TI, InfoSoluções, tecnologia empresarial">
 
   <!-- Favicons -->
   <link href="imagens/simbolo_pagina.png" rel="icon">
   <link href="imagens/simbolo_pagina.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
+
+
+  <style>
+    :root {
+      
+      --dark-color: #0a0a0a;
+      --darker-color: #000000;
+      --primary-color: #b29146; /* Dourado principal */ /* Dourado mais intenso para destaques */
+      --default-color: #ffffff; /* Branco para texto */
+      --text-muted: #cccccc;
+    }
+     /* Ajuste global para texto */
+body {
+  color: #eaeaea; /* Texto mais claro */
+  background-color: #1a1a1a; /* Fundo escuro */
+}
+
+/* Ajuste para títulos */
+h1, h2, h3, h4, h5, h6 {
+  color: #f5f5f5; /* Títulos mais claros */
+}
+
+/* Ajuste para parágrafos */
+p {
+  color: #dcdcdc; /* Texto mais claro para parágrafos */
+}
+
+/* Links */
+a {
+  color: #ffd700; /* Amarelo dourado para links */
+}
+
+a:hover {
+  color: #ffcc00; /* Amarelo mais claro ao passar o mouse */
+}
+
+/* Botões */
+.btn-primary {
+  background-color: #ffd700; /* Amarelo dourado */
+  color: #1a1a1a; /* Texto escuro para contraste */
+  border-color: #ffd700;
+}
+
+.btn-primary:hover {
+  background-color: #ffcc00; /* Amarelo mais claro */
+  border-color: #ffcc00;
+}
+
+/* Ajuste para seções escuras */
+.section-title {
+  color: #f5f5f5; /* Títulos das seções mais claros */
+}
+
+.service-box p, .service-box ul li {
+  color: #dcdcdc; /* Texto dentro das caixas de serviço */
+}
+
+.info-item p {
+  color: #dcdcdc; /* Texto das informações de contato */
+}
+
+    .header {
+  --background-color: rgba(0, 0, 0, 0);
+  --default-color: #ffffff;
+  --heading-color: #ffffff;
+  color: var(--default-color);
+  background-color: var(--background-color);
+  padding: 10px 0;
+  transition: all 0.5s;
+  z-index: 997;
+  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+}
+
+
+
+.header .logo img {
+  max-height: 70px;
+  margin-left: 0; /* Remove qualquer margem à esquerda */
+  padding-right: 100px;
+}
+
+.header .logo h1 {
+  font-size: 20px;
+  margin: 0;
+  font-weight: 700;
+  color: var(--heading-color);
+}
+
+.header .cta-btn,
+.header .cta-btn:focus {
+  color: var(--contrast-color);
+  background: var(--accent-color);
+  font-size: 14px;
+  padding: 8px 26px;
+  margin: 0;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+
+.header .cta-btn:hover,
+.header .cta-btn:focus:hover {
+  color: var(--contrast-color);
+  background: color-mix(in srgb, var(--accent-color), transparent 15%);
+}
+
+@media (max-width: 450px) {
+  .header .logo {
+    order: 1;
+  }
+
+  .header .logo img {
+    max-width: 50px; /* Ajuste para um tamanho visível */
+    height: auto; /* Mantém a proporção da imagem */
+  }
+
+  .header .cta-btn {
+    order: 2;
+    margin: 0 15px 0 0;
+    padding: 6px 20px;
+  }
+
+  .header .navmenu {
+    order: 3;
+  }
+}
+
+  
+
+    /* Hero Section */
+    .scrolled .header {
+  --background-color: rgba(40, 40, 40, 0.9);
+}
+    /* Estilos adicionais para garantir consistência */
+    .hero {
+    position: relative;
+    height: 100vh;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+   
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out 0.3s forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.8s ease-out 0.6s forwards;
+}
+
+@keyframes fadeUp {
+    from { 
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.text-glow {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #b29146;
+    font-family: 'Playfair Display', serif;
+}
+
+.hero-content p {
+    color: white !important;
+    font-size: 1.3rem !important;
+    line-height: 1.8 !important;
+    margin-bottom: 2.5rem !important;
+    font-weight: 300;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Botão com animação simples */
+.hero-btn {
+    display: inline-block;
+    background: #b29146;
+    color: rgb(0, 0, 0) !important;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out 0.9s forwards;
+}
+
+.hero-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(178, 145, 70, 0.4);
+    background: #d4af5a;
+}
+
+.hero-btn:active {
+    transform: translateY(1px);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .hero {
+        height: 80vh;
+    }
+    
+    .text-glow {
+        font-size: 2.2rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.1rem !important;
+    }
+    
+    .hero-btn {
+        padding: 12px 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        height: 70vh;
+    }
+    
+    .text-glow {
+        font-size: 1.8rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem !important;
+    }
+}
+    /* Section Styles */
+    .section {
+      padding: 6rem 0;
+      position: relative;
+    }
+
+    .dark-section {
+      background: var(--darker-bg);
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .light-section {
+      background: var(--card-bg);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .section-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--text-light);
+    }
+
+    .gold-text {
+      color: var(--primary-color);
+    }
+
+    .lead {
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Service Cards */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .service-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      padding: 2.5rem;
+      text-align: center;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary-color), var(--primary-light));
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    .service-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      border-color: var(--primary-color);
+      box-shadow: 0 20px 40px rgba(178, 145, 70, 0.2);
+    }
+
+    .service-card i {
+      font-size: 3rem;
+      color: var(--primary-color);
+      margin-bottom: 1.5rem;
+      display: block;
+    }
+
+    .service-card h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: var(--text-light);
+    }
+
+    .service-card p {
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* About Section */
+    .about-content {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .stat-item {
+      text-align: center;
+      padding: 2rem;
+      background: var(--card-bg);
+      border-radius: 15px;
+      border: 1px solid var(--border-color);
+    }
+
+    .stat-number {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      display: block;
+    }
+
+    .stat-label {
+      color: var(--text-muted);
+      font-weight: 500;
+      margin-top: 0.5rem;
+    }
+
+    /* Clients Section */
+    .clients-section {
+      padding: 4rem 0;
+      background: var(--card-bg);
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .clients-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 3rem;
+      margin-top: 2rem;
+    }
+
+    .client-logo {
+      filter: grayscale(100%) brightness(0.6);
+      opacity: 0.7;
+      transition: all 0.3s ease;
+      max-width: 120px;
+      max-height: 60px;
+    }
+
+    .client-logo:hover {
+      filter: grayscale(0%) brightness(1);
+      opacity: 1;
+    }
+
+    /* Testimonials Section */
+    .testimonials-section {
+      padding: 6rem 0;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .testimonial-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 15px;
+      padding: 2rem;
+      position: relative;
+    }
+
+    .testimonial-card::before {
+      content: '"';
+      position: absolute;
+      top: 1rem;
+      left: 1.5rem;
+      font-size: 5rem;
+      color: var(--primary-color);
+      opacity: 0.2;
+      font-family: serif;
+      line-height: 1;
+    }
+
+    .testimonial-content {
+      position: relative;
+      z-index: 1;
+      margin-bottom: 1.5rem;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .author-avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--primary-color);
+    }
+
+    .author-info h4 {
+      font-family: 'Space Grotesk', sans-serif;
+      color: var(--text-light);
+      margin-bottom: 0.2rem;
+    }
+
+    .author-info p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    /* Pricing Section */
+    .pricing-section {
+      padding: 6rem 0;
+      background: var(--darker-bg);
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .pricing-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 15px;
+      padding: 2.5rem;
+      text-align: center;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pricing-card.popular {
+      border: 2px solid var(--primary-color);
+      transform: translateY(-10px);
+    }
+
+    .popular-badge {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: var(--primary-color);
+      color: #000;
+      padding: 0.5rem 1.5rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      transform: translateY(-50%) rotate(15deg);
+    }
+
+    .pricing-card h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: var(--text-light);
+    }
+
+    .price {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      margin-bottom: 1.5rem;
+    }
+
+    .price span {
+      font-size: 1rem;
+      color: var(--text-muted);
+    }
+
+    .pricing-features {
+      list-style: none;
+      margin-bottom: 2rem;
+      text-align: left;
+    }
+
+    .pricing-features li {
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .pricing-features li i {
+      color: var(--primary-color);
+    }
+
+    /* FAQ Section */
+    .faq-section {
+      padding: 6rem 0;
+    }
+
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      margin-bottom: 1rem;
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      width: 100%;
+      background: var(--card-bg);
+      border: none;
+      padding: 1.5rem;
+      text-align: left;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.1rem;
+      color: var(--text-light);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.3s ease;
+    }
+
+    .faq-question:hover {
+      background: #151515;
+    }
+
+    .faq-question i {
+      transition: transform 0.3s ease;
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      background: var(--darker-bg);
+    }
+
+    .faq-answer-content {
+      padding: 1.5rem;
+    }
+
+    .faq-item.active .faq-question {
+      background: #151515;
+    }
+
+    .faq-item.active .faq-question i {
+      transform: rotate(180deg);
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 500px;
+    }
+
+    /* Contact Form */
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      padding: 3rem;
+      border-radius: 20px;
+      border: 1px solid var(--border-color);
+    }
+
+    .form-group {
+      margin-bottom: 2rem;
+    }
+
+    .form-label {
+      display: block;
+      color: var(--text-light);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 1rem;
+      background: var(--dark-bg);
+      border: 2px solid var(--border-color);
+      border-radius: 10px;
+      color: var(--text-light);
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 3px rgba(178, 145, 70, 0.1);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .form-check {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .form-check-input {
+      width: 18px;
+      height: 18px;
+    }
+
+    .form-check-label {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    .btn-submit {
+      width: 100%;
+      background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+      color: #000;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 30px rgba(178, 145, 70, 0.3);
+    }
+
+    .btn-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 15px 40px rgba(178, 145, 70, 0.4);
+    }
+
+    /* Footer */
+    .footer {
+      background: var(--darker-bg);
+      border-top: 1px solid var(--border-color);
+      padding: 3rem 0 1rem;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .footer-brand h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .footer-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--primary-color);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border-color);
+      color: var(--text-muted);
+    }
+
+    /* Mobile Styles */
+    @media (max-width: 768px) {
+      .nav-menu {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        right: 0;
+        background: var(--darker-bg);
+        flex-direction: column;
+        padding: 2rem;
+        gap: 1.5rem;
+        border-bottom: 1px solid var(--border-color);
+        transform: translateY(-150%);
+        transition: transform 0.3s ease;
+        z-index: 999;
+      }
+
+      .nav-menu.active {
+        transform: translateY(0);
+      }
+
+      .mobile-menu-btn {
+        display: block;
+      }
+
+      .header-container {
+        padding: 0 1rem;
+      }
+
+      .container {
+        padding: 0 1rem;
+      }
+
+      .hero {
+        height: 80vh;
+        padding: 2rem 0;
+      }
+
+      .section {
+        padding: 4rem 0;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .service-card {
+        padding: 2rem;
+      }
+
+      .contact-form {
+        padding: 2rem;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .pricing-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .client-logo {
+        max-width: 100px;
+      }
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-in-up {
+      opacity: 0;
+      animation: fadeInUp 0.6s ease forwards;
+    }
+
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.2s; }
+    .delay-3 { animation-delay: 0.3s; }
+    .delay-4 { animation-delay: 0.4s; }
+    .delay-5 { animation-delay: 0.5s; }
+  </style>
 </head>
 
-<body class="blog-page">
-
+<body>
   <!-- WhatsApp Button -->
   <a href="https://api.whatsapp.com/send?phone=912094963&text=Texto%20aqui"
-     target="_blank"
-     style="
-        position: fixed;
-        bottom: 80px;
-        right: 30px;
-        z-index: 9999;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-        animation: pulse 2s infinite;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-     "
-     onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 12px 24px rgba(0,0,0,0.3)'"
-     onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 8px 20px rgba(0, 0, 0, 0.2)'">
-    <img src="imagens/WhatsApp.svg.webp" alt="WhatsApp" style="width: 70px; height: 70px;">
-  </a>
+   target="_blank"
+   style="
+      position: fixed;
+      bottom: 80px;
+      right: 30px;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      animation: pulse 2s infinite;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+   "
+   onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 12px 24px rgba(0,0,0,0.3)'"
+   onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 8px 20px rgba(0, 0, 0, 0.2)'"
+>
+  <img src="imagens/WhatsApp.svg.webp" alt="WhatsApp" style="width: 70px; height: 70px;">
+</a>
 
-  <!-- Header -->
+<!-- Animação pulsar -->
+<style>
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+</style>
+
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
         <img src="imagens/Infosoluções_logo_Preto_page-0001-removebg-preview.png" alt="Logo Info-Soluções" class="sitename">
       </a>
       
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.html" class="active">Início</a></li>
+          <li><a href="#hero" class="active">Início</a></li>
           <li class="dropdown"><a href="#"><span>Serviços</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="assistencia_tecnica.html">Assistência Técnica</a></li>
-              <li><a href="reparacao_hardware.html">Reparação de Hardware</a></li>
-              <li><a href="montagem_de_pc.html">Montagem e Upgrade de PCs</a></li>
-              <li><a href="remocao_virus.html">Remoção de Vírus</a></li>
-              <li><a href="instalacao_software.html">Instalação de Software</a></li>
-              <li><a href="gestao_infra.html">Gestão de Infraestruturas IT</a></li>
-              <li><a href="gestao_redes.html">Gestão de Redes</a></li>
+              <li class="dropdown"><a href="#"><span>Particular</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="assistencia_tecnica.html">Assistência técnica </a></li>
+                  <li><a href="reparacao_hardware.html">Reparações de hardware</a></li>
+                  <li><a href="montagem_de_pc.html">Montagem e upgrade de PCs</a></li>
+                  <li><a href="remocao_virus.html">Remoção de vírus</a></li>
+                  <li><a href="instalacao_software.html">Instalação de software</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#"><span>Empresarial</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="gestao_infra.html">Gestão de infraestruturas IT </a></li>
+                  <li><a href="gestao_redes.html">Gestão de redes</a></li>
+                  <li><a href="manutencao_servidor.html">Manutenção de servidores</a></li>
+                  <li><a href="suporte_remoto.html">Suporte técnico remoto</a></li>
+                  <li><a href="consultoria_tecn.html">Consultoria tecnológica</a></li>
+                  <li><a href="venda_equipamentos_emp.html">Venda de equipamentos empresariais</a></li>
+                </ul>
+              </li>
             </ul>
           </li>
-          <li><a href="blog.html">Blog</a></li>
+          <li><a href="blog.html">blog</a></li>
           <li><a href="#about">Sobre</a></li>
           <li><a href="#contact">Contacto</a></li>
+          
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <a class="cta-btn" href="tel:912094963">Ligue-nos</a>
+      <a class="cta-btn" href="tel:912 094 963">Ligue-nos</a>
 
     </div>
   </header>
 
   <!-- Hero Section -->
   <section class="hero">
-    <img src="imagens/gestao_redes.jpg" alt="Imagem de Gestão de Redes" class="hero-bg">
-    <div class="hero-content" data-aos="fade-up">
-      <h2 class="text-glow">Gestão de Redes Empresariais</h2>
-      <p>Oferecemos soluções completas para gerenciar e otimizar suas redes, garantindo conectividade, segurança e desempenho.</p>
-      <a href="#contact" class="hero-btn">Solicite um Orçamento</a>
+    <div class="hero-overlay"></div>
+    <img src="imagens/gestao_redes.jpg" alt="Imagem de gestão de redes" class="hero-bg">
+    <div class="hero-content">
+        <h2 class="text-glow">Gestão de Redes Empresariais</h2>
+        <p>Oferecemos soluções completas para monitoramento, segurança e otimização de redes, garantindo conectividade e desempenho para o seu negócio.</p>
+        <a href="#contact" class="hero-btn">Saiba Mais <i class="bi bi-arrow-right"></i></a>
+    </div>
+</section>
+
+  <!-- Services Section -->
+  <section class="section dark-section" id="services">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Nossos <span class="gold-text">Serviços</span></h2>
+        <p class="lead">Oferecemos soluções completas para gestão de redes empresariais, garantindo segurança, eficiência e disponibilidade máxima.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card fade-in-up delay-1">
+          <i class="bi bi-diagram-3"></i>
+          <h3>Monitoramento de Redes</h3>
+          <p>Supervisão contínua 24/7 para identificar e resolver problemas antes que afetem suas operações empresariais.</p>
+        </div>
+        
+        <div class="service-card fade-in-up delay-2">
+          <i class="bi bi-shield-lock"></i>
+          <h3>Segurança de Redes</h3>
+          <p>Implementação de firewalls avançados, VPNs seguras e políticas de segurança robustas para proteger sua infraestrutura.</p>
+        </div>
+        
+        <div class="service-card fade-in-up delay-3">
+          <i class="bi bi-speedometer2"></i>
+          <h3>Otimização de Performance</h3>
+          <p>Melhoria contínua do desempenho e da eficiência das redes para suportar todas as suas operações críticas.</p>
+        </div>
+        
+        <div class="service-card fade-in-up delay-4">
+          <i class="bi bi-people"></i>
+          <h3>Consultoria Especializada</h3>
+          <p>Planejamento estratégico e consultoria técnica para redes empresariais de alta performance e escalabilidade.</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Main Content -->
-  <main class="main">
-    <!-- Serviços Section -->
-    <section class="section dark-section" id="services">
-      <div class="container">
-        <h2 class="section-title">Nossos Serviços</h2>
-        <div class="row gy-4">
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-box">
-              <h3>Monitoramento de Redes</h3>
-              <p>Supervisão contínua para identificar e resolver problemas antes que afetem suas operações.</p>
+  <!-- Clients Section -->
+  <section class="section clients-section" id="clients">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Nossos <span class="gold-text">Clientes</span></h2>
+        <p class="lead">Trabalhamos com empresas de diversos setores, proporcionando soluções personalizadas para cada necessidade.</p>
+      </div>
+      
+      <div class="clients-grid">
+        <img src="https://via.placeholder.com/120x60?text=Empresa+A" alt="Empresa A" class="client-logo fade-in-up delay-1">
+        <img src="https://via.placeholder.com/120x60?text=Empresa+B" alt="Empresa B" class="client-logo fade-in-up delay-2">
+        <img src="https://via.placeholder.com/120x60?text=Empresa+C" alt="Empresa C" class="client-logo fade-in-up delay-3">
+        <img src="https://via.placeholder.com/120x60?text=Empresa+D" alt="Empresa D" class="client-logo fade-in-up delay-4">
+        <img src="https://via.placeholder.com/120x60?text=Empresa+E" alt="Empresa E" class="client-logo fade-in-up delay-5">
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="section dark-section testemonials-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Depoimentos de <span class="gold-text">Clientes</span></h2>
+        <p class="lead">Veja o que nossos clientes dizem sobre nossos serviços de gestão de redes.</p>
+      </div>
+      
+      <div class="testimonials-grid">
+        <div class="testimonial-card fade-in-up delay-1">
+          <div class="testimonial-content">
+            <p>A InfoSoluções revolucionou nossa infraestrutura de rede. Desde que contratamos seus serviços, tivemos zero downtime e performance excepcional.</p>
+          </div>
+          <div class="testimonial-author">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="João Silva" class="author-avatar">
+            <div class="author-info">
+              <h4>João Silva</h4>
+              <p>Diretor de TI, Empresa X</p>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-box">
-              <h3>Segurança de Redes</h3>
-              <p>Implementação de firewalls, VPNs e políticas de segurança para proteger sua infraestrutura.</p>
+        </div>
+        
+        <div class="testimonial-card fade-in-up delay-2">
+          <div class="testimonial-content">
+            <p>O suporte técnico é rápido e eficiente. Resolvem nossos problemas antes mesmo que os percebamos. Recomendo fortemente!</p>
+          </div>
+          <div class="testimonial-author">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Maria Santos" class="author-avatar">
+            <div class="author-info">
+              <h4>Maria Santos</h4>
+              <p>Gerente de Operações, Empresa Y</p>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-box">
-              <h3>Otimização de Redes</h3>
-              <p>Melhoria do desempenho e da eficiência das redes para suportar suas operações diárias.</p>
+        </div>
+        
+        <div class="testimonial-card fade-in-up delay-3">
+          <div class="testimonial-content">
+            <p>Migramos toda nossa infraestrutura para a gestão da InfoSoluções e os resultados foram impressionantes. Redução de custos e aumento de produtividade.</p>
+          </div>
+          <div class="testimonial-author">
+            <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Carlos Oliveira" class="author-avatar">
+            <div class="author-info">
+              <h4>Carlos Oliveira</h4>
+              <p>CEO, Empresa Z</p>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Contato Section -->
-    <section class="section" id="contact">
-      <div class="container">
-        <h2 class="section-title">Entre em Contato</h2>
-        <p class="text-center mb-5">Preencha o formulário ou utilize nossos outros canais para entrar em contato conosco.</p>
-        <form action="https://example.com/form-handler" method="post" class="php-email-form">
-          <div class="row gy-4">
-            <div class="col-md-6">
-              <input type="text" name="name" class="form-control" placeholder="Seu Nome" required>
-            </div>
-            <div class="col-md-6">
-              <input type="email" name="email" class="form-control" placeholder="Seu Email" required>
-            </div>
-            <div class="col-12">
-              <textarea name="message" class="form-control" rows="6" placeholder="Mensagem" required></textarea>
-            </div>
-            <div class="col-12 text-center">
-              <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
-            </div>
+  <!-- Pricing Section -->
+  <section class="section pricing-section" id="pricing">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Nossos <span class="gold-text">Planos</span></h2>
+        <p class="lead">Escolha o plano que melhor se adapta às necessidades da sua empresa.</p>
+      </div>
+      
+      <div class="pricing-grid">
+        <div class="pricing-card fade-in-up delay-1">
+          <h3>Básico</h3>
+          <div class="price">€299<span>/mês</span></div>
+          <ul class="pricing-features">
+            <li><i class="bi bi-check-circle"></i> Monitoramento 24/7</li>
+            <li><i class="bi bi-check-circle"></i> Suporte 8x5</li>
+            <li><i class="bi bi-check-circle"></i> Relatórios mensais</li>
+            <li><i class="bi bi-check-circle"></i> Até 50 dispositivos</li>
+            <li><i class="bi bi-x-circle" style="color: var(--text-muted);"></i> Segurança avançada</li>
+          </ul>
+          <a href="#contact" class="btn-submit" style="display: block; text-align: center; text-decoration: none;">
+            Contratar
+          </a>
+        </div>
+        
+        <div class="pricing-card popular fade-in-up delay-2">
+          <div class="popular-badge">Popular</div>
+          <h3>Profissional</h3>
+          <div class="price">€599<span>/mês</span></div>
+          <ul class="pricing-features">
+            <li><i class="bi bi-check-circle"></i> Monitoramento 24/7</li>
+            <li><i class="bi bi-check-circle"></i> Suporte 24x7</li>
+            <li><i class="bi bi-check-circle"></i> Relatórios semanais</li>
+            <li><i class="bi bi-check-circle"></i> Até 200 dispositivos</li>
+            <li><i class="bi bi-check-circle"></i> Segurança básica</li>
+          </ul>
+          <a href="#contact" class="btn-submit" style="display: block; text-align: center; text-decoration: none;">
+            Contratar
+          </a>
+        </div>
+        
+        <div class="pricing-card fade-in-up delay-3">
+          <h3>Enterprise</h3>
+          <div class="price">€999<span>/mês</span></div>
+          <ul class="pricing-features">
+            <li><i class="bi bi-check-circle"></i> Monitoramento 24/7</li>
+            <li><i class="bi bi-check-circle"></i> Suporte prioritário 24x7</li>
+            <li><i class="bi bi-check-circle"></i> Relatórios diários</li>
+            <li><i class="bi bi-check-circle"></i> Dispositivos ilimitados</li>
+            <li><i class="bi bi-check-circle"></i> Segurança avançada</li>
+          </ul>
+          <a href="#contact" class="btn-submit" style="display: block; text-align: center; text-decoration: none;">
+            Contratar
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section light-section" id="about">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2 class="section-title">Porque Escolher a <span class="gold-text">InfoSoluções</span></h2>
+        <p class="lead">Mais de 10 anos de experiência em gestão de redes empresariais, garantindo conectividade, segurança e desempenho.</p>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-item fade-in-up delay-1">
+          <span class="stat-number">+500</span>
+          <span class="stat-label">Clientes Atendidos</span>
+        </div>
+        <div class="stat-item fade-in-up delay-2">
+          <span class="stat-number">99.9%</span>
+          <span class="stat-label">Taxa de Uptime</span>
+        </div>
+        <div class="stat-item fade-in-up delay-3">
+          <span class="stat-number">24/7</span>
+          <span class="stat-label">Suporte Técnico</span>
+        </div>
+        <div class="stat-item fade-in-up delay-4">
+          <span class="stat-number">+10</span>
+          <span class="stat-label">Anos de Experiência</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section dark-section" id="contact">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2 class="section-title">Entre em <span class="gold-text">Contacto</span></h2>
+        <p class="lead">Preencha o formulário abaixo e nossa equipe entrará em contacto para discutir suas necessidades de gestão de redes.</p>
+      </div>
+
+      <div class="contact-form">
+        <form id="contactForm">
+          <div class="form-group">
+            <label for="name" class="form-label">Nome Completo*</label>
+            <input type="text" id="name" name="name" class="form-control" required>
           </div>
+          <div class="form-group">
+            <label for="email" class="form-label">Email*</label>
+            <input type="email" id="email" name="email" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="phone" class="form-label">Telefone*</label>
+            <input type="tel" id="phone" name="phone" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="message" class="form-label">Mensagem</label>
+            <textarea id="message" name="message" class="form-control" rows="5" placeholder="Descreva brevemente suas necessidades ou dúvidas."></textarea>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" id="privacy" name="privacy" class="form-check-input" required>
+            <label for="privacy" class="form-check-label">Concordo com a <a href="#" class="gold-text">política de privacidade</a>*</label>
+          </div>
+          <button type="submit" class="btn-submit">Enviar Mensagem</button>
         </form>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
   <!-- Footer -->
-  <footer class="minimal-footer">
-    <div class="footer-container">
-      <div class="footer-brand">
-        <img src="imagens/Infosoluções_logo_Preto_page-0001-removebg-preview.png" alt="Logo InfoSoluções" class="footer-logo">
-      </div>
-      <div class="footer-links">
-        <a href="index.html">Início</a>
-        <a href="#services">Serviços</a>
-        <a href="blog.html">Blog</a>
-        <a href="#about">Sobre</a>
-        <a href="#contact">Contato</a>
-      </div>
-      <div class="social-icons">
-        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h3>InfoSoluções</h3>
+          <p>Conectando empresas com soluções de TI de alta performance.</p>
+        </div>
+        <div class="footer-links">
+          <a href="#">Início</a>
+          <a href="#services">Serviços</a>
+          <a href="#clients">Clientes</a>
+          <a href="#pricing">Planos</a>
+          <a href="#about">Sobre</a>
+          <a href="#contact">Contacto</a>
+        </div>
       </div>
       <div class="footer-bottom">
         <p>&copy; 2025 InfoSoluções. Todos os direitos reservados.</p>
@@ -175,17 +1240,23 @@
     </div>
   </footer>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <!-- Scripts -->
+  <script>
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const navMenu = document.getElementById('navMenu');
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    mobileMenuBtn.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
 
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+    // Contact Form Submission
+    const contactForm = document.getElementById('contactForm');
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Mensagem enviada com sucesso! Entraremos em contacto em breve.');
+      contactForm.reset();
+    });
+  </script>
 </body>
-
 </html>
