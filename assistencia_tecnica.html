@@ -293,14 +293,33 @@ a:hover {
     
     /* Section Styling */
     .section {
+      background: #1a1a1a;
       padding: 100px 0;
       position: relative;
     }
     
     .dark-background {
-      background: var(--dark-bg);
-      color: white;
+      background: #1a1a1a; /* Fundo escuro */
+      color: #ffffff; /* Texto claro */
+      padding: 60px 0; /* Espaçamento interno */
     }
+    
+    .dark-background h2,
+.dark-background h3,
+.dark-background p {
+  color: #f5f5f5; /* Ajuste para títulos e textos */
+}
+
+.dark-background .step-number {
+  background: #000000; /* Destaque dourado para os números */
+  color: #000; /* Texto escuro para contraste */
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-bottom: 15px;
+}
     
     .section-title {
       text-align: center;

@@ -51,13 +51,11 @@
     body {
       background-color: var(--black-rich);
       color: var(--white-soft);
-      font-family: 'Poppins', sans-serif;
       line-height: 1.7;
     }
 
     /* Tipografia */
     h1, h2, h3, h4, h5, h6 {
-      font-family: 'Playfair Display', serif;
       color: var(--gold-primary);
     }
     
@@ -138,7 +136,6 @@
     justify-content: center;
     text-align: center;
     overflow: hidden;
-    background: #000 url('/api/placeholder/1920/1080') center/cover no-repeat;
 }
 
 .hero-bg {
@@ -210,7 +207,6 @@
     margin-right: auto;
 }
 
-/* Botão com animação simples */
 .hero-btn {
     display: inline-block;
     background: #b29146;
@@ -235,20 +231,19 @@
     transform: translateY(1px);
 }
 
-/* Responsivo */
 @media (max-width: 768px) {
     .hero {
         height: 80vh;
     }
-    
+
     .text-glow {
         font-size: 2.2rem;
     }
-    
+
     .hero-content p {
         font-size: 1.1rem !important;
     }
-    
+
     .hero-btn {
         padding: 12px 25px;
     }
@@ -258,15 +253,16 @@
     .hero {
         height: 70vh;
     }
-    
+
     .text-glow {
         font-size: 1.8rem;
     }
-    
+
     .hero-content p {
         font-size: 1rem !important;
     }
 }
+
     /* Seções */
     .section {
       padding: 100px 0;
@@ -610,22 +606,23 @@
 
   <!-- Hero Section -->
   <section class="hero">
+    <div class="hero-overlay"></div>
     <img src="imagens/instalação_software.jpg" alt="Imagem de instalação de software" class="hero-bg">
     <div class="hero-content">
         <h2 class="text-glow">Instalação de Software Profissional</h2>
-        <p style="color: #ffffff;">Personalizamos e instalamos softwares essenciais para atender às suas necessidades, garantindo segurança e desempenho.</p>
+        <p>Personalizamos e instalamos softwares essenciais para atender às suas necessidades, garantindo segurança e desempenho.</p>
         <a href="#contact" class="hero-btn">Solicite um Orçamento <i class="bi bi-arrow-right"></i></a>
     </div>
-</section>
+  </section>
 
   <!-- Main Content -->
   <main class="main">
     <!-- Serviços Section -->
     <section class="section dark-section" id="services">
       <div class="container">
-        <div class="section-header text-center mb-5">
+        <div class="section-header text-center mb-5"> 
           <h2 class="section-title">Nossos <span class="gold-text">Serviços</span></h2>
-          <p class="lead">Oferecemos soluções completas para instalação de softwares essenciais, garantindo compatibilidade e desempenho ideal.</p>
+          <p class="lead" style="color: #ffffff;">Oferecemos soluções completas para instalação de softwares essenciais, garantindo compatibilidade e desempenho ideal.</p>
         </div>
 
         <div class="row g-4">
@@ -740,7 +737,7 @@
           <div class="col-lg-10">
             <div class="section-header text-center mb-5">
               <h2 class="section-title">Solicite um <span class="gold-text">Orçamento</span></h2>
-              <p class="lead">Preencha o formulário abaixo e entraremos em contacto para discutir suas necessidades de instalação de software.</p>
+              <p class="lead" style="color: #ffffff;">Preencha o formulário abaixo e entraremos em contacto para discutir suas necessidades de instalação de software.</p>
             </div>
     
             <div class="contact-form">
