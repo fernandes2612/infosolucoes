@@ -1094,134 +1094,175 @@
 
     </section><!-- /Recent Posts Section -->
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact section light-background">
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Entre em Contato com a InfoSoluções</h2>
-        <p>Estamos à disposição para responder a todas as suas questões e oferecer o suporte que precisa.</p>
-      </div>
+    
+   
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row gy-4">
+    <!-- reCAPTCHA v2 -->
+    <section id="contact" class="contact section bg-light py-5">
+      <div class="container">
+        <!-- Cabeçalho -->
+        <div class="section-header text-center mb-5" data-aos="fade-up">
+          <h2 class="fw-bold" style="color: #B29146;">Entre em Contato com a InfoSoluções</h2>
+          <p class="lead">Estamos à disposição para responder a todas as suas questões e oferecer o suporte que precisa.</p>
+          <div class="divider mx-auto my-3" style="background-color: #B29146; width: 80px; height: 3px;"></div>
+        </div>
+    
+        <div class="row g-4" data-aos="fade-up" data-aos-delay="100">
           <!-- Informações de Contato -->
           <div class="col-lg-4">
-            <div class="info-item d-flex align-items-start" data-aos="fade-up" data-aos-delay="200">
-              <i class="bi bi-geo-alt flex-shrink-0"></i>
-              <div>
-                <h3>Morada</h3>
-                <p>R. do Dourado 297 1º andar, Sala 4, 3700-172 São João da Madeira</p>
+            <div class="contact-info-box p-4 h-100 bg-white rounded shadow-sm">
+              <div class="info-item d-flex mb-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="icon-box me-3" style="color: #B29146;">
+                  <i class="bi bi-geo-alt fs-4"></i>
+                </div>
+                <div>
+                  <h4 class="fw-bold">Morada</h4>
+                  <p class="mb-0">R. do Dourado 297 1º andar, Sala 4<br>3700-172 São João da Madeira</p>
+                  <a href="https://maps.google.com/?q=R.+do+Dourado+297,+3700-172+São+João+da+Madeira" 
+                     target="_blank" class="btn btn-link p-0 text-decoration-none mt-2" style="color: #B29146;">
+                    Ver no mapa <i class="bi bi-arrow-right ms-1"></i>
+                  </a>
+                </div>
               </div>
-            </div>
-
-            <div class="info-item d-flex align-items-start" data-aos="fade-up" data-aos-delay="300">
-              <i class="bi bi-telephone flex-shrink-0"></i>
-              <div>
-                <h3>Telefone</h3>
-                <p><a href="tel:+351912094963">+351 912 094 963</a></p>
+    
+              <div class="info-item d-flex mb-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="icon-box me-3" style="color: #B29146;">
+                  <i class="bi bi-telephone fs-4"></i>
+                </div>
+                <div>
+                  <h4 class="fw-bold">Telefone</h4>
+                  <p class="mb-0">
+                    <a href="tel:+351912094963" class="text-decoration-none" style="color: #B29146;">+351 912 094 963</a>
+                  </p>
+                  <small class="text-muted">Segunda a Sexta, 9:00 - 18:00</small>
+                </div>
               </div>
-            </div>
-
-            <div class="info-item d-flex align-items-start" data-aos="fade-up" data-aos-delay="400">
-              <i class="bi bi-envelope flex-shrink-0"></i>
-              <div>
-                <h3>Email</h3>
-                <p><a href="mailto:ruibulhosa@infosolucoes.pt">ruibulhosa@infosolucoes.pt</a></p>
+    
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                <div class="icon-box me-3" style="color: #B29146;">
+                  <i class="bi bi-envelope fs-4"></i>
+                </div>
+                <div>
+                  <h4 class="fw-bold">Email</h4>
+                  <p class="mb-0">
+                    <a href="mailto:ruibulhosa@infosolucoes.pt" class="text-decoration-none" style="color: #B29146;">ruibulhosa@infosolucoes.pt</a>
+                  </p>
+                  <small class="text-muted">Respondemos em até 24h úteis</small>
+                </div>
               </div>
             </div>
           </div>
-
-          <!-- Formulário de Contato -->
+    
+          <!-- Formulário de Contato (mantendo sua estrutura original) -->
           <div class="col-lg-8">
-            <form id="contactForm" action="https://script.google.com/macros/s/AKfycbyS32my1_D_f3t13shYJRkBbeCC8yJ-6l6HdL4EOJV0kCRpSjiFP86Ac3QA7j6hMTPK/exec" method="POST" class="php-email-form">
-              <!-- Campo honeypot -->
-              <input type="text" name="website_hp" style="display:none">
-
-              <div class="row gy-3">
-                <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Seu Nome" required>
+            <div class="contact-form-box p-4 bg-white rounded shadow-sm">
+              <form id="contactForm" action="https://script.google.com/macros/s/AKfycbyS32my1_D_f3t13shYJRkBbeCC8yJ-6l6HdL4EOJV0kCRpSjiFP86Ac3QA7j6hMTPK/exec" method="POST">
+                <!-- Campo honeypot -->
+                <input type="text" name="website_hp" style="display:none">
+    
+                <div class="row gy-3">
+                  <div class="col-md-6">
+                    <input type="text" name="name" class="form-control" placeholder="Seu Nome" required>
+                  </div>
+                  <div class="col-md-6">
+                    <input type="email" name="email" class="form-control" placeholder="Seu Email" required>
+                  </div>
                 </div>
-                <div class="col-md-6">
-                  <input type="email" name="email" class="form-control" placeholder="Seu Email" required>
+    
+                <div class="row gy-3 mt-3">
+                  <div class="col-12">
+                    <textarea name="message" class="form-control" rows="5" placeholder="Sua Mensagem" required></textarea>
+                  </div>
                 </div>
-              </div>
-
-              <div class="row gy-3 mt-3">
-                <div class="col-12">
-                  <textarea name="message" class="form-control" rows="5" placeholder="Sua Mensagem" required></textarea>
-                </div>
-              </div>
-
-              <!-- reCAPTCHA v2 -->
-              <div class="g-recaptcha" data-sitekey="6LdxnikrAAAAAE_WWT9UQJTGCEwApMpmQUbmCd_n"></div>
-              <button type="submit" class="btn btn-primary mt-3">Enviar Mensagem</button>
-
-              <div class="text-center mt-4">
+    
+                <!-- reCAPTCHA v2 -->
+                <div class="g-recaptcha mt-3" data-sitekey="6LdxnikrAAAAAE_WWT9UQJTGCEwApMpmQUbmCd_n"></div>
+                
+                <button type="submit" class="btn mt-3 w-100" style="background-color: #B29146; color: white;">
+                  Enviar Mensagem
+                </button>
                 <div id="formFeedback" class="mt-3"></div>
-              </div>
-            </form>
+    
+                <div class="text-center mt-4">
+                  <div id="formFeedback"></div>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>
     </section>
-
-    <!-- reCAPTCHA v2 -->
+    
+    <!-- Seu script exatamente como você forneceu -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script>
       document.getElementById('contactForm').addEventListener('submit', function (e) {
         e.preventDefault();
+    
         const form = e.target;
         const button = form.querySelector('button[type="submit"]');
         const feedback = document.getElementById('formFeedback');
         const recaptchaResponse = document.querySelector('[name="g-recaptcha-response"]').value;
-
-        // Verificar honeypot
-        if (form.website_hp.value) {
-          return; // Ignora spams silenciosamente
-        }
-
-        // Verificar se o reCAPTCHA foi preenchido
+    
+        // Verificação simples do reCAPTCHA
         if (!recaptchaResponse) {
-          feedback.innerHTML = '<div class="alert alert-danger">Por favor, confirme que você não é um robô.</div>';
+          feedback.innerHTML = '<div style="color: red; font-weight: 500;">Por favor, confirme que você não é um robô.</div>';
           return;
         }
-
+    
+        // Estado: carregando
         button.disabled = true;
-        button.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Enviando...';
+        button.innerHTML = 'Enviando...';
         feedback.innerHTML = '';
-
-        // Enviar formulário
+    
+        // Enviar o formulário para o Apps Script
         fetch(form.action, {
           method: 'POST',
           body: new FormData(form)
         })
-          .then(response => response.text())
-          .then(result => {
-            if (result.includes("Erro de verificação reCAPTCHA")) {
-              feedback.innerHTML = '<div class="alert alert-danger">Erro na verificação do reCAPTCHA. Tente novamente.</div>';
-            } else if (result.includes("Mensagem enviada com sucesso")) {
-              feedback.innerHTML = '<div class="alert alert-success">Mensagem enviada com sucesso!</div>';
-              form.reset();
-              grecaptcha.reset(); // Reseta o reCAPTCHA
-            } else {
-              feedback.innerHTML = '<div class="alert alert-danger">Erro ao enviar. Tente novamente.</div>';
-            }
-          })
-          .catch(error => {
-            feedback.innerHTML = '<div class="alert alert-danger">Erro ao enviar. Tente novamente.</div>';
-            console.error('Erro:', error);
-          })
-          .finally(() => {
-            button.disabled = false;
-            button.innerHTML = 'Enviar Mensagem';
-
-            // Esconder feedback após 5 segundos
-            setTimeout(() => {
-              feedback.innerHTML = '';
-            }, 5000);
-          });
+        .then(response => response.text())
+        .then(result => {
+          if (result.includes("verificação reCAPTCHA")) {
+            feedback.innerHTML = '<div style="color: red;">Erro de verificação do reCAPTCHA. Tente novamente.</div>';
+          } else if (result.includes("sucesso")) {
+            feedback.innerHTML = '<div style="color: green;">Mensagem enviada com sucesso!</div>';
+            form.reset();
+            grecaptcha.reset(); // Reseta o reCAPTCHA
+          } else {
+            feedback.innerHTML = '<div style="color: red;">Erro ao enviar. Tente novamente mais tarde.</div>';
+          }
+        })
+        .catch(() => {
+          feedback.innerHTML = '<div style="color: red;">Erro ao enviar. Verifique sua conexão.</div>';
+        })
+        .finally(() => {
+          button.disabled = false;
+          button.innerHTML = 'Enviar Mensagem';
+    
+          // Mensagem some depois de 5 segundos
+          setTimeout(() => feedback.innerHTML = '', 5000);
+        });
       });
     </script>
+
+    
+    <style>
+      .contact-info-box, .contact-form-box {
+        transition: transform 0.3s ease;
+      }
+      
+      .contact-info-box:hover, .contact-form-box:hover {
+        transform: translateY(-3px);
+      }
+      
+      
+      
+      .form-control:focus {
+        border-color: #B29146;
+        box-shadow: 0 0 0 0.25rem rgba(178, 145, 70, 0.25);
+      }
+    </style>
 
   </main>
 
@@ -1304,43 +1345,8 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
-  <script>
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        const form = e.target;
-        const loading = form.querySelector('.loading');
-        const errorMessage = form.querySelector('.error-message');
-        const sentMessage = form.querySelector('.sent-message');
-        
-        // Mostra loading e esconde mensagens
-        loading.style.display = 'block';
-        errorMessage.style.display = 'none';
-        sentMessage.style.display = 'none';
-        
-        // Envia os dados via Fetch API
-        fetch('forms/enviar.php', {
-    method: 'POST',
-    body: new FormData(form)
-})
-        .then(response => response.json())
-        .then(data => {
-            loading.style.display = 'none';
-            if(data.success) {
-                sentMessage.style.display = 'block';
-                form.reset();
-            } else {
-                errorMessage.textContent = data.error || 'Erro ao enviar mensagem';
-                errorMessage.style.display = 'block';
-            }
-        })
-        .catch(error => {
-            loading.style.display = 'none';
-            errorMessage.textContent = 'Erro na conexão. Tente novamente mais tarde.';
-            errorMessage.style.display = 'block';
-        });
-    });
-
+  
+<script>
     AOS.init({
       once: true, // Garante que a animação aconteça apenas uma vez
       duration: 1000, // Duração da animação em milissegundos

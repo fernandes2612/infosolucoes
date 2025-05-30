@@ -575,118 +575,232 @@ a:hover {
   <!-- Main Content -->
   <main class="main">
     <!-- Services Section -->
-    <section id="services" class="service-section py-5" style="background-color: #1a1a1a;">
+    <section id="services" class="service-section py-5" style="background-color: #1a1a1a; position: relative;">
+      <!-- Borda decorativa superior -->
+      
+      
       <div class="container" data-aos="fade-up">
-        <div class="section-title text-center">
-          <h2 style="color: #b29146;">Nossos Serviços de Reparação</h2>
-          <p class="mb-5">Na InfoSoluções oferecemos soluções completas para todos os tipos de problemas de hardware, desde computadores pessoais até infraestruturas empresariais complexas.</p>
+        <div class="section-header text-center mb-5">
+          <h2 class="fw-bold" style="color: #b29146;">Nossos Serviços de Reparação</h2>
+          <p class="lead text-light opacity-75">Soluções completas desde computadores pessoais até infraestruturas empresariais complexas</p>
+          <div class="divider mx-auto my-3" style="background-color: #B29146; width: 80px; height: 3px;"></div>
         </div>
-
+    
         <div class="row g-4">
           <!-- Serviço 1 -->
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-box">
-              <div class="service-icon">
-                <i class="bi bi-laptop" style="color: #b29146;"></i>
+            <div class="service-box h-100 p-4 bg-dark rounded-3 position-relative overflow-hidden border border-secondary border-opacity-25 transition-all hover-gold-border">
+              <div class="service-icon mb-4 text-center">
+                <i class="bi bi-laptop fs-1" style="color: #b29146;"></i>
               </div>
-              <h3 style="color: #b29146;">Reparação de Computadores</h3>
-              <p>Diagnóstico e reparação profissional de computadores desktop e portáteis. Substituição de componentes avariados, limpeza interna e otimização de desempenho.</p>
-              <ul class="service-list">
-                <li>Substituição de placas-mãe</li>
-                <li>Reparação de fontes de alimentação</li>
-                <li>Troca de ecrãs e teclados</li>
+              <h3 class="h4 fw-bold text-center mb-3" style="color: #b29146;">Reparação de Computadores</h3>
+              <p class="text-light opacity-75 text-center mb-4">Diagnóstico e reparação profissional de computadores desktop e portáteis com componentes de qualidade.</p>
+              <ul class="service-list ps-0 mb-4" style="list-style: none;">
+                <li class="d-flex align-items-start mb-2">
+                  <i class="bi bi-check-circle-fill me-2" style="color: #b29146;"></i>
+                  <span class="text-light opacity-75">Substituição de placas-mãe</span>
+                </li>
+                <li class="d-flex align-items-start mb-2">
+                  <i class="bi bi-check-circle-fill me-2" style="color: #b29146;"></i>
+                  <span class="text-light opacity-75">Reparação de fontes de alimentação</span>
+                </li>
+                <li class="d-flex align-items-start">
+                  <i class="bi bi-check-circle-fill me-2" style="color: #b29146;"></i>
+                  <span class="text-light opacity-75">Troca de ecrãs e teclados</span>
+                </li>
               </ul>
-              <a href="#contact" class="btn btn-primary">Saber Mais</a>
+              <div class="text-center mt-auto pt-3">
+                <a href="#contact" class="btn btn-primary rounded-pill px-4" style="background-color: #b29146; border: none;">Saber Mais</a>
+              </div>
+              <!-- Efeito de canto dourado -->
+              <div class="position-absolute top-0 end-0" style="width: 0; height: 0; border-style: solid; border-width: 0 50px 50px 0; border-color: transparent rgba(178, 145, 70, 0.3) transparent transparent;"></div>
             </div>
           </div>
           
           <!-- Serviço 2 -->
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-box">
-              <div class="service-icon">
-                <i class="bi bi-hdd" style="color: #b29146;"></i>
+            <div class="service-box h-100 p-4 bg-dark rounded-3 position-relative overflow-hidden border border-secondary border-opacity-25 transition-all hover-gold-border">
+              <div class="service-icon mb-4 text-center">
+                <i class="bi bi-hdd fs-1" style="color: #b29146;"></i>
               </div>
-              <h3 style="color: #b29146;">Recuperação de Dados</h3>
-              <p>Recuperação de dados em discos rígidos, SSDs e dispositivos de armazenamento danificados. Soluções avançadas para perda crítica de informação.</p>
-              <ul class="service-list">
-                <li>Discos rígidos com bad sectors</li>
-                <li>SSDs corrompidos</li>
-                <li>Recuperação após formatação</li>
+              <h3 class="h4 fw-bold text-center mb-3" style="color: #b29146;">Recuperação de Dados</h3>
+              <p class="text-light opacity-75 text-center mb-4">Recuperação avançada em discos danificados com até 95% de taxa de sucesso em casos críticos.</p>
+              <ul class="service-list ps-0 mb-4" style="list-style: none;">
+                <li class="d-flex align-items-start mb-2">
+                  <i class="bi bi-check-circle-fill me-2" style="color: #b29146;"></i>
+                  <span class="text-light opacity-75">Discos rígidos com bad sectors</span>
+                </li>
+                <li class="d-flex align-items-start mb-2">
+                  <i class="bi bi-check-circle-fill me-2" style="color: #b29146;"></i>
+                  <span class="text-light opacity-75">SSDs corrompidos</span>
+                </li>
+                <li class="d-flex align-items-start">
+                  <i class="bi bi-check-circle-fill me-2" style="color: #b29146;"></i>
+                  <span class="text-light opacity-75">Recuperação após formatação</span>
+                </li>
               </ul>
-              <a href="#contact" class="btn btn-primary">Saber Mais</a>
+              <div class="text-center mt-auto pt-3">
+                <a href="#contact" class="btn btn-primary rounded-pill px-4" style="background-color: #b29146; border: none;">Saber Mais</a>
+              </div>
+              <!-- Efeito de canto dourado -->
+              <div class="position-absolute top-0 end-0" style="width: 0; height: 0; border-style: solid; border-width: 0 50px 50px 0; border-color: transparent rgba(178, 145, 70, 0.3) transparent transparent;"></div>
             </div>
           </div>
           
           <!-- Serviço 3 -->
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-box">
-              <div class="service-icon">
-                <i class="bi bi-server" style="color: #b29146;"></i>
+            <div class="service-box h-100 p-4 bg-dark rounded-3 position-relative overflow-hidden border border-secondary border-opacity-25 transition-all hover-gold-border">
+              <div class="service-icon mb-4 text-center">
+                <i class="bi bi-server fs-1" style="color: #b29146;"></i>
               </div>
-              <h3 style="color: #b29146;">Manutenção de Servidores</h3>
-              <p>Serviços especializados para infraestrutura de servidores. Manutenção preventiva e corretiva para garantir máxima disponibilidade.</p>
-              <ul class="service-list">
-                <li>Substituição de componentes RAID</li>
-                <li>Refrigeração e limpeza</li>
-                <li>Atualização de hardware</li>
+              <h3 class="h4 fw-bold text-center mb-3" style="color: #b29146;">Manutenção de Servidores</h3>
+              <p class="text-light opacity-75 text-center mb-4">Serviços especializados para garantir 99.9% de uptime em sua infraestrutura crítica.</p>
+              <ul class="service-list ps-0 mb-4" style="list-style: none;">
+                <li class="d-flex align-items-start mb-2">
+                  <i class="bi bi-check-circle-fill me-2" style="color: #b29146;"></i>
+                  <span class="text-light opacity-75">Substituição de componentes RAID</span>
+                </li>
+                <li class="d-flex align-items-start mb-2">
+                  <i class="bi bi-check-circle-fill me-2" style="color: #b29146;"></i>
+                  <span class="text-light opacity-75">Refrigeração e limpeza</span>
+                </li>
+                <li class="d-flex align-items-start">
+                  <i class="bi bi-check-circle-fill me-2" style="color: #b29146;"></i>
+                  <span class="text-light opacity-75">Atualização de hardware</span>
+                </li>
               </ul>
-              <a href="#contact" class="btn btn-primary">Saber Mais</a>
+              <div class="text-center mt-auto pt-3">
+                <a href="#contact" class="btn btn-primary rounded-pill px-4" style="background-color: #b29146; border: none;">Saber Mais</a>
+              </div>
+              <!-- Efeito de canto dourado -->
+              <div class="position-absolute top-0 end-0" style="width: 0; height: 0; border-style: solid; border-width: 0 50px 50px 0; border-color: transparent rgba(178, 145, 70, 0.3) transparent transparent;"></div>
             </div>
           </div>
           
           <!-- Serviço 4 -->
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-box">
-              <div class="service-icon">
-                <i class="bi bi-gpu-card" style="color: #b29146;"></i>
+            <div class="service-box h-100 p-4 bg-dark rounded-3 position-relative overflow-hidden border border-secondary border-opacity-25 transition-all hover-gold-border">
+              <div class="service-icon mb-4 text-center">
+                <i class="bi bi-gpu-card fs-1" style="color: #b29146;"></i>
               </div>
-              <h3 style="color: #b29146;">Reparação de Placas Gráficas</h3>
-              <p>Diagnóstico e reparação de GPUs para gamers e profissionais. Ressoldagem BGA, substituição de VRMs e testes de stress.</p>
-              <ul class="service-list">
-                <li>Artefactos visuais</li>
-                <li>Problemas de aquecimento</li>
-                <li>Falhas na inicialização</li>
+              <h3 class="h4 fw-bold text-center mb-3" style="color: #b29146;">Reparação de Placas Gráficas</h3>
+              <p class="text-light opacity-75 text-center mb-4">Técnicas avançadas de reparação para GPUs de alto desempenho e workstations.</p>
+              <ul class="service-list ps-0 mb-4" style="list-style: none;">
+                <li class="d-flex align-items-start mb-2">
+                  <i class="bi bi-check-circle-fill me-2" style="color: #b29146;"></i>
+                  <span class="text-light opacity-75">Artefactos visuais</span>
+                </li>
+                <li class="d-flex align-items-start mb-2">
+                  <i class="bi bi-check-circle-fill me-2" style="color: #b29146;"></i>
+                  <span class="text-light opacity-75">Problemas de aquecimento</span>
+                </li>
+                <li class="d-flex align-items-start">
+                  <i class="bi bi-check-circle-fill me-2" style="color: #b29146;"></i>
+                  <span class="text-light opacity-75">Falhas na inicialização</span>
+                </li>
               </ul>
-              <a href="#contact" class="btn btn-primary">Saber Mais</a>
+              <div class="text-center mt-auto pt-3">
+                <a href="#contact" class="btn btn-primary rounded-pill px-4" style="background-color: #b29146; border: none;">Saber Mais</a>
+              </div>
+              <!-- Efeito de canto dourado -->
+              <div class="position-absolute top-0 end-0" style="width: 0; height: 0; border-style: solid; border-width: 0 50px 50px 0; border-color: transparent rgba(178, 145, 70, 0.3) transparent transparent;"></div>
             </div>
           </div>
           
           <!-- Serviço 5 -->
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-box">
-              <div class="service-icon">
-                <i class="bi bi-phone" style="color: #b29146;"></i>
+            <div class="service-box h-100 p-4 bg-dark rounded-3 position-relative overflow-hidden border border-secondary border-opacity-25 transition-all hover-gold-border">
+              <div class="service-icon mb-4 text-center">
+                <i class="bi bi-phone fs-1" style="color: #b29146;"></i>
               </div>
-              <h3 style="color: #b29146;">Reparação de Portáteis</h3>
-              <p>Serviços especializados para notebooks de todas as marcas. Substituição de componentes específicos com peças originais.</p>
-              <ul class="service-list">
-                <li>Problemas de carregamento</li>
-                <li>Substituição de ecrãs</li>
-                <li>Reparação de portas e conectores</li>
+              <h3 class="h4 fw-bold text-center mb-3" style="color: #b29146;">Reparação de Portáteis</h3>
+              <p class="text-light opacity-75 text-center mb-4">Solução especializada para notebooks com peças originais e garantia de serviço.</p>
+              <ul class="service-list ps-0 mb-4" style="list-style: none;">
+                <li class="d-flex align-items-start mb-2">
+                  <i class="bi bi-check-circle-fill me-2" style="color: #b29146;"></i>
+                  <span class="text-light opacity-75">Problemas de carregamento</span>
+                </li>
+                <li class="d-flex align-items-start mb-2">
+                  <i class="bi bi-check-circle-fill me-2" style="color: #b29146;"></i>
+                  <span class="text-light opacity-75">Substituição de ecrãs</span>
+                </li>
+                <li class="d-flex align-items-start">
+                  <i class="bi bi-check-circle-fill me-2" style="color: #b29146;"></i>
+                  <span class="text-light opacity-75">Reparação de portas</span>
+                </li>
               </ul>
-              <a href="#contact" class="btn btn-primary">Saber Mais</a>
+              <div class="text-center mt-auto pt-3">
+                <a href="#contact" class="btn btn-primary rounded-pill px-4" style="background-color: #b29146; border: none;">Saber Mais</a>
+              </div>
+              <!-- Efeito de canto dourado -->
+              <div class="position-absolute top-0 end-0" style="width: 0; height: 0; border-style: solid; border-width: 0 50px 50px 0; border-color: transparent rgba(178, 145, 70, 0.3) transparent transparent;"></div>
             </div>
           </div>
           
           <!-- Serviço 6 -->
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-box">
-              <div class="service-icon">
-                <i class="bi bi-shield-check" style="color: #b29146;"></i>
+            <div class="service-box h-100 p-4 bg-dark rounded-3 position-relative overflow-hidden border border-secondary border-opacity-25 transition-all hover-gold-border">
+              <div class="service-icon mb-4 text-center">
+                <i class="bi bi-shield-check fs-1" style="color: #b29146;"></i>
               </div>
-              <h3 style="color: #b29146;">Manutenção Preventiva</h3>
-              <p>Programas de manutenção regular para prolongar a vida útil dos equipamentos e prevenir falhas críticas.</p>
-              <ul class="service-list">
-                <li>Limpeza interna profissional</li>
-                <li>Substituição de pastas térmicas</li>
-                <li>Diagnóstico completo</li>
+              <h3 class="h4 fw-bold text-center mb-3" style="color: #b29146;">Manutenção Preventiva</h3>
+              <p class="text-light opacity-75 text-center mb-4">Programas personalizados para evitar falhas e prolongar a vida útil dos equipamentos.</p>
+              <ul class="service-list ps-0 mb-4" style="list-style: none;">
+                <li class="d-flex align-items-start mb-2">
+                  <i class="bi bi-check-circle-fill me-2" style="color: #b29146;"></i>
+                  <span class="text-light opacity-75">Limpeza interna profissional</span>
+                </li>
+                <li class="d-flex align-items-start mb-2">
+                  <i class="bi bi-check-circle-fill me-2" style="color: #b29146;"></i>
+                  <span class="text-light opacity-75">Substituição de pastas térmicas</span>
+                </li>
+                <li class="d-flex align-items-start">
+                  <i class="bi bi-check-circle-fill me-2" style="color: #b29146;"></i>
+                  <span class="text-light opacity-75">Diagnóstico completo</span>
+                </li>
               </ul>
-              <a href="#contact" class="btn btn-primary">Saber Mais</a>
+              <div class="text-center mt-auto pt-3">
+                <a href="#contact" class="btn btn-primary rounded-pill px-4" style="background-color: #b29146; border: none;">Saber Mais</a>
+              </div>
+              <!-- Efeito de canto dourado -->
+              <div class="position-absolute top-0 end-0" style="width: 0; height: 0; border-style: solid; border-width: 0 50px 50px 0; border-color: transparent rgba(178, 145, 70, 0.3) transparent transparent;"></div>
             </div>
           </div>
         </div>
       </div>
+      
+      <!-- Borda decorativa inferior -->
+
     </section>
+    
+    <style>
+      .service-box {
+        transition: all 0.3s ease;
+      }
+      
+      .hover-gold-border:hover {
+        border-color: #B29146 !important;
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(178, 145, 70, 0.2);
+      }
+      
+      .service-icon i {
+        transition: transform 0.3s ease;
+      }
+      
+      .service-box:hover .service-icon i {
+        transform: scale(1.1);
+      }
+      
+      .btn-primary:hover {
+        background-color: #9a7c3d !important;
+        transform: translateY(-2px);
+      }
+      
+      .transition-all {
+        transition: all 0.3s ease;
+      }
+    </style>
 
     <!-- Process Section -->
     <section class="process-section py-5" style="background-color: #0a0a0a;">

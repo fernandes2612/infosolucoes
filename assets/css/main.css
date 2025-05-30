@@ -953,85 +953,6 @@ section,
   margin-bottom: 0;
 }
 
-/*--------------------------------------------------------------
-# Contact Section
---------------------------------------------------------------*/
-.contact .info-item+.info-item {
-  margin-top: 40px;
-}
-
-.contact .info-item i {
-  color: var(--accent-color);
-  background: color-mix(in srgb, var(--accent-color), transparent 92%);
-  font-size: 20px;
-  width: 44px;
-  height: 44px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50px;
-  transition: all 0.3s ease-in-out;
-  margin-right: 15px;
-}
-
-.contact .info-item h3 {
-  padding: 0;
-  font-size: 18px;
-  font-weight: 700;
-  margin-bottom: 5px;
-}
-
-.contact .info-item p {
-  padding: 0;
-  margin-bottom: 0;
-  font-size: 14px;
-}
-
-.contact .info-item:hover i {
-  background: var(--accent-color);
-  color: var(--contrast-color);
-}
-
-.contact .php-email-form {
-  height: 100%;
-}
-
-.contact .php-email-form input[type=text],
-.contact .php-email-form input[type=email],
-.contact .php-email-form textarea {
-  font-size: 14px;
-  padding: 10px 15px;
-  box-shadow: none;
-  border-radius: 0;
-  color: var(--default-color);
-  background-color: var(--surface-color);
-  border-color: color-mix(in srgb, var(--default-color), transparent 80%);
-}
-
-.contact .php-email-form input[type=text]:focus,
-.contact .php-email-form input[type=email]:focus,
-.contact .php-email-form textarea:focus {
-  border-color: var(--accent-color);
-}
-
-.contact .php-email-form input[type=text]::placeholder,
-.contact .php-email-form input[type=email]::placeholder,
-.contact .php-email-form textarea::placeholder {
-  color: color-mix(in srgb, var(--default-color), transparent 70%);
-}
-
-.contact .php-email-form button[type=submit] {
-  color: var(--contrast-color);
-  background: var(--accent-color);
-  border: 0;
-  padding: 10px 30px;
-  transition: 0.4s;
-  border-radius: 50px;
-}
-
-.contact .php-email-form button[type=submit]:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 25%);
-}
 
 /*--------------------------------------------------------------
 # Service Details Section
@@ -1708,43 +1629,7 @@ section,
 }
 
 /* Estilo para o formulário */
-.contact-form {
-  background-color: rgba(26, 26, 26, 0.9); /* Fundo mais escuro para contraste */
-  padding: 30px;
-  border-radius: 10px;
-  border: 1px solid var(--primary-color); /* Borda com a cor principal */
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-}
 
-.form-label {
-  color: var(--primary-color);
-  font-weight: 600;
-  margin-bottom: 8px;
-  display: block;
-  font-size: 1.1rem;
-}
-
-.form-control {
-  background: rgba(50, 50, 50, 0.7) !important;
-  border: 1px solid rgba(255, 255, 255, 0.3) !important;
-  color: white !important;
-  padding: 12px 15px !important;
-  margin-bottom: 20px !important;
-  border-radius: 6px !important;
-  transition: all 0.3s ease;
-  font-size: 1rem;
-}
-
-.form-control:focus {
-  background: rgba(70, 70, 70, 0.7) !important;
-  border-color: var(--primary-color) !important;
-  box-shadow: 0 0 0 0.3rem rgba(207, 187, 131, 0.3) !important;
-}
-
-.form-control::placeholder {
-  color: rgba(255, 255, 255, 0.6);
-  opacity: 1;
-}
 
 
 

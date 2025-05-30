@@ -1027,7 +1027,7 @@ a:hover {
         <h2 class="section-title">Entre em <span class="gold-text">Contacto</span></h2>
         <p class="lead">Preencha o formulário abaixo e nossa equipe entrará em contacto para discutir suas necessidades de gestão de redes.</p>
       </div>
-
+  
       <div class="contact-form">
         <form id="contactForm">
           <div class="form-group">
@@ -1046,15 +1046,49 @@ a:hover {
             <label for="message" class="form-label">Mensagem</label>
             <textarea id="message" name="message" class="form-control" rows="5" placeholder="Descreva brevemente suas necessidades ou dúvidas."></textarea>
           </div>
-          <div class="form-check">
+          <div class="form-check mb-3">
             <input type="checkbox" id="privacy" name="privacy" class="form-check-input" required>
-            <label for="privacy" class="form-check-label">Concordo com a <a href="#" class="gold-text">política de privacidade</a>*</label>
+            <label for="privacy" class="form-check-label">
+              Concordo com a <a href="#" class="gold-text">política de privacidade</a>*
+            </label>
           </div>
-          <button  type="submit" class="btn-submit">Enviar Mensagem</button>
+          <button type="submit" class="btn-submit">Enviar Mensagem</button>
+          <div id="form-status" class="mt-3"></div>
         </form>
       </div>
     </div>
   </section>
+  
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzFVDHWCtY0g5Gu3Ary6J7mfmhHVvePiO4lM6Vd4rPqCyoApJGPsuI2dbA3iPsGAbBt/exec'; // 🔁 SUBSTITUIR PELO TEU LINK
+    const form = document.getElementById('contactForm');
+    const status = document.getElementById('form-status');
+  
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      status.textContent = "Enviando...";
+  
+      const formData = new FormData(form);
+  
+      try {
+        const response = await fetch(scriptURL, {
+          method: 'POST',
+          body: formData
+        });
+  
+        if (response.ok) {
+          status.innerHTML = "<span style='color:green;'>Mensagem enviada com sucesso!</span>";
+          form.reset();
+        } else {
+          status.innerHTML = "<span style='color:red;'>Erro ao enviar. Tente novamente.</span>";
+        }
+      } catch (error) {
+        console.error('Erro:', error);
+        status.innerHTML = "<span style='color:red;'>Erro de rede. Verifique sua ligação.</span>";
+      }
+    });
+  </script>
+  
 
   <!-- Footer -->
   <footer class="minimal-footer">
